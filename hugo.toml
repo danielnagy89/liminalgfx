@@ -1,0 +1,4 @@
+baseURL = 'https://liminalgfx.com/'
+languageCode = 'en-us'
+title = 'LiminalGFX draft'
+theme = "LGFXtheme"
