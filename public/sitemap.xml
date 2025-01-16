@@ -2,36 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://liminalgfx.com/projects/</loc>
+    <lastmod>2025-01-16T12:42:32+02:00</lastmod>
+  </url><url>
+    <loc>https://liminalgfx.com/projects/proj_darkmoth/</loc>
     <lastmod>2025-01-15T15:34:04+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blue/</loc>
+    <loc>https://liminalgfx.com/tags/blue/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/green/</loc>
+    <loc>https://liminalgfx.com/tags/green/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-3/</loc>
+    <loc>https://liminalgfx.com/posts/post-3/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/red/</loc>
+    <loc>https://liminalgfx.com/tags/red/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://liminalgfx.com/tags/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-2/</loc>
+    <loc>https://liminalgfx.com/posts/post-2/</loc>
     <lastmod>2023-02-15T10:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-1/</loc>
+    <loc>https://liminalgfx.com/posts/post-1/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://liminalgfx.com/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://liminalgfx.com/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://liminalgfx.com/categories/</loc>
   </url>
 </urlset>

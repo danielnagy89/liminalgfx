@@ -2,11 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on LiminalGFX draft</title>
-    <link>http://localhost:1313/projects/</link>
+    <link>https://liminalgfx.com/projects/</link>
     <description>Recent content in Projects on LiminalGFX draft</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jan 2025 15:34:04 +0200</lastBuildDate>
+    <atom:link href="https://liminalgfx.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Darkmoth</title>
+      <link>https://liminalgfx.com/projects/proj_darkmoth/</link>
+      <pubDate>Wed, 15 Jan 2025 15:34:04 +0200</pubDate>
+      <guid>https://liminalgfx.com/projects/proj_darkmoth/</guid>
+      <description>&lt;h1 id=&#34;this-is-a-heading-1&#34;&gt;this is a Heading 1&lt;/h1&gt;&#xA;&lt;h2 id=&#34;this-is-h2&#34;&gt;this is H2.&lt;/h2&gt;&#xA;&lt;p&gt;this is the description paragraph&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
