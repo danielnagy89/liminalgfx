@@ -6,8 +6,15 @@
     <description>Recent content in Home on LiminalGFX draft</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jan 2025 15:34:04 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2025 12:42:32 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Frontmatter CMS</title>
+      <link>http://localhost:1313/project2/</link>
+      <pubDate>Thu, 16 Jan 2025 12:42:32 +0200</pubDate>
+      <guid>http://localhost:1313/project2/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Darkmoth</title>
       <link>http://localhost:1313/proj_darkmoth/</link>
