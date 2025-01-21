@@ -1,3 +1,10 @@
+---
+{
+  "tags": [
+    "3D"
+  ]
+}
+---
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.contentTypes": [
@@ -52,7 +59,7 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "content",
-      "path": "D:/PROJECTS/LiminalGFX/LiminalGFX_Current/liminalgfx/content"
+      "path": "[[workspace]]/content"
     }
   ],
   "frontMatter.git.enabled": true
