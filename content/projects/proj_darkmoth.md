@@ -9,3 +9,5 @@ title = 'Darkmoth'
 
 this is the description paragraph
 
+![Darkmoth](/darkmoth/daniel_nagy_liminalgfx_DarkMoth_Fly_Dutch_C_1920.jpg)
+{{< youtube 0RKpf3rK57I >}}

@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.liminalgfx.com'
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
@@ -8,8 +8,8 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Projects'
+pageRef = '/projects'
 weight = 20
 
 [[menus.main]]
