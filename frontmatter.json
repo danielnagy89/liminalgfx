@@ -49,6 +49,11 @@
   "frontMatter.framework.id": "hugo",
   "frontMatter.content.publicFolder": "static",
   "frontMatter.preview.host": "http://localhost:1313",
-  "frontMatter.content.pageFolders": [],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/D:/PROJECTS/LiminalGFX/LiminalGFX_Current/liminalgfx/content/projects"
+    }
+  ],
   "frontMatter.git.enabled": true
 }
