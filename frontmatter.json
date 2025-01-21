@@ -52,7 +52,8 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "content",
-      "path": "[[workspace]]/D:/PROJECTS/LiminalGFX/LiminalGFX_Current/liminalgfx/content/projects"
+      "path": "[[workspace]]/D:/PROJECTS/LiminalGFX/LiminalGFX_Current/liminalgfx/content/projects",
+      "previewPath": "LiminalGFX"
     }
   ],
   "frontMatter.git.enabled": true
