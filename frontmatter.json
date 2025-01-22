@@ -8,8 +8,7 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "content",
-      "path": "/content",
-      "previewPath": "/content"
+      "path": "[[workspace]]/content"
     }
   ],
   "frontMatter.git.enabled": true

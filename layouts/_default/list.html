@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="list">
+    {{ range .Paginator.Pages }}
+    <div class="listItem">
+        <img src={{ .Params.image }} alt={{ .Title }} class="listItemImage" loading="lazy">
+        <div class="listItemTexts">
+            <h1>
+                <a href="">{{ .Title }}</a>
+            </h1>
+        </div>
+
+    </div>
+
+    {{ end }}
+</div>
+{{ end }}

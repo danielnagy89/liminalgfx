@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2D on LiminalGFX draft 2025.01.21</title>
+    <link>http://localhost:60049/categories/2d/</link>
+    <description>Recent content in 2D on LiminalGFX draft 2025.01.21</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Jan 2025 13:47:49 +0000</lastBuildDate>
+    <atom:link href="http://localhost:60049/categories/2d/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FrontMatter_two</title>
+      <link>http://localhost:60049/frontmatter/</link>
+      <pubDate>Wed, 22 Jan 2025 13:47:49 +0000</pubDate>
+      <guid>http://localhost:60049/frontmatter/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
