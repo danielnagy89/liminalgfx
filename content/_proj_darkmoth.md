@@ -1,8 +1,8 @@
 ---
-title: FrontMatter test
+title: Dark Moth
 description: Testing categories, tags.
 date: 2025-01-22T11:06:13.578Z
-preview: /darkmoth/daniel_nagy_liminalgfx_DarkMoth_Fly_Dutch_C_1920.jpg
+preview: /darkmoth/daniel-nagy-liminalgfx-daniel-nagy-liminalgfx-var2.jpg
 draft: false
 tags:
     - 3D

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on LiminalGFX draft 2025.01.21</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://www.liminalgfx.com/categories/</link>
     <description>Recent content in Categories on LiminalGFX draft 2025.01.21</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2025 13:47:49 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jan 2025 13:49:43 +0000</lastBuildDate>
+    <atom:link href="https://www.liminalgfx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2D</title>
-      <link>http://localhost:1313/categories/2d/</link>
-      <pubDate>Wed, 22 Jan 2025 13:47:49 +0000</pubDate>
-      <guid>http://localhost:1313/categories/2d/</guid>
+      <link>https://www.liminalgfx.com/categories/2d/</link>
+      <pubDate>Wed, 22 Jan 2025 13:49:43 +0000</pubDate>
+      <guid>https://www.liminalgfx.com/categories/2d/</guid>
       <description></description>
     </item>
     <item>
       <title>Concept Design</title>
-      <link>http://localhost:1313/categories/concept-design/</link>
-      <pubDate>Wed, 22 Jan 2025 13:47:49 +0000</pubDate>
-      <guid>http://localhost:1313/categories/concept-design/</guid>
+      <link>https://www.liminalgfx.com/categories/concept-design/</link>
+      <pubDate>Wed, 22 Jan 2025 13:49:43 +0000</pubDate>
+      <guid>https://www.liminalgfx.com/categories/concept-design/</guid>
       <description></description>
     </item>
     <item>
       <title>3D</title>
-      <link>http://localhost:1313/categories/3d/</link>
+      <link>https://www.liminalgfx.com/categories/3d/</link>
       <pubDate>Wed, 22 Jan 2025 11:06:13 +0000</pubDate>
-      <guid>http://localhost:1313/categories/3d/</guid>
+      <guid>https://www.liminalgfx.com/categories/3d/</guid>
       <description></description>
     </item>
     <item>
       <title>Concept Art</title>
-      <link>http://localhost:1313/categories/concept-art/</link>
+      <link>https://www.liminalgfx.com/categories/concept-art/</link>
       <pubDate>Wed, 22 Jan 2025 11:06:13 +0000</pubDate>
-      <guid>http://localhost:1313/categories/concept-art/</guid>
+      <guid>https://www.liminalgfx.com/categories/concept-art/</guid>
       <description></description>
     </item>
   </channel>
