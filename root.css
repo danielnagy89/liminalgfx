@@ -2,7 +2,7 @@
 /* all refs prefixed with '--crs' */
 
 :root {
-	--crs-expand: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-expand: 	url('res-svg/expand_lite.svg') 8 8, auto;
 	--crs-zoomin: 	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-fscreen:	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-zoomout: 	url('./res-svg/expand_lite.svg') 8 8, auto;
