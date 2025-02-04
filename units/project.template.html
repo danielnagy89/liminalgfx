@@ -6,138 +6,116 @@
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
 <link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="preload" href="/res-fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/res-fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/res-fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
 <script src="../FancyUI/fancybox/fancybox.umd.js"></script>
-<meta name="viewport" charset="utf-8" name="ArtliminalGFX" content="content=" width="device-width, initial-scale=1">
+<meta 
+	name="viewport" 
+	charset="utf-8" 
+	name="LiminalGFX" 
+	content="content=" 
+	width="device-width, initial-scale=1">
 
 <style>
+	.img{
+		display: block;
+		padding-top: 2vh;
+		max-width: 50vw;		
+		height: auto;
+		margin: 0 auto;
+	}
 
-.img{
-	display: block;
-	padding-top: 2vh;
-	max-width: 50vw;		
-	height: auto;
-	margin: 0 auto;
+	video{
+		display: block;
+		padding-top: 2vh;
+		max-width: 50vw;
+		height: auto;
+		margin: 0 auto;
 }
-
-video{
-	display: block;
-	padding-top: 2vh;
-	max-width: 50vw;
-	height: auto;
-	margin: 0 auto;
-}
-
 </style>
 
 </head>
 <body class="bkg">
 
-<header>
-	<div class="header">
-		<div class="logo">
-			<img src="../agfx.svg" width="240px" height="auto" style="margin:0.5em">
+	<header>
+		<div class="header">
+			<div class="logo">
+				<a href="/index.html">
+				<img src="/res-svg/lgfx.svg" width="240px" height="auto" style="margin:1.6em">
+				</a>
+			</div>
+				<div class="navbar">
+				<a href="/404.html">					<div class="navbtn">ABOUT			</div></a>
+				<a href="/404.html">					<div class="navbtn">PROCESS			</div></a>
+				<a href="/units/project.template.html">	<div class="navbtn">ARTICLES		</div></a>
+				<a href="/404.html">					<div class="navbtn">RESUME			</div></a>
+				<a href="/404.html">					<div class="navbtn">FAQ/🥜	</div></a>
+			</div>
 		</div>
-	</div>
-</header>
+	</header>
 
 <div class="content">
-	
 	<h1 class="projtitle">PROJECT X</h1>
-
 	<div class="gridOverflow go-actionIcon ssg fs ssgdim">
+<!-- GridOverflow CONTENT GOES HERE-->
 
-
-<!--CONTENT GOES HERE-->
-
-  <!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
-  <a class="crs-expand go_gridItem go_gridItem-VIP" 
+<!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
+<a class="crs-expand go_gridItem go_gridItem-VIP" 
 	href="bin.robocop/Aim_at_Cam.webp"
 	data-fancybox="A1"
 	data-caption="Marvel">
 	<img 
 	src="bin.robocop/Aim_at_Cam.webp"
 	alt="Aim at Cam">
-  </a>
-
-  <!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
-  	<a class="crs-expand go_gridItem go_gridItem-panorama" 
-		href="bin.robocop/SidePose.png"
+</a>
+<!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
+<a class="crs-expand go_gridItem go_gridItem-panorama" 
+		href="bin.robocop/SidePose.webp"
 		data-fancybox="A1"
 		data-caption="Side Pose">
 		<img 
-		src="bin.robocop/SidePose.png"
+		src="bin.robocop/SidePose.webp"
 		alt="Side Pose">
 	</a>
-
-  <!-- go_gridItem-vertigo class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
-  	<a class="crs-expand go_gridItem go_gridItem-vertigo" 
-		href="bin.robocop/Marvel.png"
+<!-- go_gridItem-vertigo class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
+<a class="crs-expand go_gridItem go_gridItem-vertigo" 
+		href="bin.robocop/Marvel.webp"
 		data-fancybox="A1"
 		data-caption="Marvel">
 		<img 
-		src="bin.robocop/Marvel.png"
+		src="bin.robocop/Marvel.webp"
 		alt="Marvel">
-	</a>
+</a>
 
-	<a class="crs-expand go_gridItem" 
-	href="bin.robocop/SidePose25.png"
-	data-fancybox="A1"
-	data-caption="Side Pose">
+<a class="crs-expand go_gridItem" 
+href="bin.robocop/SidePose25.webp"
+data-fancybox="A1"
+data-caption="Side Pose">
 	<img 
-	src="bin.robocop/SidePose25.png"
+	src="bin.robocop/SidePose25.webp"
 	alt="Side Pose">
 	<!-- go_caption class is for creating captions inside grid items -->
 	<!-- go_caption-full creates caption with 100% width of the grid item -->
 	<span class="go_caption go_caption-full">Side Pose</span>
-  </a>
+</a>
 
-  <div class="go_gridItem">
+<div class="go_gridItem">
 	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-	>
 	<!-- go_caption class is for creating captions inside grid items -->
 	<!-- go_caption-full creates caption with 100% width of the grid item -->
-  </div>
+</div>
 
-  <div class="tagcloud">
-	<p>
-	<a href="">3D</a>
-	<a href="">2D</a>
-	<a href="">model</a>
-	<a href="">concept art</a>
-	</p>
-  </div>
+	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
 
-<!--
-
-	<a  
-		data-fancybox="A1" 
-		href="bin.robocop/Aim_at_Cam.png"
-		data-caption="Aim At Cam">
-			<img 
-			class="img"
-			src="bin.robocop/Aim_at_Cam.png" 
-			alt="Robocop Aim at Cam">
-	</a>
-
-	<a 
-		data-fancybox="A1" 
-		data-src="bin.robocop/SidePose.png" 
-		data-caption="Side Pose"> 
-		<img 
-		class="img"
-		src="bin.robocop/SidePose.png" alt="Robocop SidePose">
-	</a>
-	
-	<a href="bin.robocop/holster.mp4" 
-		data-fancybox="A1" 
-		data-caption="Holster Opening"> 
-		<video autoplay muted controls loop>
-		<source src="bin.robocop/holster.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-		</video>
-	</a>	
-
--->
+	<div class="tagcloud">
+		<p>
+		<a href="">3D</a>
+		<a href="">2D</a>
+		<a href="">model</a>
+		<a href="">concept art</a>
+		</p>
+	</div>
 
 	</div>
 </div>
@@ -145,34 +123,37 @@ video{
 <!-- FOOTER -->
 
 <footer>
-<div class="footer">
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-	<p style="margin: 0.8em auto auto 1em; font-size: 1rem;">LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
-  </div>  
-</div>
+	<div class="footer">
+		<div class="progress-container">
+			<div class="progress-bar" id="myBar"></div>
+			<p style="margin: 0.8em auto auto 1em; font-size: 1rem;">LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
+		</div>  
+	</div>
 </footer>
 
-</body>
-
-</html> 
-
-<!-- SCRIPTS -->
+<!-- SCRIPTS BEGIN -->
 
 <script>
 	// When the user scrolls the page, execute myFunction 
 	window.onscroll = function() {myFunction()};
 	
 	function myFunction() {
-	  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-	  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	  var scrolled = (winScroll / height) * 100;
-	  document.getElementById("myBar").style.width = scrolled + "%";
+		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		var scrolled = (winScroll / height) * 100;
+		document.getElementById("myBar").style.width = scrolled + "%";
 	}
 </script>
 	
 <script>
 	Fancybox.bind("[data-fancybox]", {
 		groupAll: true,
-	  });
+	});
 </script>
+
+<!-- SCRIPTS END -->
+
+</body>
+
+</html> 
+

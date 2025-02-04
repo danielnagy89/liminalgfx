@@ -2,21 +2,21 @@
 /* all refs prefixed with '--crs' */
 
 :root {
-	--crs-expand: 	url('./svg/expand_lite.svg') 8 8, auto;
-	--crs-zoomin: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-fscreen:	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-zoomout: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-arrow: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-maximize: url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-minimize: url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-gallery: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-arrup: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-arrleft:	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-arrright: url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-interest: url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-play: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-gotop: 	url('./svg/zoom_resave.svg') 8 8, auto;
-	--crs-grab: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-expand: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-zoomin: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-fscreen:	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-zoomout: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-arrow: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-maximize: url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-minimize: url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-gallery: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-arrup: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-arrleft:	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-arrright: url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-interest: url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-play: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-gotop: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-grab: 	url('./res-svg/expand_lite.svg') 8 8, auto;
 }
 
 /* CURSOR CLASSES */
@@ -26,27 +26,17 @@
 	cursor: var(--crs-expand);
 }
 
-.expandable{
-	cursor: var(--crs-expand);
-}
-
 /* CURSORS end ----------- */
 
 /* FONTS GO HERE, WOFF2 or bust -----------------------------------------------*/
 /* ALL FONTS USE SIL Open Font License 1.1, included in Font_Licenses.txt file */
-
-
-  
-.expandable{
-	cursor: var(--crs-expand);
-}
 
 @font-face {
 	font-family: "inter";
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url(fonts/InterVariable.woff2) format("woff2");
+	src: url(res-fonts/InterVariable.woff2) format("woff2");
 }
 
 @font-face {
@@ -54,7 +44,7 @@
 	font-style: italic;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url(fonts/InterVariable.woff2) format("woff2");
+	src: url(res-fonts/InterVariable.woff2) format("woff2");
 }
 
 
@@ -63,7 +53,7 @@
 	font-style: normal;
 	font-weight: 300 900;
 	font-display: swap;
-	src: url(fonts/Figtree[wght].woff2) format("woff2");
+	src: url(res-fonts/Figtree[wght].woff2) format("woff2");
 
 }
 
@@ -72,14 +62,14 @@
 	font-style: italic;
 	font-weight: 300 900;
 	font-display: swap;
-	src: url(fonts/Figtree-Italic[wght].woff2) format("woff2");
+	src: url(res-fonts/Figtree-Italic[wght].woff2) format("woff2");
 }
 
 @font-face {
 	font-family: "CalSans";
 	font-style: normal;
 	font-display: swap;
-	src: url(fonts/CalSans-SemiBold.woff2) format("woff2");
+	src: url(res-fonts/CalSans-SemiBold.woff2) format("woff2");
 }
 
 /* FONTS END ---------------------------------------------- */
@@ -90,8 +80,8 @@ html {
 	}
 
 body {
-  margin: 0;
-  font-size: 2rem;
+	margin: 0;
+	font-family: figtree;
 }
 
 .bkg{
@@ -99,12 +89,13 @@ body {
 	background-attachment: fixed;	
 	background-repeat: repeat, no-repeat; */
 	
-	background-image: linear-gradient(-30deg, black, hsl(220, 30%, 10%), black);
+	background-image: url(res-img/noise.png), linear-gradient(-30deg, black, hsl(220, 30%, 10%), black);
 	background-size: 400% 900%;
 	animation: gradient 8s ease infinite;
 	height: 100vh;
     background-attachment: fixed;	
 	background-repeat: repeat, no-repeat; 	
+	overflow: hidden;
 }
 
 	@keyframes gradient {
@@ -119,7 +110,7 @@ body {
 		}
 	}
 
-/* FOOTER BEGIN, progress bar works as divider */
+/* HEADER BEGIN */
 
 .header{
 	background: hsla(220, 80%, 2%, 0.4);
@@ -127,10 +118,38 @@ body {
 	width: 100%;
 	height: 12vh;
 	display: flex;
+	text-decoration: none;
 	position: fixed;
 	top: 0;
 	z-index: 1;
 }
+
+.navbar{
+	width: 60vw;
+	height: 2vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+	margin:1%;
+	justify-content: space-around;
+	padding:0.8vw;
+}
+
+.navbtn {
+	flex: 1;
+	font-family: figtree;
+	font-weight: 800;
+	font-size: 2.4em;
+	padding:0.8vw;
+	color: rgb(24, 187, 236);
+}
+
+.navbtn:hover{
+	background: linear-gradient(0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
+	color:black;
+}
+
+/* FOOTER BEGIN, progress bar works as divider */
 
 .footer {
 	background: hsla(220, 80%, 2%, 0.4);
@@ -148,16 +167,16 @@ body {
 	height: 4px;
 	background: hsl(220, 25%, 3%);
 	z-index: 2;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
 	height: 4px;
 	/*background: #d7dddf;*/
 	background: linear-gradient(90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
 	opacity: 0.8;
 	width: 0%;
 	z-index: 2;
-  }
+}
 
 /* FOOTER END ------------------------------ */
 
@@ -205,8 +224,8 @@ p {
 }
 
 .indent {
-  border-left: 2px solid #618d9e;
-  height: auto;
+	border-left: 2px solid #618d9e;
+	height: auto;
 }
 
 .pindent {
@@ -220,9 +239,9 @@ p {
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 li::before {
@@ -252,22 +271,8 @@ ul li {
 }
 
 .content {
-  margin: 50px auto 0 auto;
-  width: 80%;
-}
-
-.navbar{
-	display: flex;
-	flex-direction: row;	
-	margin:1%;
-	justify-content: space-between;
-}
-
-.navbarvert{
-	display: flex;
-	flex-direction: column;	
-	margin:1%;
-	justify-content: space-between;
+	margin: 50px auto 0 auto;
+	width: 80%;
 }
 
 .vidbtn{
@@ -278,3 +283,21 @@ ul li {
 	margin: 0 auto;	
 }
 
+/* ANCHOR CSS --------- */
+
+a:link { 
+	text-decoration: none; 
+	color: inherit;
+} 
+a:visited { 
+	text-decoration: none; 
+	color: inherit;
+} 
+a:hover { 
+	text-decoration: none; 
+	color: white;
+} 
+a:active { 
+	text-decoration: none; 
+	color: inherit;
+}
