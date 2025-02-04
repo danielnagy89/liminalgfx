@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robocop | LiminalGFX</title>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="stylesheet" href="../root.css">
+<link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
+<script src="../FancyUI/fancybox/fancybox.umd.js"></script>
+<meta name="viewport" charset="utf-8" name="ArtliminalGFX" content="content=" width="device-width, initial-scale=1">
+
+<style>
+
+.img{
+	display: block;
+	padding-top: 2vh;
+	max-width: 50vw;		
+	height: auto;
+	margin: 0 auto;
+}
+
+video{
+	display: block;
+	padding-top: 2vh;
+	max-width: 50vw;
+	height: auto;
+	margin: 0 auto;
+}
+
+</style>
+
+</head>
+<body class="bkg">
+
+	<h1 style="font-size:6rem">PROJECT X</h1>
+
+<div class="content">
+
+
+<!--CONTENT GOES HERE-->
+	<a  
+		data-fancybox="A1" 
+		href="bin.robocop/Aim_at_Cam.png"
+		data-caption="Aim At Cam">
+			<img 
+			class="img"
+			src="bin.robocop/Aim_at_Cam.png" 
+			alt="Robocop Aim at Cam">
+	</a>
+
+	<a 
+		data-fancybox="A1" 
+		data-src="bin.robocop/SidePose.png" 
+		data-caption="Side Pose"> 
+		<img 
+		class="img"
+		src="bin.robocop/SidePose.png" alt="Robocop SidePose">
+	</a>
+	
+	<a href="bin.robocop/holster.mp4" 
+		data-fancybox="A1" 
+		data-caption="Holster Opening"> 
+		<video autoplay muted controls loop>
+		<source src="bin.robocop/holster.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+	</a>	
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="footer">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+ <p style="font-size:10pt; text-align:center; font-family: verdana;">ArtliminalGFX is a brand of Artliminal SRL. <br>
+ Ⓒ 2023. All Rights Reserved.</p>
+</footer>
+
+</body>
+
+</html> 
+
+<!-- SCRIPTS -->
+
+<script>
+	// When the user scrolls the page, execute myFunction 
+	window.onscroll = function() {myFunction()};
+	
+	function myFunction() {
+	  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	  var scrolled = (winScroll / height) * 100;
+	  document.getElementById("myBar").style.width = scrolled + "%";
+	}
+</script>
+	
+<script>
+	Fancybox.bind("[data-fancybox]", {
+		groupAll: true,
+	  });
+</script>

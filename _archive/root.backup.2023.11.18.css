@@ -1,0 +1,129 @@
+html {
+min-height: 100%;
+}
+
+@font-face {
+  font-family: logoplexi;
+  src: url(fonts/logoplexi.otf);
+}
+
+@font-face {
+  font-family: interlight;
+  src: url(fonts/inter.light.ttf);
+}
+
+@font-face {
+  font-family: interlightitalic;
+  src: url(fonts/inter.lightitalic.ttf);
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(fonts/montserrat.thin.ttf);
+}
+
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.bkg{
+	background-image: url(noise.png), linear-gradient(#10141d,black); 
+	background-attachment: fixed;	
+	background-repeat: repeat, no-repeat;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+h1 {
+	color: white;
+	font-family: montserrat;
+	font-size: 22pt;
+	text-align: center;
+}
+
+p {
+	font-family: interlight;
+	color: #bbc0c4;
+	font-size: 13pt;
+	line-height: 1.4;
+	text-align: justify;
+	text-justify: auto;
+}
+
+.indent {
+  border-left: 2px solid #618d9e;
+  height: auto;
+}
+
+.pindent {
+	font-family: interlightitalic;
+	color: #9bc5e6;
+	font-size: 14pt;
+	line-height: 1.4;
+	text-align: left;
+	margin-left: 12px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li::before {
+	content: "❖"; /* Insert content that looks like bullets */
+	padding-right: 8px;
+	color: #d5dbde; /* Or a color you prefer */
+}
+
+ul li {
+	padding: 4px;
+	font-family: interlight;
+	color: #d5dbde;
+	font-size: 13pt;
+	line-height: 1.4;
+	text-align: justify;
+	text-justify: auto;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #131721;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #d7dddf;
+  opacity: 0.8;
+  width: 0%;
+}
+
+.dotbreak{
+		display: block;
+		height: auto;
+		padding-top:2%;
+		max-width: 600px;		
+		margin-left: auto;
+		margin-right: auto;
+}
+
+.content {
+  margin: 50px auto 0 auto;
+  width: 80%;
+}

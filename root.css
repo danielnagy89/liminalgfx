@@ -1,0 +1,280 @@
+/* CURSORS go here */
+/* all refs prefixed with '--crs' */
+
+:root {
+	--crs-expand: 	url('./svg/expand_lite.svg') 8 8, auto;
+	--crs-zoomin: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-fscreen:	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-zoomout: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-arrow: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-maximize: url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-minimize: url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-gallery: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-arrup: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-arrleft:	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-arrright: url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-interest: url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-play: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-gotop: 	url('./svg/zoom_resave.svg') 8 8, auto;
+	--crs-grab: 	url('./svg/zoom_resave.svg') 8 8, auto;
+}
+
+/* CURSOR CLASSES */
+/* all classes prefixed with 'crs-' */
+
+.crs-expand{
+	cursor: var(--crs-expand);
+}
+
+.expandable{
+	cursor: var(--crs-expand);
+}
+
+/* CURSORS end ----------- */
+
+/* FONTS GO HERE, WOFF2 or bust -----------------------------------------------*/
+/* ALL FONTS USE SIL Open Font License 1.1, included in Font_Licenses.txt file */
+
+
+  
+.expandable{
+	cursor: var(--crs-expand);
+}
+
+@font-face {
+	font-family: "inter";
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url(fonts/InterVariable.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "inter-italic";
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url(fonts/InterVariable.woff2) format("woff2");
+}
+
+
+@font-face {
+	font-family: "figtree";
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: swap;
+	src: url(fonts/Figtree[wght].woff2) format("woff2");
+
+}
+
+@font-face {
+	font-family: "figtree-italic";
+	font-style: italic;
+	font-weight: 300 900;
+	font-display: swap;
+	src: url(fonts/Figtree-Italic[wght].woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "CalSans";
+	font-style: normal;
+	font-display: swap;
+	src: url(fonts/CalSans-SemiBold.woff2) format("woff2");
+}
+
+/* FONTS END ---------------------------------------------- */
+
+html {
+	min-height: 100%;
+	scroll-behavior: smooth;
+	}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.bkg{
+	/* background-image: url(noise.png), linear-gradient(#10141d,black); 
+	background-attachment: fixed;	
+	background-repeat: repeat, no-repeat; */
+	
+	background-image: linear-gradient(-30deg, black, hsl(220, 30%, 10%), black);
+	background-size: 400% 900%;
+	animation: gradient 8s ease infinite;
+	height: 100vh;
+    background-attachment: fixed;	
+	background-repeat: repeat, no-repeat; 	
+}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+/* FOOTER BEGIN, progress bar works as divider */
+
+.header{
+	background: hsla(220, 80%, 2%, 0.4);
+	backdrop-filter: blur(0.8rem);
+	width: 100%;
+	height: 12vh;
+	display: flex;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.footer {
+	background: hsla(220, 80%, 2%, 0.4);
+	backdrop-filter: blur(0.8rem);
+	width: 100%;
+	height: 8vh;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+}
+
+.progress-container {
+	width: 100%;
+	height: 4px;
+	background: hsl(220, 25%, 3%);
+	z-index: 2;
+  }
+  
+  .progress-bar {
+	height: 4px;
+	/*background: #d7dddf;*/
+	background: linear-gradient(90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
+	opacity: 0.8;
+	width: 0%;
+	z-index: 2;
+  }
+
+/* FOOTER END ------------------------------ */
+
+h1 {
+	color: white;
+	font-family: figtree;
+	font-weight: 800;
+	font-size: 22pt;
+	text-align: center;
+}
+
+h4 {
+	color: #6279b1;
+	font-family: CalSans;
+	font-size: 3rem;
+	display: inline-block;
+	margin: 1%;
+}
+
+h4:hover {
+	color: white;
+	font-family: CalSans;
+	font-size: 3rem;
+	display: inline-block;
+	margin: 1%;
+}
+
+p {
+	font-family: inter;
+	color: #bbc0c4;
+	font-size: 1rem;
+	font-weight: light;
+	line-height: 1.4;
+	text-align: left;
+	text-justify: auto;
+}
+
+.projtitle{
+	color: white;
+	font-family: figtree;
+	font-weight: 800;
+	font-size: 6rem;
+	text-align: left;
+	margin: 12vh auto 1vh auto;
+}
+
+.indent {
+  border-left: 2px solid #618d9e;
+  height: auto;
+}
+
+.pindent {
+	font-family: inter-italic;
+	color: #9bc5e6;
+	font-size: 14pt;
+	font-weight: light;
+	line-height: 1.4;
+	text-align: left;
+	margin-left: 12px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li::before {
+	content: "❖"; /* Insert content that looks like bullets */
+	padding-right: 8px;
+	color: #d5dbde; /* Or a color you prefer */
+}
+
+ul li {
+	padding: 4px;
+	font-family: inter;
+	color: #d5dbde;
+	font-size: 13pt;
+	font-weight: light;
+	line-height: 1.4;
+	text-align: justify;
+	text-justify: auto;
+}
+
+.dotbreak{
+		display: block;
+		height: auto;
+		padding-top:2%;
+		max-width: 600px;		
+		margin-left: auto;
+		margin-right: auto;
+}
+
+.content {
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+
+.navbar{
+	display: flex;
+	flex-direction: row;	
+	margin:1%;
+	justify-content: space-between;
+}
+
+.navbarvert{
+	display: flex;
+	flex-direction: column;	
+	margin:1%;
+	justify-content: space-between;
+}
+
+.vidbtn{
+	width: 600px; 
+	height: 600px; 
+	display: inline-block; 
+	padding-top: 5px; 
+	margin: 0 auto;	
+}
+
