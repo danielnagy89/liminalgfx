@@ -66,7 +66,7 @@
 }
 
 @font-face {
-	font-family: "CalSans";
+	font-family: "calsans";
 	font-style: normal;
 	font-display: swap;
 	src: url(res-fonts/CalSans-SemiBold.woff2) format("woff2");
@@ -75,7 +75,6 @@
 /* FONTS END ---------------------------------------------- */
 
 html {
-	min-height: 100%;
 	scroll-behavior: smooth;
 	}
 
@@ -92,10 +91,11 @@ body {
 	background-image: url(res-img/noise.png), linear-gradient(-30deg, black, hsl(220, 30%, 10%), black);
 	background-size: 400% 900%;
 	animation: gradient 8s ease infinite;
-	height: 100vh;
     background-attachment: fixed;	
 	background-repeat: repeat, no-repeat; 	
-	overflow: hidden;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
 }
 
 	@keyframes gradient {
@@ -112,6 +112,26 @@ body {
 
 /* HEADER BEGIN */
 
+.logo{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+	margin:1%;
+	justify-content: space-around;
+	padding:0.8vw;
+	width:200px;
+	height:auto;
+}
+
+.toptag{
+	padding:0 3vw;
+	margin: auto auto auto 1%;
+	font-size:2rem;
+	text-align: start;
+	color:rgb(94, 105, 116);
+	text-overflow: ellipsis;
+}
+
 .header{
 	background: hsla(220, 80%, 2%, 0.4);
 	backdrop-filter: blur(0.8rem);
@@ -124,24 +144,37 @@ body {
 	z-index: 1;
 }
 
+.headerrows{
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+}
+
 .navbar{
 	width: 60vw;
-	height: 2vh;
+	height: 50%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;	
-	margin:1%;
+	margin:0.2% 1%;
 	justify-content: space-around;
-	padding:0.8vw;
+	padding:0 0.8vw;
 }
 
 .navbtn {
 	flex: 1;
 	font-family: figtree;
+	height: auto;
 	font-weight: 800;
 	font-size: 2.4em;
-	padding:0.8vw;
-	color: rgb(24, 187, 236);
+	padding:0 0.8vw;
+	color: hsl(194, 85%, 51%);
+}
+
+.navbtnactive {
+	background: linear-gradient(0deg,hsl(25, 95%, 45%), hsl(40, 83%, 55%));
+	color:black;
 }
 
 .navbtn:hover{
@@ -155,7 +188,7 @@ body {
 	background: hsla(220, 80%, 2%, 0.4);
 	backdrop-filter: blur(0.8rem);
 	width: 100%;
-	height: 8vh;
+	height: 5vh;
 	display: flex;
 	position: fixed;
 	bottom: 0;
@@ -182,36 +215,48 @@ body {
 
 h1 {
 	color: white;
-	font-family: figtree;
+	font-family: calsans;
+	display: block;
 	font-weight: 800;
 	font-size: 22pt;
-	text-align: center;
+	text-align: left;
 }
+
+h2 {
+	color: white;
+	font-family: calsans;
+	display: block;
+	font-weight: 800;
+	font-size: 22pt;
+	text-align: left;
+}
+
 
 h4 {
 	color: #6279b1;
-	font-family: CalSans;
+	font-family: calsans;
 	font-size: 3rem;
-	display: inline-block;
+	display: block;
 	margin: 1%;
 }
 
 h4:hover {
 	color: white;
-	font-family: CalSans;
+	font-family: calsans;
 	font-size: 3rem;
-	display: inline-block;
+	display: block;
 	margin: 1%;
 }
 
 p {
 	font-family: inter;
 	color: #bbc0c4;
-	font-size: 1rem;
-	font-weight: light;
-	line-height: 1.4;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 1.6;
 	text-align: left;
-	text-justify: auto;
+	margin:auto;
+	padding: 0.4rem 0.4rem;
 }
 
 .projtitle{
@@ -220,7 +265,9 @@ p {
 	font-weight: 800;
 	font-size: 6rem;
 	text-align: left;
-	margin: 12vh auto 1vh auto;
+	width: 100%;
+	margin: 0;
+
 }
 
 .indent {
@@ -271,8 +318,13 @@ ul li {
 }
 
 .content {
-	margin: 50px auto 0 auto;
-	width: 80%;
+	margin: 13vh auto 12vh auto;
+	width: 70vw;
+}
+
+.article {
+	margin: 13vh auto 12vh auto;
+	width: 60vw;
 }
 
 .vidbtn{
@@ -301,3 +353,63 @@ a:active {
 	text-decoration: none; 
 	color: inherit;
 }
+
+/* TAG CLOUD OWN TICKER ----------------- */
+
+.tagticker{
+	bottom:0;
+	margin: auto auto 1vh auto;
+}
+
+
+/* TAG CLOUD FROM FAKIR ----------------- */
+
+.cloud{
+	padding-top:30vh;
+	width: 30%;
+	display: flex;
+	margin: auto;
+	font-size: 12em;
+}
+
+nav.cloud ul {
+    /* Remove the bullet points of the list */
+    list-style: none;
+
+
+    /* make sure that all elements will be visible by wrapping into multiple lines */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* center the content */
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.cloud a {
+    /* add some padding between elements, otherwise no space between words */
+    padding-left: .25rem;
+    padding-right: .25rem;
+	text-decoration: none;
+}
+
+nav.cloud a[data-weight= "1"] { font-size: 0.9rem; }
+nav.cloud a[data-weight= "2"] { font-size: 1.0rem; }
+nav.cloud a[data-weight= "3"] { font-size: 1.2rem; }
+nav.cloud a[data-weight= "4"] { font-size: 1.4rem; }
+nav.cloud a[data-weight= "5"] { font-size: 1.6rem; }
+nav.cloud a[data-weight= "6"] { font-size: 1.8rem; }
+nav.cloud a[data-weight= "7"] { font-size: 2.0rem; }
+nav.cloud a[data-weight= "8"] { font-size: 2.2rem; }
+nav.cloud a[data-weight= "9"] { font-size: 2.4rem; }
+nav.cloud a /* >= 10 */       { font-size: 2.6rem; }
+
+
+nav.cloud li:nth-child( 1n+1) a {color:var(f06854)}
+nav.cloud li:nth-child( 2n+1) a {color:var(dfd700)}
+nav.cloud li:nth-child( 3n+1) a {color:var(0a81cf)}
+nav.cloud li:nth-child( 5n+1) a {color:var(2bd47d)}
+nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
+nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
+
