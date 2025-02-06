@@ -1,3 +1,7 @@
+/* max z-index is 7 - header/ footer 
+	GridOverflow uses 6 for hovers
+*/
+
 /* CURSORS go here */
 /* all refs prefixed with '--crs' */
 
@@ -128,7 +132,7 @@ body {
 	margin: auto auto auto 1%;
 	font-size:2rem;
 	text-align: start;
-	color:rgb(94, 105, 116);
+	color:hsl(210, 10%, 41%);
 	text-overflow: ellipsis;
 }
 
@@ -141,7 +145,7 @@ body {
 	text-decoration: none;
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 101;
 }
 
 .headerrows{
@@ -192,7 +196,15 @@ body {
 	display: flex;
 	position: fixed;
 	bottom: 0;
-	z-index: 1;
+	z-index: 101;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.footer:hover{
+	height:10vh;
+	transition-duration: 0.02s;
+	transition-timing-function: ease-out;
 }
 
 .progress-container {
@@ -212,6 +224,8 @@ body {
 }
 
 /* FOOTER END ------------------------------ */
+
+/* HEADINGS AND PARAGRAPH TAGS ------------- */
 
 h1 {
 	color: white;
@@ -249,14 +263,16 @@ h4:hover {
 }
 
 p {
-	font-family: inter;
+	font-family: figtree;
 	color: #bbc0c4;
 	font-size: 1.2rem;
 	font-weight: 400;
-	line-height: 1.6;
+	line-height: 1.8;
 	text-align: left;
-	margin:auto;
-	padding: 0.4rem 0.4rem;
+	margin: auto;
+	padding: 0.4rem 0rem;
+	height: auto;
+	width: auto;
 }
 
 .projtitle{
@@ -357,8 +373,13 @@ a:active {
 /* TAG CLOUD OWN TICKER ----------------- */
 
 .tagticker{
+	border-radius: 4px;
+	border-color: #9bc5e6;
+	background-color: hsla(204, 100%, 11%, 0.395);
+	color: aqua;
+	padding:0em 1em;
 	bottom:0;
-	margin: auto auto 1vh auto;
+	margin: 2rem auto 1vh auto;
 }
 
 
@@ -412,4 +433,3 @@ nav.cloud li:nth-child( 3n+1) a {color:var(0a81cf)}
 nav.cloud li:nth-child( 5n+1) a {color:var(2bd47d)}
 nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
 nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
-

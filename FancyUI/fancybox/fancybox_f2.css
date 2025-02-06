@@ -1,8 +1,15 @@
+/* Fancybox is part of FancyUI:
+
+https://fancyapps.com/
+https://github.com/fancyapps/ui
+
+This version of the file has been edited for this website's purposes, use the link above to get the original code! */
+
 :root {
 	--f-spinner-width: 36px;
 	--f-spinner-height: 36px;
-	--f-spinner-color-1: rgba(0, 0, 0, 0.1);
-	--f-spinner-color-2: rgba(17, 24, 28, 0.8);
+	--f-spinner-color-1: hsla(0, 0%, 0%, 0.1);
+	--f-spinner-color-2: hsla(202, 24%, 9%, 0.8);
 	--f-spinner-stroke: 2.75
 }
 
@@ -493,7 +500,7 @@ html.with-fancybox body.hide-scrollbar {
 	--fancybox-slide-gap: 10px;
 	--f-spinner-width: 50px;
 	--f-spinner-height: 50px;
-	--f-spinner-color-1: rgba(255, 255, 255, 0.1);
+	--f-spinner-color-1: hsla(0, 0%, 100%, 0.1);
 	--f-spinner-color-2: #bbb;
 	--f-spinner-stroke: 3.65;
 	position: fixed;
@@ -508,7 +515,7 @@ html.with-fancybox body.hide-scrollbar {
 	margin: 0;
 	padding: 0;
 	color: #f8f8f8;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
 	overflow: visible;
 	z-index: var(--fancybox-zIndex, 1050);
 	outline: none;
@@ -527,7 +534,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .fancybox__container::backdrop {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: hsla(0, 0%, 0%, 0);
 }
 
 .fancybox__backdrop {
@@ -668,7 +675,7 @@ html.with-fancybox body.hide-scrollbar {
 
 .fancybox__slide.has-image>.fancybox__content {
 	padding: 0;
-	background: rgba(0, 0, 0, 0);
+	background: hsla(0, 0%, 0%, 0);
 	min-height: 1px;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -782,7 +789,7 @@ html.with-fancybox body.hide-scrollbar {
 	left: 0;
 	right: 0;
 	z-index: 20;
-	background: rgba(24, 24, 27, .5)
+	background: hsla(240, 6%, 10%, 0.5)
 }
 
 .is-compact .fancybox__footer .fancybox__caption {
@@ -794,9 +801,9 @@ html.with-fancybox body.hide-scrollbar {
 	--f-button-color: #fff;
 	--f-button-hover-color: #fff;
 	--f-button-outline-color: #000;
-	--f-button-bg: rgba(0, 0, 0, 0.6);
-	--f-button-active-bg: rgba(0, 0, 0, 0.6);
-	--f-button-hover-bg: rgba(0, 0, 0, 0.6);
+	--f-button-bg: hsla(0, 0%, 0%, 0.6);
+	--f-button-active-bg: hsla(0, 0%, 0%, 0.6);
+	--f-button-hover-bg: hsla(0, 0%, 0%, 0.6);
 	--f-button-svg-width: 18px;
 	--f-button-svg-height: 18px;
 	--f-button-svg-filter: none;
@@ -812,8 +819,8 @@ html.with-fancybox body.hide-scrollbar {
 	--f-button-color: var(--fancybox-color);
 	--f-button-hover-color: var(--fancybox-hover-color);
 	--f-button-bg: transparent;
-	--f-button-hover-bg: rgba(24, 24, 27, 0.3);
-	--f-button-active-bg: rgba(24, 24, 27, 0.5);
+	--f-button-hover-bg: hsla(240, 6%, 10%, 0.3);
+	--f-button-active-bg: hsla(240, 6%, 10%, 0.5);
 	--f-button-shadow: none;
 	--f-button-transition: all 0.15s ease;
 	--f-button-transform: none;
@@ -821,7 +828,7 @@ html.with-fancybox body.hide-scrollbar {
 	--f-button-svg-height: 26px;
 	--f-button-svg-stroke-width: 2.5;
 	--f-button-svg-fill: none;
-	--f-button-svg-filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.5));
+	--f-button-svg-filter: drop-shadow(1px 1px 1px hsla(240, 6%, 10%, 0.5));
 	--f-button-svg-disabled-opacity: 0.65;
 	--f-button-next-pos: 1rem;
 	--f-button-prev-pos: 1rem;
@@ -951,7 +958,7 @@ html.with-fancybox body.hide-scrollbar {
 .has-vimeo .fancybox__content,
 .has-html5video .fancybox__content {
 	padding: 0;
-	background: rgba(24, 24, 27, .9);
+	background: hsla(240, 6%, 10%, 0.9);
 	color: #fff
 }
 
@@ -965,7 +972,7 @@ html.with-fancybox body.hide-scrollbar {
 	display: block;
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0)
+	background: hsla(0, 0%, 0%, 0)
 }
 
 .fancybox-placeholder {
@@ -1014,7 +1021,7 @@ html.with-fancybox body.hide-scrollbar {
 	flex: 0 0 auto;
 	margin: 0;
 	overflow: hidden;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
 	user-select: none;
 	perspective: 1000px;
 	transform: translateZ(0)
@@ -1116,7 +1123,7 @@ html.with-fancybox body.hide-scrollbar {
 	position: relative;
 	border-radius: var(--f-thumb-border-radius);
 	overflow: hidden;
-	background: rgba(0, 0, 0, 0);
+	background: hsla(0, 0%, 0%, 0);
 	outline: none;
 	cursor: pointer;
 	pointer-events: auto;
@@ -1213,7 +1220,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .fancybox__thumbs.is-classic .f-spinner {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))
+	background-image: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.05))
 }
 
 .fancybox__thumbs.is-modern {
@@ -1225,7 +1232,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .fancybox__thumbs.is-modern .f-spinner {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))
+	background-image: linear-gradient(hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.05))
 }
 
 .fancybox__thumbs.is-horizontal {
@@ -1252,19 +1259,19 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .fancybox__toolbar {
-	--f-progress-color: var(--fancybox-color, rgba(255, 255, 255, 0.94));
+	--f-progress-color: var(--fancybox-color, hsla(0, 0%, 100%, 0.94));
 	--f-button-width: 46px;
 	--f-button-height: 46px;
 	--f-button-color: var(--fancybox-color);
 	--f-button-hover-color: var(--fancybox-hover-color);
-	--f-button-bg: rgba(24, 24, 27, 0.65);
-	--f-button-hover-bg: rgba(70, 70, 73, 0.65);
-	--f-button-active-bg: rgba(90, 90, 93, 0.65);
+	--f-button-bg: hsla(240, 6%, 10%, 0.65);
+	--f-button-hover-bg: hsla(240, 2%, 28%, 0.65);
+	--f-button-active-bg: hsla(240, 2%, 36%, 0.65);
 	--f-button-border-radius: 0;
 	--f-button-svg-width: 24px;
 	--f-button-svg-height: 24px;
 	--f-button-svg-stroke-width: 1.5;
-	--f-button-svg-filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.15));
+	--f-button-svg-filter: drop-shadow(1px 1px 1px hsla(240, 6%, 10%, 0.15));
 	--f-button-svg-fill: none;
 	--f-button-svg-disabled-opacity: 0.65;
 	display: flex;
@@ -1275,7 +1282,7 @@ html.with-fancybox body.hide-scrollbar {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
 	color: var(--fancybox-color, currentColor);
 	opacity: var(--fancybox-opacity, 1);
-	text-shadow: var(--fancybox-toolbar-text-shadow, 1px 1px 1px rgba(0, 0, 0, 0.5));
+	text-shadow: var(--fancybox-toolbar-text-shadow, 1px 1px 1px hsla(0, 0%, 0%, 0.5));
 	pointer-events: none;
 	z-index: 20
 }
