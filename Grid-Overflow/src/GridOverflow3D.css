@@ -11,6 +11,7 @@ This version of the file has been edited for this website's purposes, use the li
   --itemAspectRatio: 1;
   --gridGap: 0.6rem;
   --linkActionIcon: "⛶";
+  --linkActionIconPlay: "▶";
   --itemRounding: 0px;
   --masonryItemHeight: 30vh;
   margin: auto;
@@ -143,6 +144,10 @@ This version of the file has been edited for this website's purposes, use the li
   font-family: sans-serif;
   opacity: 0.2;
   text-shadow: 0 0 3px #000000, 0 0 1px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 6px #000000, 0 0 16px #000000;
+}
+
+.go-actionIconPlay > a.go_gridItem::after{
+  content: var(--linkActionIconPlay);
 }
 
 .go-actionIcon > a.go_gridItem:hover:after {

@@ -6,7 +6,7 @@
 /* all refs prefixed with '--crs' */
 
 :root {
-	--crs-expand: 	url('res-svg/expand_lite.svg') 8 8, auto;
+	--crs-expand: 	url('res-svg/expand_lite.svg') 16 16, auto;
 	--crs-zoomin: 	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-fscreen:	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-zoomout: 	url('./res-svg/expand_lite.svg') 8 8, auto;
@@ -18,9 +18,11 @@
 	--crs-arrleft:	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-arrright: url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-interest: url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-play: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-play: 	url('res-svg/play.svg') 8 8, auto;
 	--crs-gotop: 	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-grab: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--bkggradient: 	linear-gradient(-30deg, black, hsl(220, 30%, 10%), hsl(219, 87%, 6%), black);
+	--bkgnoise: 	url(res-svg/nnnoise.svg);
 }
 
 /* CURSOR CLASSES */
@@ -28,6 +30,10 @@
 
 .crs-expand{
 	cursor: var(--crs-expand);
+}
+
+.crs-play{
+	cursor: var(--crs-play);
 }
 
 /* CURSORS end ----------- */
@@ -87,12 +93,8 @@ body {
 	font-family: figtree;
 }
 
-.bkg{
-	/* background-image: url(noise.png), linear-gradient(#10141d,black); 
-	background-attachment: fixed;	
-	background-repeat: repeat, no-repeat; */
-	
-	background-image: url(res-img/noise.png), linear-gradient(-30deg, black, hsl(220, 30%, 10%), black);
+.bkgx{
+	background: var(--bkggradient);
 	background-size: 400% 900%;
 	animation: gradient 8s ease infinite;
     background-attachment: fixed;	
@@ -100,6 +102,41 @@ body {
 	z-index: -1;
 	margin: 0;
 	padding: 0;
+}
+
+.bkgaddy{
+	background-image: var(--bkgnoise);
+	background-size: 10% 10%;
+	mix-blend-mode: multiply;
+	background-repeat: repeat;
+	animation: none;
+	z-index: -5;
+	margin: 0;
+	padding: 0;
+}
+
+
+.bkg {
+    background-image: 
+        var(--bkgnoise), /* Static noise */
+        var(--bkggradient); /* Moving gradient */
+    
+    background-size: 
+        100% 150%, /* Noise stays fixed */
+        400% 900%; /* Gradient moves */
+    
+    background-repeat: space, no-repeat;
+    
+    background-blend-mode: overlay; /* Blend noise with gradient */
+    
+    /* Make the noise stay fixed, but let the gradient animate */
+    background-attachment: unset, local; 
+    
+    animation: gradient 8s ease infinite;
+    
+    z-index: -1;
+    margin: 0;
+    padding: 0;
 }
 
 	@keyframes gradient {
@@ -130,10 +167,24 @@ body {
 .toptag{
 	padding:0 3vw;
 	margin: auto auto auto 1%;
+	font-family: figtree;
+	font-weight:600;
 	font-size:2rem;
 	text-align: start;
 	color:hsl(210, 10%, 41%);
+
 	text-overflow: ellipsis;
+}
+
+
+
+.toptag:after {
+	color:hsl(40, 83%, 55%);
+}
+
+.toptag:hover:after {
+	color:hsl(40, 83%, 55%);
+	content: " Let's do business!";
 }
 
 .header{
@@ -184,6 +235,7 @@ body {
 .navbtn:hover{
 	background: linear-gradient(0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
 	color:black;
+	transition-duration: 0.6s;
 }
 
 /* FOOTER BEGIN, progress bar works as divider */
@@ -373,15 +425,25 @@ a:active {
 /* TAG CLOUD OWN TICKER ----------------- */
 
 .tagticker{
-	border-radius: 4px;
-	border-color: #9bc5e6;
 	background-color: hsla(204, 100%, 11%, 0.395);
-	color: aqua;
-	padding:0em 1em;
+	padding:0em 0em;
 	bottom:0;
-	margin: 2rem auto 1vh auto;
+	margin: 1rem auto 1rem auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
 }
 
+.hashtag{
+	color: hsl(194, 85%, 51%);
+	padding: 0.6em;
+	height: auto;
+	font-size: 1.1rem;
+}
+
+.hashtag:hover{
+	color: white;
+}
 
 /* TAG CLOUD FROM FAKIR ----------------- */
 
@@ -433,3 +495,5 @@ nav.cloud li:nth-child( 3n+1) a {color:var(0a81cf)}
 nav.cloud li:nth-child( 5n+1) a {color:var(2bd47d)}
 nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
 nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
+
+
