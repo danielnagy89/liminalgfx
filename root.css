@@ -1,4 +1,4 @@
-/* max z-index is 7 - header/ footer 
+/* max z-index is 101 - header/ footer 
 	GridOverflow uses 6 for hovers
 */
 
@@ -21,8 +21,20 @@
 	--crs-play: 	url('res-svg/play.svg') 8 8, auto;
 	--crs-gotop: 	url('./res-svg/expand_lite.svg') 8 8, auto;
 	--crs-grab: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--bkggradient: 	linear-gradient(-30deg, black, hsl(220, 30%, 10%), hsl(219, 87%, 6%), black);
+	--bkggradient: 	linear-gradient(in srgb 135deg, black, hsl(209, 46%, 14%), hsl(219, 87%, 6%), black);
 	--bkgnoise: 	url(res-svg/nnnoise.svg);
+	
+	/* COLORS go here, --col-[prefix]-[0 for dark, 1 for light] */
+
+	--col-or0:		hsl(25, 95%, 45%); /* orange dark */
+	--col-or1:		hsl(40, 85%, 65%); /* orange lite */
+	--col-bl0:		hsl(200, 70%, 45%); /* blue dark */
+	--col-bl1:		hsl(165, 90%, 50%); /* blue lite */
+}
+
+#root {
+	height: 100vh;
+	overflow: auto;
 }
 
 /* CURSOR CLASSES */
@@ -91,6 +103,7 @@ html {
 body {
 	margin: 0;
 	font-family: figtree;
+	overflow-y: scroll;
 }
 
 .bkgx{
@@ -115,14 +128,13 @@ body {
 	padding: 0;
 }
 
-
 .bkg {
     background-image: 
         var(--bkgnoise), /* Static noise */
         var(--bkggradient); /* Moving gradient */
     
     background-size: 
-        100% 150%, /* Noise stays fixed */
+        100% 180%, /* Noise stays fixed */
         400% 900%; /* Gradient moves */
     
     background-repeat: space, no-repeat;
@@ -172,7 +184,6 @@ body {
 	font-size:2rem;
 	text-align: start;
 	color:hsl(210, 10%, 41%);
-
 	text-overflow: ellipsis;
 }
 
@@ -225,17 +236,26 @@ body {
 	font-size: 2.4em;
 	padding:0 0.8vw;
 	color: hsl(194, 85%, 51%);
+	background: linear-gradient(in srgb 0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
 }
 
 .navbtnactive {
-	background: linear-gradient(0deg,hsl(25, 95%, 45%), hsl(40, 83%, 55%));
+	background: linear-gradient(in srgb 0deg,hsl(25, 95%, 45%), hsl(40, 83%, 55%));
+	-webkit-text-fill-color: black;
 	color:black;
 }
 
 .navbtn:hover{
-	background: linear-gradient(0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
+	background: linear-gradient(in srgb 135deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
 	color:black;
+	-webkit-text-fill-color: black;
 	transition-duration: 0.6s;
+	transition-timing-function: ease-out;
 }
 
 /* FOOTER BEGIN, progress bar works as divider */
@@ -269,10 +289,69 @@ body {
 .progress-bar {
 	height: 4px;
 	/*background: #d7dddf;*/
-	background: linear-gradient(90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
+	background: linear-gradient(in srgb 90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
 	opacity: 0.8;
 	width: 0%;
 	z-index: 2;
+}
+
+.cta{
+	font-size: 1.6rem;
+	font-family: figtree;
+	font-weight: 600;
+	text-align: center;
+	align-items: center;
+	color: var(--col-or1);
+	background-image: repeating-linear-gradient(in srgb 60deg,var(--col-or0), var(--col-or1),var(--col-or0));
+	background-clip: text;
+	animation: ctascroll 6s ease infinite;
+	transition-duration: 0.3s;	
+	transition-timing-function: ease-out;
+	-webkit-text-fill-color: transparent;
+
+}
+
+@keyframes ctascroll {
+	0% {
+		background-position: 0;
+	}
+	50% {
+		background-position: 30vw;
+	}
+	100% {
+		background-position: 0;
+	}
+}
+
+.footer:hover .cta{
+	background: repeating-linear-gradient(in srgb 90deg, var(--col-bl0), var(--col-bl1), var(--col-bl0));
+	color:black;
+	transition-duration: 0.1s;	
+	transition-timing-function: ease-out;
+	-webkit-text-fill-color: black;
+}
+
+.bktopbtn{
+	background: linear-gradient(in srgb 180deg, rgba(255, 255, 255, 0.409), hsla(0, 0%, 0%, 0));
+	opacity: 0.3;
+	padding: 0.4rem 0.1rem;
+	border-radius: 0.2rem;
+	height: 2.4rem;
+	width: 2.4rem;
+	position: sticky;
+	bottom: 12.4vh;
+	left:96.4vw;
+	z-index: 102;
+	text-align: center;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.bktopbtn:hover{
+	opacity: 1;
+	height: 6rem;
+	transition-duration: 0.02s;
+	transition-timing-function: ease-out;
 }
 
 /* FOOTER END ------------------------------ */
@@ -290,17 +369,17 @@ h1 {
 
 h2 {
 	color: white;
-	font-family: calsans;
+	font-family: figtree;
 	display: block;
-	font-weight: 800;
-	font-size: 22pt;
+	font-weight: 600;
+	font-size: 1.8rem;
 	text-align: left;
 }
 
 
 h4 {
 	color: #6279b1;
-	font-family: calsans;
+	font-family: figtree;
 	font-size: 3rem;
 	display: block;
 	margin: 1%;
@@ -329,12 +408,13 @@ p {
 
 .projtitle{
 	color: white;
+	background-color: hsla(0, 0%, 0%, 0.5);
 	font-family: figtree;
 	font-weight: 800;
-	font-size: 6rem;
+	font-size: 4rem;
 	text-align: left;
 	width: 100%;
-	margin: 0;
+	margin: 0 auto 0.4rem auto;
 
 }
 
@@ -387,7 +467,7 @@ ul li {
 
 .content {
 	margin: 13vh auto 12vh auto;
-	width: 70vw;
+	width: 74vw;
 }
 
 .article {
@@ -497,3 +577,25 @@ nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
 nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
 
 
+details {
+	border-radius: 4px;
+	padding: 0.5em 0.5em 0;
+  }
+  
+  summary {
+	color: white;
+	font-family: figtree;
+	font-weight: 600;
+	font-size: 1.8rem;
+	text-align: left;
+	margin: -0.5em -0.5em 0;
+	padding: 0.5em;
+  }
+  
+  details[open] {
+	padding: 0.5em;
+  }
+  
+  details[open] summary {
+	margin-bottom: 0.5em;
+  }
