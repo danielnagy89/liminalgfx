@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
 <head>
-<title>LiminalGFX.com</title>
+<title>LiminalGFX - Art of Daniel Nagy</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
-<link rel="stylesheet" href="../root.css">
-<link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
-<link rel="preload" href="/res-fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/res-fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/res-fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
-<script src="../FancyUI/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="root.css">
+<link rel="stylesheet" href="FancyUI/fancybox/fancybox_f2.css"/>
+<link rel="stylesheet" href="Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="preload" href="fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+<script src="FancyUI/fancybox/fancybox.umd.js"></script>
 <meta 
 	name="viewport" 
 	charset="utf-8" 
@@ -22,58 +22,55 @@
 	<header>
 		<div class="header">
 
-				<a href="../index.html">
+				<a href="index.html">
 					<div class="logo">
-					<img src="../res-svg/lgfx.svg" alt="LiminalGFX Home">
+					<img src="graphics/lgfx.svg" alt="LiminalGFX Home">
 					</div>
 				</a>
 			<div class="headerrows">
-				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, a 3D Art Generalist working in the games industry for the past 15 years.</a></h1>
+				<h1 class="toptag"><a href="about.html">Hi! I'm Daniel, a 3D Art Generalist working in the games industry for the past 15 years.</a></h1>
 				<div class="navbar">
-				<a href="../404.html">					<div class="navbtn">ABOUT			</div></a>
-				<a href="../units/project.template.html">					<div class="navbtn">PROCESS			</div></a>
-				<a href="../units/article.template.html">	<div class="navbtn ">ARTICLES		</div></a>
-				<a href="../404.html">					<div class="navbtn">RESUME			</div></a>
-				<a href="../tags.html">					<div class="navbtn">tags	</div></a>
+				<a href="about.html">					<div class="navbtn">ABOUT			</div></a>
+				<a href="projects/template-project.html">					<div class="navbtn">PROCESS			</div></a>
+				<a href="articles/template-article.html">	<div class="navbtn ">ARTICLES		</div></a>
+				<a href="404.html">					<div class="navbtn">RESUME			</div></a>
+				<a href="tags.html">					<div class="navbtn">tags	</div></a>
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<div class="content" style="width:97.4vw">
-		<div class="gridOverflow go_fp">
-	<!-- GridOverflow BEGIN -->
-	
-	<!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
-	<a class="go_gridItem go_gridItem-VIP" 
-		href="units/proj-darkmoth.html"
+		<div class="gridOverflow go_fp aspect">	<!-- GridOverflow BEGIN -->
+
+		<a class="go_gridItem go_gridItem-VIP loadfx c01" 
+		href="projects/darkmoth.html"
 		data-caption="Drop it! Cowboy pose, inspired by Robocop 3's poster">
 		<img 
-		src="units/bin.frontpage/daniel-nagy-liminalgfx-fly-dutch-c-1920.webp"
+		src="projects/bin.frontpage/daniel-nagy-liminalgfx-fly-dutch-c-1920.webp"
 		style="height: 100%;"
 		alt="Dark Moth">
 		<span class="go_caption go_caption-full">Dark Moth</span>
-	</a>
+		</a>
 
-	<!-- go_gridItem-vertigo class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
-	<a class="go_gridItem go_gridItem-vertigo" 
-			href="units/proj-robocop.html">
+	<a class="go_gridItem go_gridItem-vertigo loadfx c02" 
+			href="projects/robocop.html">
 			<img 
-			src="units/bin.robocop/Marvel-thumb.webp"
+			src="projects/bin.robocop/Marvel-thumb.webp"
 			alt="Marvel">
 	</a>
 
-	<a class="go_gridItem go_gridItem-panorama" 
-	href="units/proj-poppy.html">			
+	<a class="go_gridItem go_gridItem-panorama loadfx c03" 
+	href="projects/poppy.html">			
 	<img 
-	src="units/bin.frontpage/daniel-nagy-liminalgfx-daniel-nagy-liminalgfx-poppy-plate-final-image0200-3qv-f-r-1.webp"
+	src="projects/bin.frontpage/daniel-nagy-liminalgfx-daniel-nagy-liminalgfx-poppy-plate-final-image0200-3qv-f-r-1.webp"
 	alt="Poppy">
 	</a>
 
-	<a class="go_gridItem go_gridItem-vertigo" 
-	href="units/proj-atrophytwin.html">
+	<a class="go_gridItem go_gridItem-vertigo loadfx c04" 
+	href="projects/atrophytwin.html">
 		<img 
-		src="units/bin.frontpage/daniel-nagy-daniel-nagy-01-splay-03.webp"
+		src="projects/bin.frontpage/daniel-nagy-daniel-nagy-01-splay-03.webp"
 		alt="Atrophytwin">
 		<!-- go_caption class is for creating captions inside grid items -->
 		<!-- go_caption-full creates caption with 100% width of the grid item -->
@@ -81,43 +78,37 @@
 	</a>
 
 	
-	<a class="go_gridItem" 
-		href="units/bin.frontpage/gears.webp">
+	<a class="go_gridItem loadfx c05" 
+		href="projects/gears.html">
 			<img 
-			src="units/bin.frontpage/gears.webp"
+			src="projects/bin.frontpage/gears.webp"
 			alt="Autobot Gears">
-			<!-- go_caption class is for creating captions inside grid items -->
-			<!-- go_caption-full creates caption with 100% width of the grid item -->
 			<span class="go_caption go_caption-full">Autobot Gears</span>
 	</a>
 	
-	<a class="go_gridItem" 
-			href="units/bin.frontpage/daniel-nagy-liminalgfx-shot-04-handgrip.webp">
+	<a class="go_gridItem loadfx c06" 
+			href="projects/inquisitors-edge.html">
 			<img 
-			src="units/bin.frontpage/daniel-nagy-liminalgfx-shot-04-handgrip.webp"
+			src="projects/bin.frontpage/daniel-nagy-liminalgfx-shot-04-handgrip.webp"
 			alt="Inquisitor's Edge">
+			<span class="go_caption go_caption-full">Inquisitor's Edge</span>
 	</a>
 
-	<!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
-	<a class="go_gridItem go_gridItem-panorama" 
-			href="units/bin.frontpage/artliminalgfx-daniel-nagy-cam-aerial.webp">			
+	<a class="go_gridItem go_gridItem-panorama loadfx c07" 
+			href="projects/atom-turbo-jet.html">			
 			<img 
-			src="units/bin.frontpage/artliminalgfx-daniel-nagy-cam-aerial.webp"
+			src="projects/bin.frontpage/artliminalgfx-daniel-nagy-cam-aerial.webp"
 			alt="Atom Turbo Jet">
+			<span class="go_caption">Atom Turbo Jet</span>
 	</a>
 
-	<a class="go_gridItem" 
-	href="units/bin.frontpage/daniel-nagy-stack3.webp">
+	<a class="go_gridItem loadfx c08" 
+	href="projects/abominations.html">
 		<img 
-		src="units/bin.frontpage/daniel-nagy-stack3.webp"
+		src="projects/bin.frontpage/daniel-nagy-stack3.webp"
 		alt="Abominations">
-		<!-- go_caption class is for creating captions inside grid items -->
-		<!-- go_caption-full creates caption with 100% width of the grid item -->
 		<span class="go_caption go_caption-full">Abominations</span>
-</a>
-
-	<!-- go_gridItem-vertigo class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
-
+	</a>
 
 		</div> <!-- Grid Overflow END -->
 </div>
@@ -132,8 +123,9 @@
 
 -->
 
+
 <!-- FOOTER -->
-<a href="#"><div class="bktopbtn"><img src="../res-svg/arrow-top.svg" width="26px"></div></a>
+<a href="#"><div class="bktopbtn"><img src="../graphics/arrow-top.svg" width="26px"></div></a>
 
 <footer>
 	<div class="footer">

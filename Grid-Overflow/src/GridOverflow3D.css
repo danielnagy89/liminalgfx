@@ -60,15 +60,15 @@ This version of the file has been edited for this website's purposes, use the li
 }
 
 .go_caption {
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background: linear-gradient(in srgb 90deg, hsla(240, 40%, 10%, 0.5), hsla(0, 0%, 0%, 0.5));
   top: auto;
   left: auto;
   bottom: 0;
   right: 0;
   height: auto;
   font-family: figtree;
-  font-weight: 500;
-  font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 2rem;
   color: white;
   box-sizing: border-box;
   line-height: 1.33em;
@@ -173,3 +173,40 @@ This version of the file has been edited for this website's purposes, use the li
 .go-actionIcon > .go_gridItem:hover:after {
   transition: all 0.02s ease;
 }
+
+/* Grid animation ------------------------- */
+
+/* Load Effect 2: Move Up */
+.loadfx {
+	transform: translateY(1rem);
+	animation: moveUp 0.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes moveUp {
+	0% { }
+	100% { transform: translateY(0); opacity: 1; }
+}
+
+.loadfx.c01 { animation-delay: .0s }
+.loadfx.c02 { animation-delay: .05s }
+.loadfx.c03 { animation-delay: .1s }
+.loadfx.c04 { animation-delay: .15s }
+.loadfx.c05 { animation-delay: .2s }
+.loadfx.c06 { animation-delay: .25s }
+.loadfx.c07 { animation-delay: .3s }
+.loadfx.c08 { animation-delay: .35s }
+.loadfx.c09 { animation-delay: .4s }
+.loadfx.c10 { animation-delay: .45s }
+.loadfx.c11 { animation-delay: .5s }
+.loadfx.c12 { animation-delay: .55s }
+.loadfx.c13 { animation-delay: .6s }
+.loadfx.c14 { animation-delay: .65s }
+.loadfx.c15 { animation-delay: .7s }
+.loadfx.c16 { animation-delay: .75s }
+.loadfx.c17 { animation-delay: .8s }
+.loadfx.c18 { animation-delay: .85s }
+.loadfx.c19 { animation-delay: .9s }
+.loadfx.c20 { animation-delay: .95s }
+
+/* Effect 4: fall perspective */

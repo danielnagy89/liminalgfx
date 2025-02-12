@@ -6,23 +6,23 @@
 /* all refs prefixed with '--crs' */
 
 :root {
-	--crs-expand: 	url('res-svg/expand_lite.svg') 16 16, auto;
-	--crs-zoomin: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-fscreen:	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-zoomout: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-arrow: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-maximize: url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-minimize: url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-gallery: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-arrup: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-arrleft:	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-arrright: url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-interest: url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-play: 	url('res-svg/play.svg') 8 8, auto;
-	--crs-gotop: 	url('./res-svg/expand_lite.svg') 8 8, auto;
-	--crs-grab: 	url('./res-svg/expand_lite.svg') 8 8, auto;
+	--crs-expand: 	url('graphics/expand_lite.svg') 16 16, auto;
+	--crs-zoomin: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-fscreen:	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-zoomout: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-arrow: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-maximize: url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-minimize: url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-gallery: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-arrup: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-arrleft:	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-arrright: url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-interest: url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-play: 	url('graphics/play.svg') 8 8, auto;
+	--crs-gotop: 	url('./graphics/expand_lite.svg') 8 8, auto;
+	--crs-grab: 	url('./graphics/expand_lite.svg') 8 8, auto;
 	--bkggradient: 	linear-gradient(in srgb 135deg, black, hsl(209, 46%, 14%), hsl(219, 87%, 6%), black);
-	--bkgnoise: 	url(res-svg/nnnoise.svg);
+	--bkgnoise: 	url(graphics/nnnoise.svg);
 	
 	/* COLORS go here, --col-[prefix]-[0 for dark, 1 for light] */
 
@@ -58,7 +58,7 @@
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url(res-fonts/InterVariable.woff2) format("woff2");
+	src: url(fonts/InterVariable.woff2) format("woff2");
 }
 
 @font-face {
@@ -66,7 +66,7 @@
 	font-style: italic;
 	font-weight: 100 900;
 	font-display: swap;
-	src: url(res-fonts/InterVariable.woff2) format("woff2");
+	src: url(fonts/InterVariable.woff2) format("woff2");
 }
 
 
@@ -75,7 +75,7 @@
 	font-style: normal;
 	font-weight: 300 900;
 	font-display: swap;
-	src: url(res-fonts/Figtree[wght].woff2) format("woff2");
+	src: url(fonts/Figtree[wght].woff2) format("woff2");
 
 }
 
@@ -84,14 +84,14 @@
 	font-style: italic;
 	font-weight: 300 900;
 	font-display: swap;
-	src: url(res-fonts/Figtree-Italic[wght].woff2) format("woff2");
+	src: url(fonts/Figtree-Italic[wght].woff2) format("woff2");
 }
 
 @font-face {
 	font-family: "calsans";
 	font-style: normal;
 	font-display: swap;
-	src: url(res-fonts/CalSans-SemiBold.woff2) format("woff2");
+	src: url(fonts/CalSans-SemiBold.woff2) format("woff2");
 }
 
 /* FONTS END ---------------------------------------------- */
@@ -172,18 +172,20 @@ body {
 	margin:1%;
 	justify-content: space-around;
 	padding:0.8vw;
-	width:200px;
+	width: 200px;
 	height:auto;
 }
 
 .toptag{
+	display: block;
 	padding:0 3vw;
 	margin: auto auto auto 1%;
 	font-family: figtree;
 	font-weight:600;
-	font-size:2rem;
+	font-size: 2em;
 	text-align: start;
 	color:hsl(210, 10%, 41%);
+	overflow-y: hidden;
 	text-overflow: ellipsis;
 }
 
@@ -238,7 +240,7 @@ body {
 	color: hsl(194, 85%, 51%);
 	background: linear-gradient(in srgb 0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
 	background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: transparent;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
@@ -246,7 +248,6 @@ body {
 
 .navbtnactive {
 	background: linear-gradient(in srgb 0deg,hsl(25, 95%, 45%), hsl(40, 83%, 55%));
-	-webkit-text-fill-color: black;
 	color:black;
 }
 
@@ -332,8 +333,9 @@ body {
 }
 
 .bktopbtn{
-	background: linear-gradient(in srgb 180deg, rgba(255, 255, 255, 0.409), hsla(0, 0%, 0%, 0));
-	opacity: 0.3;
+	background: linear-gradient(in srgb 180deg, hsla(240, 20%, 20%, 1), hsla(0, 0%, 0%, 0));
+	backdrop-filter: blur(2px);
+	opacity: 0.5;
 	padding: 0.4rem 0.1rem;
 	border-radius: 0.2rem;
 	height: 2.4rem;
@@ -341,6 +343,7 @@ body {
 	position: sticky;
 	bottom: 12.4vh;
 	left:96.4vw;
+	margin:auto;
 	z-index: 102;
 	text-align: center;
 	transition-duration: 0.3s;
@@ -411,10 +414,10 @@ p {
 	background-color: hsla(0, 0%, 0%, 0.5);
 	font-family: figtree;
 	font-weight: 800;
-	font-size: 4rem;
+	font-size: 6rem;
 	text-align: left;
 	width: 100%;
-	margin: 0 auto 0.4rem auto;
+	margin: 0.4rem auto 0.4rem auto;
 
 }
 
@@ -502,7 +505,7 @@ a:active {
 	color: inherit;
 }
 
-/* TAG CLOUD OWN TICKER ----------------- */
+/* TAG CLOUD OWN TICKER START ----------------- */
 
 .tagticker{
 	background-color: hsla(204, 100%, 11%, 0.395);
@@ -525,7 +528,9 @@ a:active {
 	color: white;
 }
 
-/* TAG CLOUD FROM FAKIR ----------------- */
+/* TAG CLOUD OWN TICKER END ------------------- */
+
+/* TAG CLOUD FROM FAKIR START ----------------- */
 
 .cloud{
 	padding-top:30vh;
@@ -576,6 +581,9 @@ nav.cloud li:nth-child( 5n+1) a {color:var(2bd47d)}
 nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
 nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
 
+/* TAG CLOUD FROM FAKIR END ------------------- */
+
+/* Toggle START ------------------------------- */
 
 details {
 	border-radius: 4px;
@@ -599,3 +607,13 @@ details {
   details[open] summary {
 	margin-bottom: 0.5em;
   }
+
+/* Toggle END -------- */
+
+/* Horizontal Rule <hr> */
+
+hr {
+	display: block;
+	margin: 0.5rem auto;
+	border: 0.12rem solid hsla(194, 30%, 80%, 0.3);
+}
