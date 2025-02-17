@@ -134,7 +134,7 @@ body {
         var(--bkggradient); /* Moving gradient */
     
     background-size: 
-        100% 180%, /* Noise stays fixed */
+        100% 300%, /* Noise stays fixed */
         400% 900%; /* Gradient moves */
     
     background-repeat: space, no-repeat;
