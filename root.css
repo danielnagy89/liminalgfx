@@ -436,7 +436,9 @@ p {
 	margin-left: 12px;
 }
 
-ul {
+ul.a {
+	font-family: inter;
+	color: #d5dbde;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -444,19 +446,17 @@ ul {
 
 li::before {
 	content: "❖"; /* Insert content that looks like bullets */
-	padding-right: 8px;
+	padding-right: 0.2rem;
 	color: #d5dbde; /* Or a color you prefer */
 }
 
-ul li {
+li {
 	padding: 4px;
 	font-family: inter;
 	color: #d5dbde;
-	font-size: 13pt;
+	font-size: 1rem;
 	font-weight: light;
 	line-height: 1.4;
-	text-align: justify;
-	text-justify: auto;
 }
 
 .dotbreak{
@@ -586,27 +586,34 @@ nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
 /* Toggle START ------------------------------- */
 
 details {
-	border-radius: 4px;
-	padding: 0.5em 0.5em 0;
+	padding: 0.5em 1.5em;
+	background-color: hsla(204, 100%, 11%, 0.395);
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%231487BA73' stroke-width='6' stroke-dasharray='16%2c24' stroke-dashoffset='21' stroke-linecap='square'/%3e%3c/svg%3e");
+	border-radius: 12px;
   }
   
   summary {
-	color: white;
+	color: var(--col-bl0);
 	font-family: figtree;
 	font-weight: 600;
 	font-size: 1.8rem;
 	text-align: left;
-	margin: -0.5em -0.5em 0;
+	margin: -0.25em -0.5em 0;
 	padding: 0.5em;
   }
   
   details[open] {
-	padding: 0.5em;
+	padding: 0.5em 1.5em;
   }
   
   details[open] summary {
+	color: white;
 	margin-bottom: 0.5em;
   }
+
+summary:hover{
+	color: white;
+}
 
 /* Toggle END -------- */
 
@@ -617,3 +624,11 @@ hr {
 	margin: 0.5rem auto;
 	border: 0.12rem solid hsla(194, 30%, 80%, 0.3);
 }
+
+hr.dashed{
+	border-width: 4px;
+	border-style: dashed;
+	border-image: linear-gradient(to right, var(--col-bl0), rgba(0, 0, 0, 0)) 1;
+}
+
+/* https://kovart.github.io/dashed-border-generator/ */ 

@@ -27,9 +27,29 @@ This version of the file has been edited for this website's purposes, use the li
   --itemMinWidth: 18%;
 }
 
-.aspect{
-  --itemAspectRatio:0.85;
-}
+/* aspect ratios, first number is width, second is height
+    GridOverflow takes the HEIGHT FIRST, so reverse the ratio before converting to decimal!
+    https://www.inchcalculator.com/ratio-to-decimal-calculator/
+*/
+
+
+/* aspect horizontals */
+
+.aspect2x1  {--itemAspectRatio:0.5;}
+.aspect16x9 {--itemAspectRatio:0.5625;}
+.aspect16x10 {--itemAspectRatio:0.625;}
+.aspect3x2  {--itemAspectRatio:0.6667;}
+.aspect4x3  {--itemAspectRatio:0.75;}
+
+/* aspect verticals */
+
+.aspect1x2  {--itemAspectRatio:2;}
+.aspect9x16 {--itemAspectRatio:1.778;}
+.aspect10x16 {--itemAspectRatio:1.6;}
+.aspect2x3  {--itemAspectRatio:1.5;}
+.aspect3x4  {--itemAspectRatio:1.333;}
+
+/* aspect ratios end */
 
 .go_gridItem {
   padding-bottom: calc(100% * var(--itemAspectRatio));
