@@ -414,11 +414,18 @@ p {
 	background-color: hsla(0, 0%, 0%, 0.5);
 	font-family: figtree;
 	font-weight: 800;
-	font-size: 6rem;
+	/* font-size: 6rem;*/ 
+	font-size: calc(1 * (var(--fval)));
 	text-align: left;
 	width: 100%;
 	margin: 0.4rem auto 0.4rem auto;
+	--fval: 8vmin;
+}
 
+.projsubhead{
+	color: white;
+	font-size: calc(1 * (var(--fval)));
+	--fval: 3vmin;
 }
 
 .indent {
