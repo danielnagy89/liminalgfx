@@ -21,6 +21,10 @@ This version of the file has been edited for this website's purposes, use the li
   grid-auto-flow: dense;
 }
 
+.go-4{
+  --itemMinWidth: 10vw;
+}
+
 .go_fp{
   --gridGap: 0.4rem;
   --itemRounding: 0.4rem;
