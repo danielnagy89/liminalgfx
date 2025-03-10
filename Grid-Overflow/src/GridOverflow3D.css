@@ -25,6 +25,10 @@ This version of the file has been edited for this website's purposes, use the li
   --itemMinWidth: 10vw;
 }
 
+.go-3{
+  --itemMinWidth: 30%;
+}
+
 .go_fp{
   --gridGap: 0.4rem;
   --itemRounding: 0.4rem;
@@ -234,3 +238,9 @@ This version of the file has been edited for this website's purposes, use the li
 .loadfx.c20 { animation-delay: .95s }
 
 /* Effect 4: fall perspective */
+
+
+.go_pad{
+  display: block;
+  padding: 0 0 0 0.6rem;
+}

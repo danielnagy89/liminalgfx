@@ -96,72 +96,46 @@
 
 /* FONTS END ---------------------------------------------- */
 
-html {
-	scroll-behavior: smooth;
-	}
 
-body {
-	margin: 0;
+body, html {
+
 	font-family: figtree;
-	overflow-y: scroll;
-}
-
-.bkgx{
-	background: var(--bkggradient);
-	background-size: 400% 900%;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	/* Apply the background to the body */
+	background-image: 
+		var(--bkgnoise), /* Static noise */
+		var(--bkggradient); /* Moving gradient */
+	
+	background-size: 
+		auto, /* Noise with its natural size */
+		400% 400%; /* Gradient sized for animation */
+	
+	background-repeat: 
+		repeat, /* Noise repeats */
+		no-repeat; /* Gradient doesn't repeat */
+	
+	background-blend-mode: overlay; /* Blend noise with gradient */
+	
+	/* Make both layers fixed to viewport */
+	background-attachment: fixed, fixed;
+	
 	animation: gradient 8s ease infinite;
-    background-attachment: fixed;	
-	background-repeat: repeat, no-repeat; 	
-	z-index: -1;
-	margin: 0;
-	padding: 0;
-}
-
-.bkgaddy{
-	background-image: var(--bkgnoise);
-	background-size: 10% 10%;
-	mix-blend-mode: multiply;
-	background-repeat: repeat;
-	animation: none;
-	z-index: -5;
-	margin: 0;
-	padding: 0;
-}
-
-.bkg {
-    background-image: 
-        var(--bkgnoise), /* Static noise */
-        var(--bkggradient); /* Moving gradient */
-    
-    background-size: 
-        100% 300%, /* Noise stays fixed */
-        400% 900%; /* Gradient moves */
-    
-    background-repeat: space, no-repeat;
-    
-    background-blend-mode: overlay; /* Blend noise with gradient */
-    
-    /* Make the noise stay fixed, but let the gradient animate */
-    background-attachment: unset, local; 
-    
-    animation: gradient 8s ease infinite;
-    
-    z-index: -1;
-    margin: 0;
-    padding: 0;
-}
-
-	@keyframes gradient {
+	  }
+	  
+	  @keyframes gradient {
 		0% {
-			background-position: 0% 50%;
+			background-position: center, 0% 50%;
 		}
 		50% {
-			background-position: 100% 50%;
+			background-position: center, 100% 50%;
 		}
 		100% {
-			background-position: 0% 50%;
+			background-position: center, 0% 50%;
 		}
-	}
+	  }
 
 /* HEADER BEGIN */
 
@@ -332,29 +306,39 @@ body {
 	-webkit-text-fill-color: black;
 }
 
-.bktopbtn{
-	background: linear-gradient(in srgb 180deg, hsla(240, 20%, 20%, 1), hsla(0, 0%, 0%, 0));
-	backdrop-filter: blur(2px);
-	opacity: 0.5;
-	padding: 0.4rem 0.1rem;
-	border-radius: 0.2rem;
-	height: 2.4rem;
-	width: 2.4rem;
-	position: sticky;
-	bottom: 12.4vh;
-	left:96.4vw;
-	margin:auto;
-	z-index: 102;
-	text-align: center;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
+.bktopbtn {
+    background: linear-gradient(in srgb 180deg, hsla(240, 20%, 20%, 1), hsla(0, 0%, 0%, 0));
+    backdrop-filter: blur(2px);
+    opacity: 0.5;
+    padding: 0.4rem 0.1rem;
+    border-radius: 0.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    
+    z-index: 102;
+    text-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.bktopbtn:hover{
-	opacity: 1;
-	height: 6rem;
-	transition-duration: 0.02s;
-	transition-timing-function: ease-out;
+.bktopbtn:hover {
+    opacity: 1;
+    height: 6rem;
+    transition-duration: 0.02s;
+    transition-timing-function: ease-out;
+}
+
+/* image padding to keep it on top */
+.bktopbtn img {
+    padding-top: 0.4rem;
 }
 
 /* FOOTER END ------------------------------ */
@@ -443,6 +427,8 @@ p {
 	margin-left: 12px;
 }
 
+/* LISTS START */
+
 ul.a {
 	font-family: inter;
 	color: #d5dbde;
@@ -451,13 +437,21 @@ ul.a {
 	list-style: none;
 }
 
-li::before {
+li.creds::before {
 	content: "❖"; /* Insert content that looks like bullets */
 	padding-right: 0.2rem;
 	color: #d5dbde; /* Or a color you prefer */
 }
 
+li.good::before {
+	content: "✔️"; /* Insert content that looks like bullets */
+	padding-right: 0.2rem;
+}
+
+
+
 li {
+	list-style-type:none;
 	padding: 4px;
 	font-family: inter;
 	color: #d5dbde;
@@ -465,6 +459,8 @@ li {
 	font-weight: light;
 	line-height: 1.4;
 }
+
+/* LISTS END */
 
 .dotbreak{
 		display: block;
@@ -478,6 +474,7 @@ li {
 .content {
 	margin: 13vh auto 12vh auto;
 	width: 74vw;
+	padding-bottom: 6vh;
 }
 
 .article {
@@ -642,6 +639,11 @@ hr.dashed{
 	border-width: 4px;
 	border-style: dashed;
 	border-image: linear-gradient(to right, var(--col-bl0), rgba(0, 0, 0, 0)) 1;
+}
+
+hr.space{
+	border-style: none;
+	margin:0.6rem;
 }
 
 /* https://kovart.github.io/dashed-border-generator/ */ 
