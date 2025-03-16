@@ -610,9 +610,10 @@ li {
 }
 
 .content {
-	padding: 20px;
-	/* Add enough height to allow scrolling */
-	min-height: 150vh;
+		padding: 20px;
+		/* Add enough height to allow scrolling */
+		min-height: 150vh;
+}
 
 .article {
 	margin: 13vh auto 12vh auto;
