@@ -5,6 +5,12 @@
 /* CURSORS go here */
 /* all refs prefixed with '--crs' */
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 :root {
 	--crs-expand: 	url('graphics/expand_lite.svg') 16 16, auto;
 	--crs-zoomin: 	url('./graphics/expand_lite.svg') 8 8, auto;
@@ -96,13 +102,13 @@
 
 /* FONTS END ---------------------------------------------- */
 
-
 body, html {
 
 	font-family: figtree;
 	scroll-behavior: smooth;
+	line-height: 1.6;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 4rem 0;
 	height: 100%;
 	/* Apply the background to the body */
 	background-image: 
@@ -139,172 +145,295 @@ body, html {
 
 /* HEADER BEGIN */
 
-.logo{
+.logo {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;	
-	margin:1%;
-	justify-content: space-around;
-	padding:0.8vw;
-	width: 200px;
-	height:auto;
-}
-
-.toptag{
+	margin: 1%;
+	padding: 0.5rem;
+	width: clamp(120px, 15vw, 200px);
+	height: auto;
+  }
+  
+  .toptag {
 	display: block;
-	padding:0 3vw;
+	padding: 0 1rem;
 	margin: auto auto auto 1%;
 	font-family: figtree;
-	font-weight:600;
-	font-size: 2em;
+	font-weight: 600;
+	font-size: clamp(1rem, 4vw, 2rem);
 	text-align: start;
-	color:hsl(210, 10%, 41%);
-	overflow-y: hidden;
+	color: hsl(210, 10%, 41%);
+	white-space: nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-
-
-.toptag:after {
-	color:hsl(40, 83%, 55%);
-}
-
-.toptag:hover:after {
-	color:hsl(40, 83%, 55%);
+  }
+  
+  .toptag:after {
+	color: hsl(40, 83%, 55%);
+  }
+  
+  .toptag:hover:after {
+	color: hsl(40, 83%, 55%);
 	content: " Let's do business!";
-}
-
-.header{
+  }
+  
+  .header {
 	background: hsla(220, 80%, 2%, 0.4);
 	backdrop-filter: blur(0.8rem);
 	width: 100%;
-	height: 12vh;
+	min-height: 80px;
+	height: auto;
 	display: flex;
+	flex-wrap: wrap;
 	text-decoration: none;
 	position: fixed;
 	top: 0;
 	z-index: 101;
-}
-
-.headerrows{
+	padding: 0.5rem 0;
+  }
+  
+  .headerrows {
 	display: flex;
 	flex-direction: column;
 	height: auto;
+	flex: 1;
+	width: calc(100% - 200px);
+  }
+  
+  .navbar {
 	width: 100%;
-}
-
-.navbar{
-	width: 60vw;
-	height: 50%;
+	height: auto;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;	
-	margin:0.2% 1%;
+	flex-wrap: wrap;
+	margin: 0.2% 1%;
 	justify-content: space-around;
-	padding:0 0.8vw;
-}
-
-.navbtn {
+	padding: 0 0.5rem;
+  }
+  
+  .navbtn {
 	flex: 1;
+	min-width: max-content;
 	font-family: figtree;
 	height: auto;
 	font-weight: 800;
-	font-size: 2.4em;
-	padding:0 0.8vw;
+	font-size: clamp(1rem, 3vw, 2.4rem);
+	padding: 0 0.5rem;
 	color: hsl(194, 85%, 51%);
-	background: linear-gradient(in srgb 0deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
+	background: linear-gradient(in srgb 0deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%));
 	background-clip: text;
 	color: transparent;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
-
-}
-
-.navbtnactive {
-	background: linear-gradient(in srgb 0deg,hsl(25, 95%, 45%), hsl(40, 83%, 55%));
-	color:black;
-}
-
-.navbtn:hover{
-	background: linear-gradient(in srgb 135deg,hsl(201, 72%, 47%), hsl(166, 91%, 52%));
-	color:black;
+	text-align: center;
+  }
+  
+  .navbtnactive {
+	background: linear-gradient(in srgb 0deg, hsl(25, 95%, 45%), hsl(40, 83%, 55%));
+	color: black;
+  }
+  
+  .navbtn:hover {
+	background: linear-gradient(in srgb 135deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%));
+	color: black;
 	-webkit-text-fill-color: black;
 	transition-duration: 0.6s;
 	transition-timing-function: ease-out;
+  }
+  
+  .mobile-menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 30px;
+	margin: auto 1rem;
+	cursor: pointer;
+  }
+  
+  .mobile-menu-toggle span {
+	width: 100%;
+	height: 3px;
+	background-color: hsl(194, 85%, 51%);
+	border-radius: 3px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 992px) {
+	.navbar {
+	  justify-content: flex-start;
+	}
+	
+	.navbtn {
+	  padding: 0.3rem;
+	}
+  }
+  
+  @media screen and (max-width: 768px) {
+	.header {
+	  flex-direction: row;
+	  justify-content: space-between;
+	  padding: 0.5rem;
+	}
+	
+	.headerrows {
+	  width: calc(100% - 120px);
+	}
+	
+	.toptag {
+	  font-size: clamp(0.9rem, 3vw, 1.2rem);
+	  padding: 0;
+	}
+	
+	.navbar {
+	  overflow-x: auto;
+	  justify-content: flex-start;
+	  padding: 0.3rem 0;
+	}
+	
+	.navbtn {
+	  min-width: max-content;
+	  padding: 0 0.5rem;
+	}
+  }
+  
+  @media screen and (max-width: 576px) {
+	.header {
+	  flex-wrap: nowrap;
+	}
+	
+	.headerrows {
+	  width: auto;
+	  flex: 1;
+	}
+	
+	.mobile-menu-toggle {
+	  display: flex;
+	}
+	
+	.navbar {
+	  display: none;
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  width: 100%;
+	  background: hsla(220, 80%, 2%, 0.95);
+	  backdrop-filter: blur(0.8rem);
+	  flex-direction: column;
+	  padding: 1rem;
+	}
+	
+	.navbar.active {
+	  display: flex;
+	}
+	
+	.navbtn {
+	  padding: 0.8rem 1rem;
+	  margin: 0.3rem 0;
+	  text-align: left;
+	}
 }
 
 /* FOOTER BEGIN, progress bar works as divider */
 
-.footer {
-	background: hsla(220, 80%, 2%, 0.4);
-	backdrop-filter: blur(0.8rem);
-	width: 100%;
-	height: 5vh;
-	display: flex;
-	position: fixed;
-	bottom: 0;
-	z-index: 101;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
+    /* Footer container */
+    .footer-container {
+		position: relative;
+	  }
+  
+	  /* Progress bar that stays fixed at bottom until footer scrolls into view */
+	  .progress-container {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 4px;
+		background: hsl(220, 25%, 3%);
+		z-index: 100;
+	  }
+  
+	  .progress-bar {
+		height: 100%;
+		background: linear-gradient(in srgb 90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
+		width: 0%;
+	  }
+  
+	  /* Footer itself - scrolls into view normally */
+	  footer {
+		width: 100%;
+		background: hsla(220, 80%, 2%, 0.4);
+		backdrop-filter: blur(0.8rem);
+		padding-top: 4px; /* Space for progress bar */
+		margin-bottom: 0; /* Ensure no extra space at bottom */
+	  }
+  
+	  /* This will be positioned correctly when the footer scrolls into view */
+	  footer .progress-container {
+		position: absolute;
+		top: 0;
+		bottom: auto;
+	  }
+  
+	  .footer-content {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: padding 0.3s ease;
+	  }
+  
+	  /* CTA Button */
+	  .cta-section {
+		margin-bottom: 1.5rem;
+		text-align: center;
+	  }
+  
+	  .cta-button {
+		display: inline-block;
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		transition: transform 0.2s ease;
+	  }
+  
+	  .cta-button:hover {
+		transform: scale(1.1);
+		background-image: repeating-linear-gradient(in srgb 90deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%), hsl(201, 72%, 47%));
+	  }
+  
+	  /* Gradient text for CTA */
+	  .cta {
+		font-size: clamp(1.2rem, 4vw, 2rem);
+		font-weight: 600;
+		background-image: repeating-linear-gradient(in srgb 60deg, hsl(25, 95%, 45%), hsl(40, 83%, 55%), hsl(25, 95%, 45%));
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: ctascroll 6s ease infinite;
+		background-size: 200% auto;
+	  }
+  
+	  @keyframes ctascroll {
+		0% { background-position: 0% center; }
+		50% { background-position: 100% center; }
+		100% { background-position: 0% center; }
+	  }
 
-.footer:hover{
-	height:10vh;
-	transition-duration: 0.02s;
-	transition-timing-function: ease-out;
-}
-
-.progress-container {
-	width: 100%;
-	height: 4px;
-	background: hsl(220, 25%, 3%);
-	z-index: 2;
-}
-
-.progress-bar {
-	height: 4px;
-	/*background: #d7dddf;*/
-	background: linear-gradient(in srgb 90deg, hsl(210, 60%, 25%) 35%, hsl(195, 10%, 85%) 100%);
-	opacity: 0.8;
-	width: 0%;
-	z-index: 2;
-}
-
-.cta{
-	font-size: 1.6rem;
-	font-family: figtree;
-	font-weight: 600;
-	text-align: center;
-	align-items: center;
-	color: var(--col-or1);
-	background-image: repeating-linear-gradient(in srgb 60deg,var(--col-or0), var(--col-or1),var(--col-or0));
-	background-clip: text;
-	animation: ctascroll 6s ease infinite;
-	transition-duration: 0.3s;	
-	transition-timing-function: ease-out;
-	-webkit-text-fill-color: transparent;
-
-}
-
-@keyframes ctascroll {
-	0% {
-		background-position: 0;
-	}
-	50% {
-		background-position: 30vw;
-	}
-	100% {
-		background-position: 0;
-	}
-}
-
-.footer:hover .cta{
-	background: repeating-linear-gradient(in srgb 90deg, var(--col-bl0), var(--col-bl1), var(--col-bl0));
-	color:black;
-	transition-duration: 0.1s;	
-	transition-timing-function: ease-out;
-	-webkit-text-fill-color: black;
-}
+	  /* Company info section */
+	  .company-info {
+		text-align: center;
+		max-width: 800px;
+	  }
+  
+	  .company-info h3 {
+		font-size: clamp(1rem, 3vw, 1.2rem);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		color: #f0f0f0;
+	  }
+  
+	  .company-info p {
+		font-size: clamp(0.8rem, 2vw, 1rem);
+		font-weight: 300;
+		color: #d0d0d0;
+	  }
 
 .bktopbtn {
     background: linear-gradient(in srgb 180deg, hsla(240, 20%, 20%, 1), hsla(0, 0%, 0%, 0));
@@ -350,7 +479,7 @@ h1 {
 	font-family: calsans;
 	display: block;
 	font-weight: 800;
-	font-size: 22pt;
+	font-size: 4rem;
 	text-align: left;
 }
 
@@ -359,6 +488,15 @@ h2 {
 	font-family: figtree;
 	display: block;
 	font-weight: 600;
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+h3 {
+	color: white;
+	font-family: figtree;
+	display: block;
+	font-weight: 400;
 	font-size: 1.8rem;
 	text-align: left;
 }
@@ -374,14 +512,14 @@ h4 {
 
 h4:hover {
 	color: white;
-	font-family: calsans;
+	font-family: figtree;
 	font-size: 3rem;
 	display: block;
 	margin: 1%;
 }
 
 p {
-	font-family: figtree;
+	font-family: inter;
 	color: #bbc0c4;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -472,10 +610,9 @@ li {
 }
 
 .content {
-	margin: 13vh auto 12vh auto;
-	width: 74vw;
-	padding-bottom: 6vh;
-}
+	padding: 20px;
+	/* Add enough height to allow scrolling */
+	min-height: 150vh;
 
 .article {
 	margin: 13vh auto 12vh auto;
@@ -590,6 +727,7 @@ nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
 /* Toggle START ------------------------------- */
 
 details {
+	margin: 2rem auto;
 	padding: 0.5em 1.5em;
 	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='transparent' rx='12' ry='12' stroke='%231487BA73' stroke-width='6' stroke-dasharray='16%2c24' stroke-dashoffset='21' stroke-linecap='square'/%3e%3c/svg%3e"), linear-gradient(hsla(204, 100%, 11%, 0.395), hsla(204, 100%, 11%, 0.874));
 	border-radius: 12px;
@@ -630,9 +768,11 @@ summary:hover::after{
 /* Horizontal Rule <hr> */
 
 hr {
-	display: block;
-	margin: 0.5rem auto;
-	border: 0.12rem solid hsla(194, 30%, 80%, 0.3);
+	margin: 1rem auto;
+	border: 0;
+    height: 0.14rem;
+	opacity: 0.6;
+    background: var(--col-bl0);
 }
 
 hr.dashed{
@@ -644,6 +784,12 @@ hr.dashed{
 hr.space{
 	border-style: none;
 	margin:0.6rem;
+}
+
+hr.default {
+	display: block;
+	margin: 0.5rem auto;
+	border: 0.12rem solid hsla(194, 30%, 80%, 0.3);
 }
 
 /* https://kovart.github.io/dashed-border-generator/ */ 
@@ -743,3 +889,67 @@ hr.space{
         h2 {
             margin-bottom: 1rem;
         }
+
+
+.iframe-parent{
+	width: 100%;
+	height: 50vh;
+}
+
+  /* Expand to the entire container */
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.post-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.post-header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.post-title {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+}
+
+.post-subtitle {
+	font-size: 1.6rem;
+	color: #666;
+	margin-bottom: 1.5rem;
+}
+
+.post-content {
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.post-meta {
+	color: var(--col-bl0);
+	font-weight: 400;
+}
+
+.column {
+	flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.post-content {
+		flex-direction: column;
+	}
+	
+	.post-container {
+		padding: 1.5rem;
+	}
+	
+	.post-title {
+		font-size: 2rem;
+	}
+}
