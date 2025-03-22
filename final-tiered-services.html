@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiminalGFX - Service Tiers</title>
+  <link rel="stylesheet" href="../root.css">
+  <style>
+
+    .services-section {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      font-size: 1.2rem;
+    }
+    
+    /* Tier Container Layout */
+    .tiers-container {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .tier {
+      flex: 1;
+      background: hsla(225, 51%, 12%, 0.642);
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+    }
+    
+    .tier:hover {
+      background-color: rgba(81, 136, 217, 0.788);
+    }
+    
+    .tier-header {
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .red-tier {
+      border-top: 5px solid #e63946;
+    }
+    
+    .red-tier .tier-name {
+      color: #e63946;
+    }
+    
+    .redgreen-tier {
+      border-top: 5px solid #43aa8b;
+    }
+    
+    .redgreen-tier .tier-name {
+      color: #43aa8b;
+    }
+    
+    .redgreenblue-tier {
+      border-top: 5px solid #4361ee;
+    }
+    
+    .redgreenblue-tier .tier-name {
+      color: #4361ee;
+    }
+    
+    .tier-name {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .tier-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tier-price {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    
+    /* Categories within Tiers */
+    .tier-sections {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .tier-sections.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .category {
+      padding: 20px 25px;
+      border-top: 1px solid #eee;
+    }
+    
+    .category-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #eee;
+    }
+    
+    /* Feature Grid System */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    
+    .feature-row {
+      display: contents; /* Makes children align in the grid */
+    }
+    
+    .feature-cell {
+      min-height: 3.5rem; /* Ensures consistent height */
+      padding: 5px 5px 5px 25px;
+      position: relative;
+    }
+    
+    .feature-cell::before {
+      content: "✓";
+      position: absolute;
+      left: 5px;
+      color: #4CAF50;
+    }
+    
+    .red-tier .feature-cell::before {
+      color: #e63946;
+    }
+    
+    .redgreen-tier .feature-cell::before {
+      color: #43aa8b;
+    }
+    
+    .redgreenblue-tier .feature-cell::before {
+      color: #4361ee;
+    }
+    
+    /* Feature cells hover */
+    .feature-cell {
+      color:white;
+      font-size: 1.2rem;
+      transition: background-color 0.2s ease;
+      border-radius: 4px;
+    }
+    
+    .feature-cell:hover {
+      background-color: rgba(0,0,0,0.02);
+    }
+    
+    /* Unlimited Access Section */
+    .unlimited-section {
+      margin-top: 40px;
+      padding: 30px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .unlimited-section.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .unlimited-title {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .unlimited-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    
+    .unlimited-item {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .unlimited-item::before {
+      content: "✓";
+      position: absolute;
+      left: 10px;
+      color: #333;
+    }
+    
+    .contact-cta {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+    
+    .contact-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    
+    .contact-button:hover {
+      background: #555;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 960px) {
+      .tiers-container {
+        flex-direction: column;
+      }
+      
+      .tier {
+        margin-bottom: 30px;
+      }
+      
+      .feature-grid {
+        display: block;
+      }
+      
+      .feature-cell {
+        margin-bottom: 10px;
+      }
+      
+      .unlimited-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="services-section">
+    <h1>How We Can Work Together</h1>
+    <p class="section-intro">I offer three partnership models tailored to your team's needs, resources, and goals. As you scroll, discover the depth of capabilities each tier provides.</p>
+    
+    <div class="tiers-container">
+      <!-- Red Tier -->
+      <div class="tier red-tier">
+        <div class="tier-header">
+          <h2 class="tier-name">Red</h2>
+          <h3 class="tier-subtitle">Strategic Direction</h3>
+          <p>For indies who need a pillar, a consultant or firepower.</p>
+        </div>
+        
+        <div class="tier-sections management-section">
+          <!-- Management Category -->
+          <div class="category">
+            <h3 class="category-title">Management & Strategy</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Art Team management basic guidelines, remote consulting</div>
+              <div class="feature-cell">Long term art strategy and tactics- goals, KPIs</div>
+              <div class="feature-cell">Artist assessment</div>
+              <div class="feature-cell">Artist guidance</div>
+              <div class="feature-cell">Art processes and Systems review (diagnosis)</div>
+              <div class="feature-cell">Knowledge database creation, guidelines</div>
+              <div class="feature-cell">Custom internal document creation, guidelines</div>
+              <div class="feature-cell">Milestone accountability & course correction meetings</div>
+              <div class="feature-cell">Quality Control guidelines</div>
+              <div class="feature-cell"></div>
+              <div class="feature-cell"></div>
+            </div>
+          </div>
+          
+          <!-- Creative Category -->
+          <div class="category">
+            <h3 class="category-title">Creative Services</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Ideation - Concept Art, Brainstorming</div>
+              <div class="feature-cell">Technology research</div>
+              <div class="feature-cell">Pipeline design</div>
+              <div class="feature-cell">Art Direction (specific projects)</div>
+              <div class="feature-cell">Async brainstorm</div>
+            </div>
+          </div>
+          
+          <!-- Technical Category -->
+          <div class="category">
+            <h3 class="category-title">Technical Expertise</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Internal documentation guidelines</div>
+              <div class="feature-cell">Asset Pipeline expertise</div>
+              <div class="feature-cell">Detail-oriented analytical mind</div>
+            </div>
+          </div>
+          
+          <!-- Availability Category -->
+          <div class="category">
+            <h3 class="category-title">Availability & Terms</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Weekday availability</div>
+              <div class="feature-cell">2-hour live sync to your timezone</div>
+              <div class="feature-cell">Async, response time max 12 hours</div>
+              <div class="feature-cell">Weekly meetings, planned in advance</div>
+              <div class="feature-cell">Limited retention of IP - what you don't use I get back</div>
+            </div>
+          </div>
+          
+          <!-- Pricing at Bottom -->
+          <div class="category">
+            <h3 class="category-title">Investment</h3>
+            <div class="tier-price">$3,500/month</div>
+            <p>Bespoke diagnosis and pricing for your company</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RedGreen Tier -->
+      <div class="tier redgreen-tier">
+        <div class="tier-header">
+          <h2 class="tier-name">RedGreen</h2>
+          <h3 class="tier-subtitle">Collaborative Partnership</h3>
+          <p>For studios who need an allstar player to bring the muscle and ship.</p>
+        </div>
+        
+        <div class="tier-sections management-section">
+          <!-- Management Category -->
+          <div class="category">
+            <h3 class="category-title">Management & Strategy</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Art Team management custom guidelines, Consultation/ Diagnosis/ Surrogate Management</div>
+              <div class="feature-cell">Long term art strategy and tactics- goals, KPIs</div>
+              <div class="feature-cell">Artist assessment, retention</div>
+              <div class="feature-cell">Artist training and guidance, development</div>
+              <div class="feature-cell">Art processes and Systems review, improvement plan</div>
+              <div class="feature-cell">Knowledge database creation, periodic review</div>
+              <div class="feature-cell">Bespoke internal document creation, management</div>
+              <div class="feature-cell">Bi-Monthly accountability & course correction meetings</div>
+              <div class="feature-cell">After Action Review</div>
+              <div class="feature-cell">Quality Control guidelines, implementation</div>
+            </div>
+          </div>
+          
+          <!-- Creative Category -->
+          <div class="category">
+            <h3 class="category-title">Creative Services</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Ideation - Concept Art, Brainstorming</div>
+              <div class="feature-cell">Technology research, implementation</div>
+              <div class="feature-cell">Pipeline design, implementation</div>
+              <div class="feature-cell">Art Direction (specific projects)</div>
+              <div class="feature-cell">Live brainstorm sessions</div>
+            </div>
+          </div>
+          
+          <!-- Technical Category -->
+          <div class="category">
+            <h3 class="category-title">Technical Expertise</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Custom internal documentation</div>
+              <div class="feature-cell">Asset Pipeline expertise</div>
+              <div class="feature-cell">Detail-oriented analytical mind</div>
+            </div>
+          </div>
+          
+          <!-- Availability Category -->
+          <div class="category">
+            <h3 class="category-title">Availability & Terms</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Weekday availability</div>
+              <div class="feature-cell">Core 4-hour live sync to your timezone</div>
+              <div class="feature-cell">Response time max 4 hours</div>
+              <div class="feature-cell">Bi-weekly meetings, planned in advance</div>
+              <div class="feature-cell">IP extended licensing</div>
+            </div>
+          </div>
+          
+          <!-- Pricing at Bottom -->
+          <div class="category">
+            <h3 class="category-title">Investment</h3>
+            <div class="tier-price">$6,000/month</div>
+            <p>Bespoke diagnosis and pricing for your company</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RedGreenBlue Tier -->
+      <div class="tier redgreenblue-tier">
+        <div class="tier-header">
+          <h2 class="tier-name">RedGreenBlue</h2>
+          <h3 class="tier-subtitle">Full Integration</h3>
+          <p>For studios who are playing for keeps and need seasoned veterans.</p>
+        </div>
+        
+        <div class="tier-sections management-section">
+          <!-- Management Category -->
+          <div class="category">
+            <h3 class="category-title">Management & Strategy</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Art Team direct management 3-8 people</div>
+              <div class="feature-cell">Long term art strategy and tactics- goals, KPIs, accountability system</div>
+              <div class="feature-cell">Artist assessment, retention, active teambuilding, morale care</div>
+              <div class="feature-cell">Artist training and guidance, development, accountability</div>
+              <div class="feature-cell">Art processes and Systems review, improvement plan, implementation</div>
+              <div class="feature-cell">Knowledge database creation, management & maintenance</div>
+              <div class="feature-cell">Bespoke internal document creation, management & maintenance</div>
+              <div class="feature-cell">Monthly accountability & course correction meetings</div>
+              <div class="feature-cell">After Action Review</div>
+              <div class="feature-cell">Quality Control guidelines, implementation, maintenance</div>
+            </div>
+          </div>
+          
+          <!-- Creative Category -->
+          <div class="category">
+            <h3 class="category-title">Creative Services</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Ideation - Concept Art, Brainstorming, Idea capture and development</div>
+              <div class="feature-cell">Technology research, implementation, review and update</div>
+              <div class="feature-cell">Pipeline design, implementation, periodic review and update</div>
+              <div class="feature-cell">Art Direction (specific projects)</div>
+              <div class="feature-cell">Live brainstorm sessions</div>
+            </div>
+          </div>
+          
+          <!-- Technical Category -->
+          <div class="category">
+            <h3 class="category-title">Technical Expertise</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Info management, custom internal documentation</div>
+              <div class="feature-cell">Asset Pipeline expertise</div>
+              <div class="feature-cell">Technically-savvy, detail-oriented analytical mind</div>
+            </div>
+          </div>
+          
+          <!-- Availability Category -->
+          <div class="category">
+            <h3 class="category-title">Availability & Terms</h3>
+            <div class="feature-grid-container">
+              <div class="feature-cell">Weekday availability</div>
+              <div class="feature-cell">Core 4-hour live sync to your timezone</div>
+              <div class="feature-cell">Response time max 2 hours</div>
+              <div class="feature-cell">Unlimited virtual meetings whenever necessary</div>
+              <div class="feature-cell">Possibility to visit your studio for face-to-face time</div>
+              <div class="feature-cell">Possibility to license IP exclusively and permanently</div>
+            </div>
+          </div>
+          
+          <!-- Pricing at Bottom -->
+          <div class="category">
+            <h3 class="category-title">Investment</h3>
+            <div class="tier-price">$10,000/month</div>
+            <p>Bespoke diagnosis and pricing for your company</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Unlimited Access Section as a Separate Section -->
+    <div class="unlimited-section">
+      <h3 class="unlimited-title">All Tiers Include Unlimited Access To:</h3>
+      <div class="unlimited-grid">
+        <div class="unlimited-item">15 years of game development art experience</div>
+        <div class="unlimited-item">Veteran 3D Art expertise and skills</div>
+        <div class="unlimited-item">Asset creation and optimization expertise</div>
+        <div class="unlimited-item">Concept-to-engine art implementation capability</div>
+        <div class="unlimited-item">Highly creative and imaginative mind</div>
+        <div class="unlimited-item">Graphic Design capability</div>
+        <div class="unlimited-item">Cultivated aesthetic sense, visual acuity and creativity</div>
+        <div class="unlimited-item">An ever-expanding compendium of visual knowledge, skills & XP</div>
+        <div class="unlimited-item">Active, growth-oriented mentor</div>
+        <div class="unlimited-item">Self-driven & self-managed effective professional</div>
+        <div class="unlimited-item">Patient, empathetic, supportive mentor</div>
+        <div class="unlimited-item">Highly articulate expressive and precise communicator</div>
+        <div class="unlimited-item">Team-oriented, very sociable and all-around easygoing dude</div>
+        <div class="unlimited-item">Responsive, consistent and reliable customer service</div>
+      </div>
+    </div>
+    
+    <div class="contact-cta">
+      <p>All engagements begin with a comprehensive needs assessment to determine the exact scope and investment.</p>
+      <a href="#contact" class="contact-button">Let's Talk About Your Project</a>
+    </div>
+  </section>
+
+  <script>
+    // Intersection Observer setup
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      root: null, // viewport
+      threshold: 0.1, // trigger when 10% visible
+      rootMargin: '-50px' // add a little margin so it triggers slightly before fully visible
+    });
+    
+    // Observe all sections that should be animated
+    document.querySelectorAll('.tier-sections, .unlimited-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

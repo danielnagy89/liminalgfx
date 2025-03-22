@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
@@ -16,6 +16,15 @@
 	content="width=device-width, initial-scale=1.0, noindex, nofollow">
 
 </head>
+
+<!-- To DO ----------------------------------------
+
+• port to new Modern Grid Gallery
+• review text, benefits not features
+• insert something about the tile editor
+
+
+----------------------------------------------- -->
 
 <body class="bkg">
 
@@ -41,16 +50,18 @@
 	</header>
 
 <div class="content">
-	<h1 class="projtitle">Trinity Fusion (2023)</h1>
-	<h2 class="projsubhead">An ambitious multi-platform multiverse venture.</h2>
+
 
 	<div style="display: flex; flex-direction: row;"> <!-- SPLITTER START-->
 		
 		<div style="width: 70%;"> <!-- MAIN background-color: red;------- -->
 
-			<div class="gridOverflow go-actionIcon"> <!-- GridOverflow KEY BEGIN -->
+			<h1 class="projtitle">Trinity Fusion (2023)</h1>
+			<h2 class="projsubhead">An ambitious multi-platform multiverse venture.</h2>
 
-				<a class="crs-expand go_gridItem go_gridItem-panorama" 
+			<div class="grid-gallery grid-col-4 with-icon aspect-10x16"> <!-- Grid-gallery KEY BEGIN -->
+
+				<a class="crs-expand grid-item size-2x1" 
 				href="trinityfusion/trinityfusion-key.webp"
 				data-fancybox="trinity"
 				data-thumb="trinityfusion/trinityfusion-key.webp"
@@ -61,8 +72,8 @@
 				alt="Trinity Fusion Key Art">
 				</a>
 			
-			<div class="go_gridItem go_gridItem">
-				<div>
+			<div class="grid-item">
+				<div class="pad">
 				<h2 style="margin:0 auto 1rem">Fact Sheet</h2>
 				<ul class="a">
 					<li>Developer: Angry Mob Games</li>
@@ -70,23 +81,28 @@
 					<li>Release date: Q4, 2023</li>
 					<li>Platforms: Steam, PS5, Xbox, Nintendo Switch</li>
 				</ul>
+				</div>
+			</div> 	
+
+			<div class="grid-item">
+				<div class="pad">
 				<p style="font-size: 1.2rem; font-style:italic;">Easily the most challenging project I've been a part of, Trinity Fusion put my thinking and concepting abilities to the test. From research to co-designing the level editing tool, creating documentation and managing the volume of environment assets, I was deeply involved all the way from idea to market. </p>
 				</div>
 			</div> 	
 		
-		</div> <!-- GridOverflow KEY END -->
+		</div> <!-- Grid-gallery KEY END -->
 
 <hr style="margin:1.4rem auto">
 
-			<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GridOverflow Main BEGIN -->
+			<div class="grid-gallery with-icon aspect-16x9"> <!-- Grid-gallery Main BEGIN -->
 				
 				
-				<!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
+				<!-- grid-item-VIP class creates a grid item in the form of a large square (2x2 cells) -->
 
 
 				
-				<!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
-				<a class="crs-expand go_gridItem" 
+				<!-- size-2x1 class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-dialogue.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-dialogue.webp"
@@ -96,7 +112,7 @@
 					alt="Trinity Fusion Sshot 6/6">
 				</a>
 				
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-dog.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-dog.webp"
@@ -106,7 +122,7 @@
 					alt="Trinity Fusion Environment art shot 2/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-natureout.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-natureout.webp"
@@ -116,7 +132,7 @@
 					alt="Trinity Fusion Environment art shot 1/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-natureunder.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-natureunder.webp"
@@ -126,7 +142,7 @@
 					alt="Trinity Fusion Environment art shot 4/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-quadra.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-quadra.webp"
@@ -138,7 +154,7 @@
 
 
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-snake.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-snake.webp"
@@ -148,7 +164,7 @@
 					alt="Trinity Fusion - Snake vs sniper">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-steward.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-steward.webp"
@@ -158,7 +174,7 @@
 					alt="Trinity Fusion - Steward One">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-sshot-sumo.webp"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-sshot-sumo.webp"
@@ -168,7 +184,7 @@
 					alt="Trinity Fusion Sumobot">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 					href="trinityfusion/trinityfusion-steam-runscroll.gif"
 					data-fancybox="trinity"
 					data-thumb="trinityfusion/trinityfusion-steam-runscroll.gif"
@@ -183,19 +199,9 @@
 
 
 
-		<div class="gridOverflow go-actionIcon aspect2x1" style="margin:1rem auto"> 
+		<div class="grid-gallery grid-col-5 with-icon aspect-16x9"> 
 
-		<a class="crs-expand go_gridItem" 
-			href="trinityfusion/trinityfusion-key.webp"
-			data-fancybox="trinity-chars"
-			data-thumb="trinityfusion/trinityfusion-key.webp"
-			data-caption="Key art and logo fully developed from idea to execution by the talented Jeremy Spagnulo.">
-			<img 
-			src="trinityfusion/trinityfusion-key.webp"
-			alt="Trinity Fusion Key Art">
-		</a>
-
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item size-3x2" 
 			href="trinityfusion/trinityfusion-characters.webp"
 			data-fancybox="trinity-chars"
 			data-thumb="trinityfusion/trinityfusion-characters.webp"
@@ -205,7 +211,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item size-2x3" 
 			href="trinityfusion/trinityfusion-fused-naira.webp"
 			data-fancybox="trinity-chars"
 			data-thumb="trinityfusion/trinityfusion-fused-naira.webp"
@@ -215,8 +221,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item size-3x3" 
 			href="trinityfusion/trinityfusion-enemy-lines.webp"
 			data-fancybox="avp"
 			data-thumb="trinityfusion/trinityfusion-enemy-lines.webp"
@@ -226,7 +231,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item size-2x2" 
 			href="trinityfusion/trinityfusion-lasereyes-xl.webp"
 			data-fancybox="avp"
 			data-thumb="trinityfusion/trinityfusion-lasereyes-xl.webp"
@@ -236,16 +241,16 @@
 			alt="Trinity Fusion Lens Guardian">
 		</a>
 
-		</div> <!-- GridOverflow Main End -->
+		</div> <!-- Grid-gallery Main End -->
 
 
 		<h2 class="projsubhead">Most <b>visible</b> contribution: Typhoon Two, the Overworld boss.</h2>
 		<p>I was in charge of handling this large mechanical fellow from concept art to basemesh, 3d modeling, baking, texturing and base rigging.<br>
 		Greatly amplified by spiffy animations and energetic VFX, I'm very proud how it turned out.</p>
 
-		<div class="gridOverflow go-actionIcon aspect4x3"> <!-- GridOverflow Typhoon BEGIN -->
+		<div class="grid-gallery grid-col-3 with-icon aspect-4x3"> <!-- Grid-gallery Typhoon BEGIN -->
 
-		<a class="crs-expand go_gridItem go_gridItem-VIP" 
+		<a class="crs-expand grid-item size-2x2" 
 			href="trinityfusion/trinityfusion-typhoon-intro.webp"
 			data-fancybox="trinity-typhoon"
 			data-thumb="trinityfusion/trinityfusion-typhoon-intro.webp"
@@ -255,7 +260,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-typhoon-collage.webp"
 			data-fancybox="trinity-typhoon"
 			data-thumb="trinityfusion/trinityfusion-typhoon-collage.webp"
@@ -265,7 +270,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-typhoon-headshot.webp"
 			data-fancybox="trinity-typhoon"
 			data-thumb="trinityfusion/trinityfusion-typhoon-headshot.webp"
@@ -275,13 +280,13 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		</div> <!-- GridOverflow Typhoon END -->
+		</div> <!-- Grid-gallery Typhoon END -->
 
+<hr>
 
+		<div class="grid-gallery grid-col-3 aspect-16x9"> <!-- Grid-gallery Strider BEGIN -->
 
-		<div class="gridOverflow go-actionIcon aspect4x3"> <!-- GridOverflow Strider BEGIN -->
-
-		<a class="crs-expand go_gridItem go_gridItem-vertigo" 
+		<a class="crs-expand grid-item size-1x3" 
 			href="trinityfusion/trinityfusion-strider-collage-trailer2.webp"
 			data-fancybox="trinity-strider"
 			data-thumb="trinityfusion/trinityfusion-strider-collage-trailer2.webp"
@@ -291,7 +296,7 @@
 			alt="Trinity Fusion ArcStrider trailer grab">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item size-2x2" 
 			href="trinityfusion/trinityfusion-strider-fight.webp"
 			data-fancybox="trinity-strider"
 			data-thumb="trinityfusion/trinityfusion-strider-fight.webp"
@@ -301,12 +306,7 @@
 			alt="Trinity Fusion ArcStrider combat">
 		</a>
 
-		<div class="go_gridItem">
-			<h2>The Arcstrider</h2><br>
-			<p>Another design I've made from concept to ingame model- aside from being a more tricky enemy, he's been featured in the trailer.</p>
-		</div>
-
-		<a class="crs-expand go_gridItem go_gridItem-panorama" 
+		<a class="crs-expand grid-item size-2x1" 
 			href="trinityfusion/trinityfusion-strider-trailer.webp"
 			data-fancybox="trinity-strider"
 			data-thumb="trinityfusion/trinityfusion-strider-trailer.webp"
@@ -316,11 +316,21 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		</div> <!-- GridOverflow Strider End -->
+		</div> <!-- Grid-gallery Strider End -->
 
-		<div class="gridOverflow go-actionIcon aspect2x1" style="margin:1rem auto"> <!-- GO boss sketches BEGIN -->
+		
+		<div>
+			<h2>The Arcstrider</h2>
+			<p>Another design I've made from concept to ingame model- aside from being a more tricky enemy, he's been featured in the trailer.<br>Obviously influenced by the Half-Life 2 striders, we needed a high-priority target that was a bit harder to reach, buying the lower tier enemies some time to do damage. </p>
+			</div>
 
-			<a class="crs-expand go_gridItem" 
+
+		<h1>Boss Design</h1>
+		<p>Mid-way through the project I was part of the boss brainstorming sessions. Some of the quick scribbles for attack stages and behaviors made it in, coded by my talented teammates.</p>
+
+		<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- GO boss sketches BEGIN -->
+
+			<a class="crs-expand grid-item" 
 				href="trinityfusion/trinityfusion-boss-design-automaton.webp"
 				data-fancybox="bosssketch"
 				data-thumb="trinityfusion/trinityfusion-boss-design-automaton.webp"
@@ -330,7 +340,7 @@
 				alt="Trinity Fusion environment run-through">
 			</a>
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="trinityfusion/trinityfusion-boss-design-eyes.webp"
 				data-fancybox="bosssketch"
 				data-thumb="trinityfusion/trinityfusion-boss-design-eyes.webp"
@@ -340,7 +350,7 @@
 				alt="Trinity Fusion environment run-through">
 			</a>
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="trinityfusion/trinityfusion-boss-design-gargantuan.webp"
 				data-fancybox="bosssketch"
 				data-thumb="trinityfusion/trinityfusion-boss-design-gargantuan.webp"
@@ -353,35 +363,14 @@
 
 		</div> <!-- GO boss sketches END -->
 
-
-
-
 	<hr>
 
+	<h1>User Interface</h1>
+	<p>My contributions to the UI were the frames and the iconography used throughout for abilities, powerups and perks.</p>
 
+		<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- Grid-gallery UI BEGIN -->
 
-				
-				<!-- VIDEO CODE 
-				
-				<a class="crs-play go_gridItem" 
-				href="bin.robocop/HB-Holster.webm"
-				data-fancybox="avp"
-				data-type="html5video"
-				data-width="1200" 
-				data-height="1200"
-				data-thumb="bin.robocop/HB-Holster-thumb-fbx.webp"
-				data-caption="Leg Holster mechanism simple rig and animation">
-					<video class="vidbtn" loop onmouseover="this.play();" onmouseout="this.pause();">
-						<source src="bin.robocop/HB-Holster.webm" type="video/webm">
-					</video>
-					<span class="go_caption go_caption-full">Leg Holster mechanism</span>
-				</a>
-				
-				-->
-
-		<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GridOverflow UI BEGIN -->
-
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-augs-1.webp"
 			data-fancybox="trinity-ui"
 			data-thumb="trinityfusion/trinityfusion-ui-augs-1.webp"
@@ -391,7 +380,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-augs-2.webp"
 			data-fancybox="trinity-ui"
 			data-thumb="trinityfusion/trinityfusion-ui-augs-2.webp"
@@ -401,7 +390,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-weapons-1.webp"
 			data-fancybox="trinity-ui-w"
 			data-thumb="trinityfusion/trinityfusion-ui-weapons-1.webp"
@@ -411,7 +400,7 @@
 			alt="Trinity Fusion weapon comparison">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-augs-3.webp"
 			data-fancybox="trinity-ui"
 			data-thumb="trinityfusion/trinityfusion-ui-augs-3.webp"
@@ -421,7 +410,7 @@
 			alt="Trinity Fusion environment run-through">
 		</a>
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-perks-2.webp"
 			data-fancybox="trinity-ui"
 			data-thumb="trinityfusion/trinityfusion-ui-perks-2.webp"
@@ -432,7 +421,7 @@
 		</a>
 
 
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="trinityfusion/trinityfusion-ui-weapons-2.webp"
 			data-fancybox="trinity-ui-w"
 			data-thumb="trinityfusion/trinityfusion-ui-weapons-2.webp"
@@ -443,16 +432,16 @@
 		</a>
 
 
-		</div> <!-- GridOverflow UI END -->
+		</div> <!-- Grid-gallery UI END -->
 
 <hr style="margin:1.4rem auto">
 
 <details>
 	<summary>cutting room floor ✂ </summary>
 	<div>
-	<div class="gridOverflow go-actionIcon aspect2x1"> <!-- GO cutting room bosses START -->
+	<div class="grid-gallery grid-col-2 aspect-2x1"> <!-- GO cutting room bosses START -->
 
-	<a class="crs-expand go_gridItem" 
+	<a class="crs-expand grid-item" 
 		href="trinityfusion/trinityfusion-boss-design-jumper.webp"
 		data-fancybox="bosssketchcut"
 		data-thumb="trinityfusion/trinityfusion-boss-design-jumper.webp"
@@ -462,7 +451,7 @@
 		alt="Trinity Fusion environment run-through">
 	</a>
 
-	<a class="crs-expand go_gridItem" 
+	<a class="crs-expand grid-item" 
 		href="trinityfusion/trinityfusion-boss-design-techsnake.webp"
 		data-fancybox="bosssketchcut"
 		data-thumb="trinityfusion/trinityfusion-boss-design-techsnake.webp"
@@ -474,11 +463,16 @@
 
 	</div> <!-- GO cutting room bosses START -->
 
-	<ul class="a">
-	<li>A couple of the bosses I've made sketches for were superseded by better designs.</li>
-	<li>The sumo bot originally had an attack where he would curl into a ball and tumble forward, it was cut in favor of the laser attack.</li>
-	</ul>
-	</div>
+
+		<div>
+		<ul class="a">
+		<li>A couple of the bosses I've made sketches for were superseded by better designs.</li>
+		<li>The sumo bot originally had an attack where he would curl into a ball and tumble forward, it was cut in favor of the laser attack.</li>
+		</ul>
+		</div>
+
+</div>
+
 </details>
 
 <!--
@@ -640,6 +634,6 @@
 <!-- Rough huh? took me like 3 weeks to cobble this together. Feel free to grab snippets and adapt to your purposes, but bear in mind that Fancybox is NOT free. 
 
 Artliminal SRL Ⓒ 2025. All Rights Reserved.
-Website created by Daniel Nagy completely in VSCode. GridOverflow and Fancybox are licensed to their respective owners.
+Website created by Daniel Nagy completely in VSCode. Grid-gallery and Fancybox are licensed to their respective owners.
 
 -->

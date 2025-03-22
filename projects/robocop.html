@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
@@ -16,6 +16,14 @@
 	content="width=device-width, initial-scale=1.0">
 
 </head>
+
+<!-- To DO ----------------------------------------
+
+• explain Pierrick Picaut courses, rigging and animation
+• explain Marvel, Proportions, credit Mindchamber
+• retroactive art direction - no materials
+
+----------------------------------------------- -->
 
 <body class="bkg">
 
@@ -28,7 +36,7 @@
 					</div>
 				</a>
 			<div class="headerrows">
-				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, a 3D Art Generalist working in the games industry for the past 15 years.</a></h1>
+				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, I've been making art for games for 15 years and counting.</a></h1>
 				<div class="navbar">
 				<a href="../about.html">					<div class="navbtn">ABOUT			</div></a>
 				<a href="../projects/template-project.html">					<div class="navbtn">PROCESS			</div></a>
@@ -41,33 +49,32 @@
 	</header>
 
 <div class="content">
-	<div class="gridOverflow go-actionIcon">
-<!-- GridOverflow BEGIN -->
+	<div class="grid-gallery grid-col-5 with-icon aspect-4x3"> <!-- GG Main BEGIN -->
 
-<!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
-<a class="crs-expand go_gridItem go_gridItem-VIP" 
+
+<a class="crs-expand grid-item size-2x4" 
 	href="robocop/Aim-at-Cam.webp"
 	data-fancybox="Robocop"
 	data-thumb="robocop/Aim-at-Cam-thumb-fbx.webp"
 	data-caption="Drop it! Cowboy pose, inspired by Robocop 3's poster">
 	<img 
-	src="robocop/Aim-at-Cam-thumb.webp"
+	src="robocop/Aim-at-Cam.webp"
 	style="height: 100%;"
 	alt="Aim at Cam">
 </a>
-<!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
-<a class="crs-expand go_gridItem go_gridItem-panorama" 
+<!-- size-2x1 class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
+<a class="crs-expand grid-item size-3x2" 
 		href="robocop/SidePosePano.webp"
 		data-fancybox="Robocop"
 		data-thumb="robocop/SidePosePano-thumb-fbx.webp"
 		data-caption="''Somewhere there is a crime happening.''">
 		
 		<img 
-		src="robocop/SidePosePano-thumb.webp"
+		src="robocop/SidePosePano.webp"
 		alt="Side Pose">
 	</a>
-<!-- go_gridItem-vertigo class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
-<a class="crs-expand go_gridItem go_gridItem-vertigo" 
+<!-- size-1x2 class creates a grid item in the form of a vertical rectangle (1x2 cells) -->
+<a class="crs-expand grid-item size-1x2" 
 		href="robocop/Marvel.webp"
 		data-fancybox="Robocop"
 		data-thumb="robocop/Marvel-thumb-fbx.webp"
@@ -77,7 +84,7 @@
 		alt="Marvel">
 </a>
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div>
 	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 	<!-- go_caption class is for creating captions inside grid items -->
@@ -85,7 +92,7 @@
 	</div>
 </div> 
 
-<a class="crs-play go_gridItem" 
+<a class="crs-play grid-item" 
 href="robocop/HB-Holster.webm"
 data-fancybox="Robocop"
 data-type="html5video"
@@ -96,10 +103,9 @@ data-caption="Leg Holster mechanism simple rig and animation">
 	<video class="vidbtn" loop onmouseover="this.play();" onmouseout="this.pause();">
 		<source src="robocop/HB-Holster.webm" type="video/webm">
 	</video>
-	<span class="go_caption go_caption-full">Leg Holster mechanism</span>
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="robocop/SidePose25B.webp"
 	data-fancybox="Robocop"
 	data-thumb="robocop/SidePose25-thumb-fbx.webp"

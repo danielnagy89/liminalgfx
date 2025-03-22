@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
@@ -16,6 +16,14 @@
 	content="width=device-width, initial-scale=1.0">
 
 </head>
+
+<!-- To DO ----------------------------------------
+
+• unfuck text sizing
+• find better solution for Spiral Notebook graphics
+
+
+----------------------------------------------- -->
 
 <body>
 
@@ -28,7 +36,7 @@
 					</div>
 				</a>
 			<div class="headerrows">
-				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, a 3D Art Generalist working in the games industry for the past 15 years.</a></h1>
+				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, I've been making art for games for 15 years and counting.</a></h1>
 				<div class="navbar">
 				<a href="../about.html">					<div class="navbtn">ABOUT			</div></a>
 				<a href="../projects/template-project.html">					<div class="navbtn">PROCESS			</div></a>
@@ -40,11 +48,11 @@
 		</div>
 	</header>
 
-<div class="content"> <!-- DIV CONTENT BEGIN -->
+<main class="content"> <!-- MAIN CONTENT BEGIN -->
 
-	<div class="gridOverflow go-actionIcon aspect5x4"> <!-- GO Main BEGIN -->
+	<div class="grid-gallery with-icon aspect-5x4"> <!-- GO Main BEGIN -->
 
-<a class="crs-expand go_gridItem go_gridItem-VIP loadfx c01" 
+<a class="crs-expand grid-item size-2x2 animate-in delay-1" 
 	href="atomturbojet/atj-ico.webp"
 	data-fancybox="atj-ico"
 	data-thumb="atomturbojet/atj-ico.webp"
@@ -56,39 +64,40 @@
 </a>
 
 
-<div class="go_gridItem go_gridItem-panorama">
-	<div class="go_pad">
-	<h1 class="projtitle">Atom Turbo Jet</h1>
+<div class="grid-item size-2x1">
+	<div class="text-container grid-item-text text-xl">
+		<svg width="100%" height="auto" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet">
+			<text x="0" y="150" text-anchor="start" font-family="figtree" font-weight="700" font-size="150" textLength="1000" lengthAdjust="spacing" fill="white" letter-spacing="-5">Atom Turbo Jet</text>
+		</svg>
 	<h2>Working in the indie sphere I got too used to cutting corners. I wanted to check where current processes were compared to the industry standards, so I enrolled into a short mentorship with AMC Studio.</h2>
 	<p>When teams are small and milestones come tumbling, you get in a mindset of getting things done at heavy cost. Corners get cut, errors get swept under the rug, whatever it takes to get to the finish line. I felt like I never did a project where I emphasized quality to the detriment of speed, so this here would be my exercise. </p>
 	<p>I wrote an application detailing who I am and what I was looking for, and within a few days I've received the confirmation email. I had a short call with my mentor and the facilitator, and it was off to the races.</p>
-	</div>
+	</div>	
+
 </div>
 
 
-<div class="go_gridItem">
-	<div class="go_pad">
+<div class="grid-item pad endline">
+	<div class="text-container grid-item-text">
 	<h2>What to do?</h2>
 	<p>Usually for this sort of short mentorship, props are favored since they're easy to manage and there's a good concentration of detail to tackle.</p>
 	<p>On the other hand, I already had a decade of experience so I wouldn't really get bogged down in the basics. To me it was an issue of assessment- revealing blindspots, undoing bad habits and fine-tuning. I'd need a challenge to keep it interesting too.</p>
 	</div>
 </div> 
 
-<div class="go_gridItem">
-	<div class="go_pad">
+<div class="grid-item pad endline">
+	<div class="text-container grid-item-text">
 	<h2>Decisions decisions</h2>
-	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time, and ambitious as I usually am, I was wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... smaller vehicle?"</i></p>
-	<p>Presto, problem solved.</p>
+	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time and wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... <small>smaller</small> vehicle?"</i></p>
+	<p>Presto, problem solved. New project created.</p>
 	</div>
 </div> 
-
 </div> <!-- GO Main END -->
 
-<hr>
 
-<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GO Shots BEGIN -->
+<div class="grid-gallery with-icon grid-col-5 aspect-16x9"> <!-- GO Shots BEGIN -->
 
-<a class="crs-expand go_gridItem loadfx c01" 
+<a class="crs-expand grid-item animate-in delay-1" 
 	href="atomturbojet/atj-cam-3QV-left-fr.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-3QV-left-fr.webp"
@@ -98,7 +107,7 @@
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c02" 
+<a class="crs-expand grid-item size-1x2 animate-in delay-2" 
 	href="atomturbojet/atj-cam-front.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-front.webp"
@@ -108,7 +117,7 @@
 	alt="Atom Turbo Jet Front">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c03" 
+<a class="crs-expand grid-item animate-in delay-3" 
 	href="atomturbojet/atj-cam-3QV-left-bk.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-3QV-left-bk.webp"
@@ -118,7 +127,7 @@
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c04" 
+<a class="crs-expand grid-item size-1x2 animate-in delay-4" 
 	href="atomturbojet/atj-cam-back.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-back.webp"
@@ -128,7 +137,7 @@
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c05" 
+<a class="crs-expand grid-item animate-in delay-5" 
 	href="atomturbojet/atj-cam-interior.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-interior.webp"
@@ -138,7 +147,7 @@
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c06" 
+<a class="crs-expand grid-item animate-in delay-6" 
 	href="atomturbojet/atj-cam-side-left.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-side-left.webp"
@@ -148,7 +157,7 @@
 		alt="Atom Turbo Jet Left Side">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c07" 
+<a class="crs-expand grid-item animate-in delay-7" 
 	href="atomturbojet/atj-cam-side-right.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-side-right.webp"
@@ -158,7 +167,7 @@
 		alt="Atom Turbo Jet Right Side">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c08" 
+<a class="crs-expand grid-item animate-in delay-8" 
 	href="atomturbojet/atj-cam-aerial.webp"
 	data-fancybox="atj-cam"
 	data-thumb="atomturbojet/thumb-atj-cam-aerial.webp"
@@ -173,9 +182,9 @@
 
 <hr>
 
-<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GO Clay BEGIN -->
+<div class="grid-gallery with-icon aspect-16x9"> <!-- GO Clay BEGIN -->
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-clay-aerial.webp"
 	data-fancybox="atj-clay"
 	data-thumb="atomturbojet/thumb-atj-clay-aerial.webp"
@@ -185,7 +194,7 @@
 	alt="Atom Turbo Jet Aerial">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-clay-back.webp"
 	data-fancybox="atj-clay"
 	data-thumb="atomturbojet/thumb-atj-clay-back.webp"
@@ -195,7 +204,7 @@
 	alt="Atom Turbo Jet Aerial">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-clay-fr.webp"
 	data-fancybox="atj-clay"
 	data-thumb="atomturbojet/thumb-atj-clay-fr.webp"
@@ -209,9 +218,9 @@
 
 <hr>
 
-<div class="gridOverflow go-actionIcon go-3 aspect16x9"> <!-- GO Ref BEGIN -->
+<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- GO Ref BEGIN -->
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-ref-1.webp"
 	data-fancybox="atj-ref"
 	data-thumb="atomturbojet/thumb-atj-ref-1.webp"
@@ -221,7 +230,7 @@
 	alt="Atom Turbo Jet Locators 1/4">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-ref-2.webp"
 	data-fancybox="atj-ref"
 	data-thumb="atomturbojet/thumb-atj-ref-2.webp"
@@ -231,8 +240,8 @@
 	alt="Atom Turbo Jet Locators 2/4">
 </a>
 
-<div class="go_gridItem">
-	<div class="go_pad">
+<div class="grid-item">
+	<div class="pad">
 		<h1 style="font-size:2.6rem;">Reference</h1>
 		<p>The base inspiration was a classic-looking bumpercar from the 1950s; luckily I found a website that had one for sale and the picture set was very comprehensive, giving me all angles. I'm fascinated from 'Atomic Age' aesthetics, the corny space-race metal toys in particular really caught my eye.</p>
 	</div>
@@ -242,25 +251,25 @@
 <hr>
 
 
-<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GO Locators BEGIN -->
+<div class="grid-gallery with-icon aspect-16x9"> <!-- GO Locators BEGIN -->
 
-	<div class="go_gridItem go_gridItem-vertigo">
-		<div>
-			<h1 style="font-size:2.6rem;">Accuracy Process</h1>
+	<div class="grid-item size-1x2">
+		<div class="text-container grid-item-text">
+			<h1 style="font-size:2.6em;">Accuracy Process</h1>
 			<p>For this project I've tried to use an obscure method to replicating a 3D model accurately from a set of images. I've used the discontinued Autodesk Image Modeler (no longer on the market) to place a cluster of Locators (points with same location). How it works is, AIM loads the images and assigns a camera with specific settings to each image. The locators are shared between the cameras/ images, so adjusting them by what you see in each image will give it the spatial location relative to the cameras.</p>
 		</div>
 	</div>
 
-	<div class="go_gridItem go_gridItem-vertigo">
+	<div class="grid-item size-1x2">
 		<div>
-			<p>As I was about to find, it's a painstaking process and only worth it if you need extreme accuracy. The precise number of people who cared whether my bumpercar was accurate: ∅ (zero).</p>
+			<p>As I was about to find, it's a painstaking process and only worth it if you need extreme accuracy. The precise number of people who cared whether my bumpercar was life-accurate: ∅ (barred zero).</p>
 			<p>I've tried replicating this process with Perspective Plotter, an addon for Blender which does camera matching, but it only references one image. While working on this, I reached out to Mark Kingsnorth (the author of the plugin) to ask him about camera matching. He was interested in making a successor to AIM, since there's demand. </p>
 	
 		</div>
 	</div>
 
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-locators2.webp"
 	data-fancybox="atj-loc"
 	data-thumb="atomturbojet/thumb-atj-locators2.webp"
@@ -270,7 +279,7 @@
 	alt="Atom Turbo Jet Locators 1/4">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-locators5.webp"
 	data-fancybox="atj-loc"
 	data-thumb="atomturbojet/thumb-atj-locators5.webp"
@@ -280,7 +289,7 @@
 	alt="Atom Turbo Jet Locators 2/4">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-locators3.webp"
 	data-fancybox="atj-loc"
 	data-thumb="atomturbojet/atj-locators3.webp"
@@ -290,7 +299,7 @@
 	alt="Atom Turbo Jet Locators 3/4">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="atomturbojet/atj-locators4.webp"
 	data-fancybox="atj-loc"
 	data-thumb="atomturbojet/thumb-atj-locators4.webp"
@@ -350,9 +359,9 @@
 	
 	<hr class="space">
 
-		<div class="gridOverflow go-actionIcon go-3 aspect3x2"> <!-- GO Spiral BEGIN -->
+		<div class="grid-gallery with-icon grid-col-3 aspect-3x2"> <!-- GO Spiral BEGIN -->
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-01.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-01.webp"
@@ -362,7 +371,7 @@
 				alt="Atom Turbo Jet Spiral 1">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-02.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-02.webp"
@@ -372,7 +381,7 @@
 				alt="Atom Turbo Jet Spiral 2">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-03.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-03.webp"
@@ -382,7 +391,7 @@
 				alt="Atom Turbo Jet Spiral 3">
 			</a>
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-04.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-04.webp"
@@ -392,7 +401,7 @@
 				alt="Atom Turbo Jet Spiral 4">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-05.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-05.webp"
@@ -402,7 +411,7 @@
 				alt="Atom Turbo Jet Spiral 5">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-06.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-06.webp"
@@ -421,8 +430,8 @@
 
 	<details>
 		<summary>Cutting room floor ✂</summary>
-		<div class="gridOverflow go-actionIcon aspect16x10"> <!-- GO Spiral BEGIN -->
-		<a class="crs-expand go_gridItem" 
+		<div class="grid-gallery with-icon aspect-16x10"> <!-- GO Spiral BEGIN -->
+		<a class="crs-expand grid-item" 
 			href="atomturbojet/atj-hover.webp"
 			data-fancybox="atj-cut"
 			data-thumb="atomturbojet/thumb-atj-hover.webp"
@@ -431,7 +440,7 @@
 			src="atomturbojet/thumb-atj-hover.webp"
 			alt="Atom Turbo Jet Hover">
 		</a>
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="atomturbojet/atj-wip-meshlist.webp"
 			data-fancybox="atj-cut"
 			data-thumb="atomturbojet/atj-wip-meshlist.webp"
@@ -440,12 +449,12 @@
 			src="atomturbojet/atj-wip-meshlist.webp"
 			alt="Atom Turbo Jet WIP Meshlist">
 		</a>
-		<div class="go_gridItem">
-		<div class="go_pad">
-		<p>• I wanted to add an eerie crash test dummy, both for scale and for story. I didn't have time left over in the budget to do that.<br>
-		• Multiple skins. One of the most fun features about these bumpercars are their paintjobs. The Substance file was layered in such a way that reskins could be easy, but that time's passed.<br>
-		• Environment-wise I planned to do a park or a track where multiple different Jets were abandoned. Unfortunately the eastern-european melancholia didn't get to materialize due to time constraints.</p>
-	</div>
+		<div class="grid-item">
+			<div class="pad">
+			<p>• I wanted to add an eerie crash test dummy, both for scale and for story. I didn't have time left over in the budget to do that.<br>
+			• Multiple skins. One of the most fun features about these bumpercars are their paintjobs. The Substance file was layered in such a way that reskins could be easy, but that time's passed.<br>
+			• Environment-wise I planned to do a park or a track where multiple different Jets were abandoned. Unfortunately the eastern-european melancholia didn't get to materialize due to time constraints.</p>
+			</div>
 		</div>
 	</details>
 
@@ -459,7 +468,10 @@
 		<a href=""><div class="hashtag">#hardsurface</div></a>
 	</div>
 
-</div> <!-- DIV CONTENT END -->
+	<li>rev.1 2025.03.12</li>
+	<li>drafted 2025.03.12</li>
+
+</main> <!-- MAIN CONTENT END -->
 
 
 	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
@@ -530,6 +542,6 @@
 <!-- Rough huh? took me like 3 weeks to cobble this together. Feel free to grab snippets and adapt to your purposes, but bear in mind that Fancybox is NOT free. 
 
 Artliminal SRL Ⓒ 2025. All Rights Reserved.
-Website created by Daniel Nagy completely in VSCode. GridOverflow and Fancybox are licensed to their respective owners.
+Website created by Daniel Nagy completely in VSCode. Grid-gallery and Fancybox are licensed to their respective owners.
 
 -->

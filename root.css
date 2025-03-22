@@ -106,7 +106,7 @@ body, html {
 
 	font-family: figtree;
 	scroll-behavior: smooth;
-	line-height: 1.6;
+	line-height: 1.2;
 	margin: 0;
 	padding: 0 0 4rem 0;
 	height: 100%;
@@ -333,6 +333,51 @@ body, html {
 	}
 }
 
+/* CONTENT BEGIN */
+
+:root {
+	/* Base sizing variables */
+	--content-padding: clamp(1rem, 3vw, 2.5rem);
+	--content-width-narrow: min(85%, 1200px);    /* Articles */
+	--content-width-default: min(90%, 1800px);   /* Projects */
+	--content-width-wide: min(95%, 2400px);      /* Homepage */
+	--content-margin-top: clamp(2rem, 5vh, 5rem);
+  }
+  
+  /* Base content styles */
+  .content {
+	padding: var(--content-padding);
+	width: var(--content-width-default); /* Default for projects */
+	margin: var(--content-margin-top) auto;
+	min-height: 50vh;
+  }
+  
+  /* Modifier classes */
+  .content--article {
+	width: var(--content-width-article); /* For articles */
+  }
+  
+  .content--wide {
+	width: var(--content-width-wide); /* For homepage */
+  }
+  
+  /* Biz page might need a specific layout */
+  .content--biz {
+	width: var(--content-width-default);
+	/* Any specific biz page styling */
+  }
+  
+  /* Optional: Full-width modifier for image galleries that need to break out */
+  .content--fullwidth {
+	width: 100%;
+	max-width: none;
+	margin-left: calc(var(--content-padding) * -1);
+	margin-right: calc(var(--content-padding) * -1);
+  }
+
+/* CONTENT END */
+
+
 /* FOOTER BEGIN, progress bar works as divider */
 
     /* Footer container */
@@ -532,22 +577,23 @@ p {
 }
 
 .projtitle{
+	display: block;
 	color: white;
 	background-color: hsla(0, 0%, 0%, 0.5);
 	font-family: figtree;
 	font-weight: 800;
 	/* font-size: 6rem;*/ 
-	font-size: calc(1 * (var(--fval)));
-	text-align: left;
+	font-size: clamp(1rem, 5vw, 8rem);
+	text-align: justify;
+	text-align-last: justify;
 	width: 100%;
-	margin: 0.4rem auto 0.4rem auto;
-	--fval: 8vmin;
+	height:auto;
+	box-sizing: border-box;
+	margin: 0 auto 0.4rem auto;
 }
 
 .projsubhead{
 	color: white;
-	font-size: calc(1 * (var(--fval)));
-	--fval: 3vmin;
 }
 
 .indent {
@@ -609,11 +655,11 @@ li {
 		margin-right: auto;
 }
 
-.content {
+/* .content {
 		padding: 20px;
-		/* Add enough height to allow scrolling */
-		min-height: 150vh;
-}
+		width: 80%;
+		margin: 10vh auto;
+} */
 
 .article {
 	margin: 13vh auto 12vh auto;

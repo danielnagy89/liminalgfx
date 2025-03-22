@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
@@ -16,6 +16,15 @@
 	content="width=device-width, initial-scale=1.0">
 
 </head>
+
+<!-- To DO ----------------------------------------
+
+• retroactive art direction section
+• lessons learned, in order; art direction, leadership, scope creep, sidetracking
+• clip snippets of Painting Streams
+
+----------------------------------------------- -->
+
 
 <body>
 
@@ -28,7 +37,7 @@
 					</div>
 				</a>
 			<div class="headerrows">
-				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, a 3D Art Generalist working in the games industry for the past 15 years.</a></h1>
+				<h1 class="toptag"><a href="../about.html">Hi! I'm Daniel, I've been making art for games for 15 years and counting.</a></h1>
 				<div class="navbar">
 				<a href="../about.html">					<div class="navbtn">ABOUT			</div></a>
 				<a href="../biz.html">					<div class="navbtn">BUSINESS			</div></a>
@@ -42,9 +51,9 @@
 
 <div class="content"> <!-- DIV CONTENT BEGIN -->
 
-	<div class="gridOverflow go-actionIcon aspect16x10"> <!-- GO Main BEGIN -->
+	<div class="grid-gallery with-icon aspect-16x10"> <!-- GO Main BEGIN -->
 
-<a class="crs-expand go_gridItem go_gridItem-VIP loadfx c01" 
+<a class="crs-expand grid-item size-2x2 animate-in" 
 	href="rift-frigate/riftfrigate-key-16x10.webp"
 	data-fancybox="rf-key"
 	data-thumb="rift-frigate/riftfrigate-key-16x10.webp"
@@ -55,25 +64,7 @@
 	alt="Aim at Cam">
 </a>
 
-
-
-
-
-
-
-N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
-
-
-
-
-
-
-
-
-
-
-
-<div class="go_gridItem go_gridItem-panorama">
+<div class="grid-item size-2x2">
 	<div class="go_pad">
 	<h1 class="projtitle">Rift Frigate</h1>
 	<h2>Post-Mortem for an indie project.</h2>
@@ -86,11 +77,11 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 
 <hr>
 
-<div class="gridOverflow go-actionIcon go-3 aspect16x9"> <!-- GO Shots BEGIN -->
+<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- GO Shots BEGIN -->
 
 
 
-<a class="crs-expand go_gridItem loadfx c01" 
+<a class="crs-expand grid-item animate-in delay-1" 
 	href="rift-frigate/riftfrigate-sshot-1.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-1.webp"
@@ -100,7 +91,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 	alt="Atom Turbo Jet Front">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c02" 
+<a class="crs-expand grid-item animate-in delay-2" 
 	href="rift-frigate/riftfrigate-sshot-2.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-2.webp"
@@ -110,7 +101,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c03" 
+<a class="crs-expand grid-item animate-in delay-3" 
 	href="rift-frigate/riftfrigate-sshot-3.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-3.webp"
@@ -120,7 +111,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c04" 
+<a class="crs-expand grid-item animate-in delay-4" 
 	href="rift-frigate/riftfrigate-sshot-4.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-4.webp"
@@ -130,7 +121,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Side Pose">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c05" 
+<a class="crs-expand grid-item animate-in delay-5" 
 	href="rift-frigate/riftfrigate-sshot-5.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-5.webp"
@@ -140,7 +131,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Atom Turbo Jet Left Side">
 </a>
 
-<a class="crs-expand go_gridItem loadfx c06" 
+<a class="crs-expand grid-item animate-in delay-6" 
 	href="rift-frigate/riftfrigate-sshot-6.webp"
 	data-fancybox="rf-ss"
 	data-thumb="rift-frigate/riftfrigate-sshot-6.webp"
@@ -154,9 +145,9 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 
 <hr>
 
-<div class="gridOverflow go-actionIcon go-3 aspect2x1"> <!-- GO GIF BEGIN -->
+<div class="grid-gallery with-icon grid-col-3 aspect-2x1"> <!-- GO GIF BEGIN -->
 
-	<a class="crs-expand go_gridItem" 
+	<a class="crs-play grid-item" 
 	href="rift-frigate/riftfrigate-chainsaw-lite.webp"
 	data-fancybox="rf-ani"
 	data-thumb="rift-frigate/riftfrigate-chainsaw-lite.webp"
@@ -166,7 +157,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Rift Frigate Chainsaw">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-tractorbeam.webp"
 	data-fancybox="rf-ani"
 	data-thumb="rift-frigate/riftfrigate-tractorbeam.webp"
@@ -176,7 +167,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Rift Frigate Tractor Beam">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-rage.webp"
 	data-fancybox="rf-ani"
 	data-thumb="rift-frigate/riftfrigate-rage.webp"
@@ -186,7 +177,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Rift Frigate Chainsaw">
 </a>
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div class="go_pad">
 	<h2>Decisions decisions</h2>
 	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time, and ambitious as I usually am, I was wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... smaller vehicle?"</i></p>
@@ -194,7 +185,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 	</div>
 </div> 
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div class="go_pad">
 	<h2>Decisions decisions</h2>
 	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time, and ambitious as I usually am, I was wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... smaller vehicle?"</i></p>
@@ -202,7 +193,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 	</div>
 </div> 
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div class="go_pad">
 	<h2>Decisions decisions</h2>
 	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time, and ambitious as I usually am, I was wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... smaller vehicle?"</i></p>
@@ -214,9 +205,9 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 
 <hr>
 
-<div class="gridOverflow go-actionIcon go-3 aspect16x9"> <!-- GO v0 BEGIN -->
+<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- GO v0 BEGIN -->
 
-	<a class="crs-expand go_gridItem" 
+	<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-v0-1.webp"
 	data-fancybox="rf-ani"
 	data-thumb="rift-frigate/riftfrigate-v0-1.webp"
@@ -226,7 +217,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Rift Frigate Chainsaw">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-v0-2.webp"
 	data-fancybox="rf-ani"
 	data-thumb="rift-frigate/riftfrigate-v0-2.webp"
@@ -236,14 +227,14 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 		alt="Rift Frigate Tractor Beam">
 </a>
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div class="go_pad">
 	<h2>Introduction - version 0.00</h2>
 	<p>The first screenshots that made it to social media showcased quite a solid and unassuming art style. <br> Everything here was very attainable. Fixed camera with a limited frustrum, easy pre-made modules, flares that were just additive planes - simple and efficient.<br>Looking back, I believe this iteration could have made the market.</p>
 	</div>
 </div> 
 
-<div class="go_gridItem">
+<div class="grid-item">
 	<div class="go_pad">
 	<h2>Decisions decisions</h2>
 	<p>Props weren't doing it for me. I wanted something bigger, but I was well aware I'd be doing this in my spare time, and ambitious as I usually am, I was wary of my tendency to fill my plate to burnout. My idea of toning it down went as follows:</p><p><i>"What if instead of a vehicle I did a... smaller vehicle?"</i></p>
@@ -255,9 +246,9 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 
 <hr>
 
-<div class="gridOverflow go-actionIcon go-3 aspect16x9"> <!-- GO Ref BEGIN -->
+<div class="grid-gallery with-icon grid-col-3 aspect-16x9"> <!-- GO Ref BEGIN -->
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/3D-Process-txt.webp"
 	data-fancybox="process"
 	data-thumb="rift-frigate/3D-Process-txt.webp"
@@ -267,7 +258,7 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 	alt="Rift Frigate 3D Export Process">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/launch-campaign.webp"
 	data-fancybox="process"
 	data-thumb="rift-frigate/launch-campaign.webp"
@@ -284,9 +275,9 @@ N:\Projects.SHELVED\Rift_Frigate\RiftFrigate_Root\• Sort
 <h1 style="font-size:2.6rem;">Fun with Fractals</h1>
 <h2>Early on I was fascinated with fractals, but also stumped as to how to port them to a video game setting. Generating them is a very intensive task, so the only way to have fractal stuff was to collapse them to textures and go from there.</h2>
 
-<div class="gridOverflow go-actionIcon go-3 aspect16x9"> <!-- GO Skybox BEGIN -->
+<div class="grid-gallery with-icon grid-col-4 aspect-16x9"> <!-- GO Skybox BEGIN -->
 
-<a class="crs-play go_gridItem" 
+<a class="crs-play grid-item" 
 href="rift-frigate/riftfrigate-sky-city-1.mp4"
 data-fancybox="RF-skybox"
 data-type="html5video"
@@ -297,7 +288,7 @@ data-caption="Fractal render merged with existing skybox, v1. Unfortunately for 
 	</video>
 </a>
 
-<a class="crs-play go_gridItem" 
+<a class="crs-play grid-item" 
 href="rift-frigate/riftfrigate-sky-city-2.mp4"
 data-fancybox="RF-skybox"
 data-type="html5video"
@@ -308,7 +299,7 @@ data-caption="Version 2. Slightly better and blending with the layers of atmosph
 	</video>
 </a>
 
-<a class="crs-play go_gridItem" 
+<a class="crs-play grid-item" 
 href="rift-frigate/riftfrigate-sky-city-3.mp4"
 data-fancybox="RF-skybox"
 data-type="html5video"
@@ -319,7 +310,7 @@ data-caption="Different fractal, would have made a great wreckage/ battlefield s
 	</video>
 </a>
 
-<a class="crs-play go_gridItem" 
+<a class="crs-play grid-item" 
 href="rift-frigate/riftfrigate-fractalspin.mp4"
 data-fancybox="RF-skybox"
 data-type="html5video"
@@ -339,9 +330,9 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 <h1 style="font-size:2.6rem;">MUCI</h1>
 <h2>MUCI was the Mothership that had to protect and escort throughout the prequel episode. The acronym is lost to time, but "muci" means "snot" in romanian.</h2>
 
-<div class="gridOverflow go-actionIcon go-3 aspect2x1"> <!-- GO Ref BEGIN -->
+<div class="grid-gallery with-icon grid-col-6 aspect-4x3"> <!-- GO Ref BEGIN -->
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-concept-MUCI.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/riftfrigate-concept-MUCI.webp"
@@ -351,7 +342,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item size-2x2" 
 	href="rift-frigate/riftfrigate-concept-MUCI2.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/riftfrigate-concept-MUCI2.webp"
@@ -362,7 +353,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 </a>
 
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP0.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP0.webp"
@@ -372,7 +363,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP1.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP1.webp"
@@ -382,7 +373,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP2.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP2.webp"
@@ -392,7 +383,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP3.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP3.webp"
@@ -402,7 +393,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP4.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP4.webp"
@@ -412,7 +403,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/Muci-HP5.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/Muci-HP5.webp"
@@ -422,7 +413,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate MUCI 0">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/muci-box.webp"
 	data-fancybox="muci"
 	data-thumb="rift-frigate/muci-box.webp"
@@ -434,16 +425,16 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 
 </div>
 
-<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GO Locators BEGIN -->
+<div class="grid-gallery with-icon grid-col-5 aspect-16x10"> <!-- GO Locators BEGIN -->
 
-	<div class="go_gridItem go_gridItem-vertigo">
+	<div class="grid-item size-1x2">
 		<div>
-			<h1 style="font-size:2.6rem;">Accuracy Process</h1>
-			<p>For this project I've tried to use an obscure method to replicating a 3D model accurately from a set of images. I've used the discontinued Autodesk Image Modeler (no longer on the market) to place a cluster of Locators (points with same location). How it works is, AIM loads the images and assigns a camera with specific settings to each image. The locators are shared between the cameras/ images, so adjusting them by what you see in each image will give it the spatial location relative to the cameras.</p>
+			<h1 style="font-size:2.6rem;">Weird shit</h1>
+			<p>One of the Unique Selling Points of the game would have been a very lively universe. Space games usually shy away from alien stuff, which makes for a very sterile experience. I tried to stretch.</p>
 		</div>
 	</div>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-concept-asterocks.webp"
 	data-fancybox="rf-concepts"
 	data-thumb="rift-frigate/riftfrigate-concept-asterocks.webp"
@@ -453,7 +444,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate Concepts - Asteroids">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item size-2x2" 
 	href="rift-frigate/riftfrigate-concept-cultist-base.webp"
 	data-fancybox="rf-concepts"
 	data-thumb="rift-frigate/riftfrigate-concept-cultist-base.webp"
@@ -463,7 +454,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate Concepts - Asteroids">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-concept-kaijus.webp"
 	data-fancybox="rf-concepts"
 	data-thumb="rift-frigate/riftfrigate-concept-kaijus.webp"
@@ -473,7 +464,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate Concepts - Kaijus 1">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-concept-kaijus2.webp"
 	data-fancybox="rf-concepts"
 	data-thumb="rift-frigate/riftfrigate-concept-kaijus2.webp"
@@ -483,7 +474,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	alt="Rift Frigate Concepts - Kaijus 2">
 </a>
 
-<a class="crs-expand go_gridItem" 
+<a class="crs-expand grid-item" 
 	href="rift-frigate/riftfrigate-concept-spacefeesh.webp"
 	data-fancybox="rf-concepts"
 	data-thumb="rift-frigate/riftfrigate-concept-spacefeesh.webp"
@@ -543,9 +534,9 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 	
 	<hr class="space">
 
-		<div class="gridOverflow go-actionIcon go-3 aspect3x2"> <!-- GO Spiral BEGIN -->
+		<div class="grid-gallery with-icon grid-col-3 aspect-3x2"> <!-- GO Spiral BEGIN -->
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-01.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-01.webp"
@@ -555,7 +546,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 				alt="Atom Turbo Jet Spiral 1">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-02.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-02.webp"
@@ -565,7 +556,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 				alt="Atom Turbo Jet Spiral 2">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-03.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-03.webp"
@@ -575,7 +566,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 				alt="Atom Turbo Jet Spiral 3">
 			</a>
 
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-04.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-04.webp"
@@ -585,7 +576,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 				alt="Atom Turbo Jet Spiral 4">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-05.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-05.webp"
@@ -595,7 +586,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 				alt="Atom Turbo Jet Spiral 5">
 			</a>
 			
-			<a class="crs-expand go_gridItem" 
+			<a class="crs-expand grid-item" 
 				href="atomturbojet/atj-spiral-06.webp"
 				data-fancybox="atj-spiral"
 				data-thumb="atomturbojet/thumb-atj-spiral-06.webp"
@@ -614,8 +605,8 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 
 	<details>
 		<summary>Cutting room floor ✂</summary>
-		<div class="gridOverflow go-actionIcon aspect16x10"> <!-- GO Spiral BEGIN -->
-		<a class="crs-expand go_gridItem" 
+		<div class="grid-gallery with-icon aspect-16x10"> <!-- GO Spiral BEGIN -->
+		<a class="crs-expand grid-item" 
 			href="atomturbojet/atj-hover.webp"
 			data-fancybox="atj-cut"
 			data-thumb="atomturbojet/thumb-atj-hover.webp"
@@ -624,7 +615,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 			src="atomturbojet/thumb-atj-hover.webp"
 			alt="Atom Turbo Jet Hover">
 		</a>
-		<a class="crs-expand go_gridItem" 
+		<a class="crs-expand grid-item" 
 			href="atomturbojet/atj-wip-meshlist.webp"
 			data-fancybox="atj-cut"
 			data-thumb="atomturbojet/atj-wip-meshlist.webp"
@@ -633,7 +624,7 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 			src="atomturbojet/atj-wip-meshlist.webp"
 			alt="Atom Turbo Jet WIP Meshlist">
 		</a>
-		<div class="go_gridItem">
+		<div class="grid-item">
 		<div class="go_pad">
 		<p>• I wanted to add an eerie crash test dummy, both for scale and for story. I didn't have time left over in the budget to do that.<br>
 		• Multiple skins. One of the most fun features about these bumpercars are their paintjobs. The Substance file was layered in such a way that reskins could be easy, but that time's passed.<br>
@@ -723,6 +714,6 @@ data-caption="Deceptively simple. Emissive fractal texture on a plane, rotating 
 <!-- Rough huh? took me like 3 weeks to cobble this together. Feel free to grab snippets and adapt to your purposes, but bear in mind that Fancybox is NOT free. 
 
 Artliminal SRL Ⓒ 2025. All Rights Reserved.
-Website created by Daniel Nagy completely in VSCode. GridOverflow and Fancybox are licensed to their respective owners.
+Website created by Daniel Nagy completely in VSCode. Grid-gallery and Fancybox are licensed to their respective owners.
 
 -->

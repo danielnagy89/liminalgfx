@@ -1,0 +1,309 @@
+/*!  
+    LGFX Grid Gallery - A flexible, responsive grid system for image galleries
+    Based on Grid Overflow: https://github.com/Roman-Flossler/Grid-Overflow
+    additional specifications by Daniel Nagy
+    additional conversion and structuring by Cl.ai
+    draft 16.03.2025
+    rev.1 21.03.2025 - added multiple col and gap options
+    rev.2 22.03.2025 - added responsive text features
+*/
+
+/* Base grid container */
+.grid-gallery {
+  --columns: 4;                 /* Default column count (can be overridden) */
+  --gap: 0.4rem;                /* Space between items */
+  --item-radius: 0.3rem;        /* Corner rounding */
+  --action-icon: "⛶";           /* Default action icon */
+  --action-icon-play: "▶";      /* Play icon for videos */
+  --default-aspect: 1;          /* Default 1:1 aspect ratio */
+  --base-cell-size: 1fr;        /* Base cell size */
+  --text-min-size: 0.8rem;      /* Minimum text size */
+  --text-max-size: 1.2rem;      /* Maximum text size */
+  --base-text-size: 1rem;       /* Base text size (for standard screens) */
+  
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--columns), var(--base-cell-size));
+  grid-auto-rows: 1fr;          /* Equal-height rows */
+  grid-auto-flow: dense;        /* Fill gaps automatically */
+  margin: 1rem auto;
+  width: 100%;
+}
+
+/* Gap variations */
+.gap-02 { --gap: 0.2rem; }
+.gap-06 { --gap: 0.6rem; }
+.gap-1 { --gap: 1rem; }
+.gap-2 { --gap: 2rem; }
+.gap-4 { --gap: 4rem; }
+
+/* Column count variants */
+.grid-col-2 { --columns: 2; }
+.grid-col-3 { --columns: 3; }
+.grid-col-4 { --columns: 4; }
+.grid-col-5 { --columns: 5; }
+.grid-col-6 { --columns: 6; }
+
+/* Aspect ratio defined at gallery level */
+.aspect-1x1 { --default-aspect: 1; }
+.aspect-2x1 { --default-aspect: 0.5; }
+.aspect-16x9 { --default-aspect: 0.5625; }
+.aspect-16x10 { --default-aspect: 0.625; }
+.aspect-3x2 { --default-aspect: 0.6667; }
+.aspect-4x3 { --default-aspect: 0.75; }
+.aspect-1x2 { --default-aspect: 2; }
+.aspect-9x16 { --default-aspect: 1.778; }
+.aspect-10x16 { --default-aspect: 1.6; }
+.aspect-2x3 { --default-aspect: 1.5; }
+.aspect-3x4 { --default-aspect: 1.333; }
+
+/* Basic grid item */
+.grid-item {
+  --span-x: 1;                  /* Default span 1 column */
+  --span-y: 1;                  /* Default span 1 row */
+  
+  position: relative;
+  grid-column: span var(--span-x);
+  grid-row: span var(--span-y);
+  overflow: hidden;
+  border-radius: var(--item-radius);
+  aspect-ratio: calc(var(--span-x) / (var(--span-y) * var(--default-aspect)));
+  width: 100%;
+  height: 100%;
+}
+
+/* Item content positioning */
+.grid-item > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+/* Size variants - simple syntax for different item sizes */
+.size-1x1 { --span-x: 1; --span-y: 1; }
+.size-1x2 { --span-x: 1; --span-y: 2; }
+.size-1x3 { --span-x: 1; --span-y: 3; }
+.size-1x4 { --span-x: 1; --span-y: 4; }
+.size-1x5 { --span-x: 1; --span-y: 5; }
+.size-1x6 { --span-x: 1; --span-y: 6; }
+.size-2x1 { --span-x: 2; --span-y: 1; }
+.size-2x2 { --span-x: 2; --span-y: 2; }
+.size-2x3 { --span-x: 2; --span-y: 3; }
+.size-2x4 { --span-x: 2; --span-y: 4; }
+.size-2x5 { --span-x: 2; --span-y: 5; }
+.size-2x6 { --span-x: 2; --span-y: 6; }
+.size-3x1 { --span-x: 3; --span-y: 1; }
+.size-3x2 { --span-x: 3; --span-y: 2; }
+.size-3x3 { --span-x: 3; --span-y: 3; }
+.size-4x1 { --span-x: 4; --span-y: 1; }
+.size-4x2 { --span-x: 4; --span-y: 2; }
+.size-4x3 { --span-x: 4; --span-y: 3; }
+
+/* For backwards compatibility */
+.size-vip { --span-x: 2; --span-y: 2; }
+.size-panorama { --span-x: 2; --span-y: 1; }
+.size-vertigo { --span-x: 1; --span-y: 2; }
+.size-fullbar { --span-x: 4; --span-y: 1; }
+
+/* Prominence system - alternative way to assign importance */
+.prominence-1 { --span-x: 1; --span-y: 1; } /* Standard */
+.prominence-2 { --span-x: 2; --span-y: 1; } /* Wider */
+.prominence-3 { --span-x: 2; --span-y: 2; } /* Larger */
+.prominence-4 { --span-x: 3; --span-y: 2; } /* Featured */
+.prominence-5 { --span-x: 4; --span-y: 2; } /* Spotlight */
+
+/* ======== NEW TEXT HANDLING FEATURES ======== */
+
+/* Method 1: Fluid Typography with clamp() */
+.grid-item-text {
+  /* Responsive font sizing based on viewport width */
+  font-size: clamp(var(--text-min-size), 1vw + 0.5rem, var(--text-max-size));
+  line-height: 1.4;
+  
+  /* Reduce padding for small screens to maximize space for text */
+  padding: clamp(0.4rem, 1vw, 0.8rem);
+  
+  /* Enable text wrapping and hyphenation */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Method 2: Content-specific classes */
+.text-xs { --text-min-size: 0.7rem; --text-max-size: 0.9rem; }
+.text-sm { --text-min-size: 0.8rem; --text-max-size: 1rem; }
+.text-md { --text-min-size: 0.9rem; --text-max-size: 1.2rem; }
+.text-lg { --text-min-size: 1rem; --text-max-size: 1.4rem; }
+.text-xl { --text-min-size: 1.1rem; --text-max-size: 1.8rem; }
+
+/* Method 3: Media Queries for text scaling */
+@media (max-width: 1200px) {
+  .grid-gallery {
+    --base-text-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-gallery {
+    --base-text-size: 0.9rem;
+    --columns: 3; /* Reduce columns for medium screens */
+  }
+  
+  /* Adjust text for specific sizes */
+  .size-4x1, .size-4x2, .size-4x3, .size-fullbar {
+    --span-x: 3; /* Cap at 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-gallery {
+    --base-text-size: 0.85rem;
+    --columns: 2; /* Reduce to 2 columns for small screens */
+  }
+  
+  /* Adjust text for specific sizes */
+  .size-3x1, .size-3x2, .size-3x3, 
+  .size-4x1, .size-4x2, .size-4x3, .size-fullbar {
+    --span-x: 2; /* Cap at 2 columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-gallery.responsive-single {
+    --columns: 1; /* Option for single column on very small screens */
+  }
+  
+  .grid-item-text {
+    font-size: var(--base-text-size); /* Use base text size directly for consistency */
+  }
+}
+
+/* Auto-fit grid for text-heavy layouts */
+.grid-text-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--gap);
+}
+
+.grid-text-layout .grid-item {
+  aspect-ratio: auto; /* Allow natural height based on content */
+  height: auto;
+  position: relative;
+}
+
+.grid-text-layout .grid-item > * {
+  position: relative; /* Reset positioning for text content */
+  height: auto;
+}
+
+/* Enhanced centered content style with text support */
+.grid-item-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.grid-item-centered > * {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 6%;
+  hyphens: auto;
+}
+
+/* Ensure text doesn't overflow in content-size boxes */
+.text-container {
+  position: relative !important;
+  width: 100%;
+  height: auto !important;
+  overflow: visible;
+  word-wrap: break-word;
+}
+
+/* ======== END NEW TEXT FEATURES ======== */
+
+/* Caption styles */
+.caption {
+  background: linear-gradient(90deg, hsla(240, 40%, 10%, 0.5), hsla(0, 0%, 0%, 0.5));
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  color: white;
+  padding: 0.2rem 4%;
+  width: auto;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.grid-item:hover .caption {
+  opacity: 1;
+}
+
+.caption-full {
+  width: 100% !important;
+}
+
+/* Action icons for links */
+.with-icon > a.grid-item::after {
+  content: var(--action-icon);
+  position: absolute;
+  top: 0;
+  right: 0.3em;
+  color: white;
+  font-size: 2rem;
+  opacity: 0.2;
+  text-shadow: 0 0 3px #000000, 0 0 1px #000000;
+  transition: all 0.12s ease-in;
+}
+
+.with-play-icon > a.grid-item::after {
+  content: var(--action-icon-play);
+}
+
+.with-icon > a.grid-item:hover::after {
+  opacity: 0.6;
+  font-size: 2.2rem;
+  transition: all 0.02s ease;
+}
+
+/* Staggered loading animation */
+.animate-in {
+  transform: translateY(1rem);
+  opacity: 0;
+  animation: moveUp 0.2s ease forwards;
+}
+
+@keyframes moveUp {
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Simple delay classes for staggered animation */
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.1s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.2s; }
+.delay-5 { animation-delay: 0.25s; }
+.delay-6 { animation-delay: 0.3s; }
+.delay-7 { animation-delay: 0.35s; }
+.delay-8 { animation-delay: 0.4s; }
+.delay-9 { animation-delay: 0.45s; }
+/* Add more if needed */
+
+/* Utility class for padding content */
+.pad {
+  display: block;
+  padding: 0.6rem;
+  --item-radius: 0rem;
+}
+
+.endline {border-bottom: 0.2rem solid hsla(0, 0%, 100%, 0.8);}
