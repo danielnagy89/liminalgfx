@@ -43,10 +43,16 @@
 .grid-col-4 { --columns: 4; }
 .grid-col-5 { --columns: 5; }
 .grid-col-6 { --columns: 6; }
+.grid-col-7 { --columns: 7; }
+.grid-col-8 { --columns: 8; }
+.grid-col-9 { --columns: 9; }
 
 /* Aspect ratio defined at gallery level */
 .aspect-1x1 { --default-aspect: 1; }
 .aspect-2x1 { --default-aspect: 0.5; }
+.aspect-4x1 { --default-aspect: 0.25; }
+.aspect-5x1 { --default-aspect: 0.2; }
+.aspect-6x1 { --default-aspect: 0.1667; }
 .aspect-16x9 { --default-aspect: 0.5625; }
 .aspect-16x10 { --default-aspect: 0.625; }
 .aspect-3x2 { --default-aspect: 0.6667; }

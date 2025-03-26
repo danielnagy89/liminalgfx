@@ -159,7 +159,7 @@ body, html {
 	margin: auto auto auto 1%;
 	font-family: figtree;
 	font-weight: 600;
-	font-size: clamp(1rem, 4vw, 2rem);
+	font-size: 2rem;
 	text-align: start;
 	color: hsl(210, 10%, 41%);
 	white-space: nowrap;
@@ -216,7 +216,7 @@ body, html {
 	font-family: figtree;
 	height: auto;
 	font-weight: 800;
-	font-size: clamp(1rem, 3vw, 2.4rem);
+	font-size: 2.4rem;
 	padding: 0 0.5rem;
 	color: hsl(194, 85%, 51%);
 	background: linear-gradient(in srgb 0deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%));
@@ -280,7 +280,7 @@ body, html {
 	}
 	
 	.toptag {
-	  font-size: clamp(0.9rem, 3vw, 1.2rem);
+	  font-size: 1.2rem;
 	  padding: 0;
 	}
 	
@@ -442,15 +442,16 @@ body, html {
 	  .cta-button:hover {
 		transform: scale(1.1);
 		background-image: repeating-linear-gradient(in srgb 90deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%), hsl(201, 72%, 47%));
+		color: transparent;
 	  }
   
 	  /* Gradient text for CTA */
 	  .cta {
-		font-size: clamp(1.2rem, 4vw, 2rem);
+		font-size: 4rem;
 		font-weight: 600;
 		background-image: repeating-linear-gradient(in srgb 60deg, hsl(25, 95%, 45%), hsl(40, 83%, 55%), hsl(25, 95%, 45%));
 		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		color: transparent;
 		animation: ctascroll 6s ease infinite;
 		background-size: 200% auto;
 	  }
@@ -468,14 +469,14 @@ body, html {
 	  }
   
 	  .company-info h3 {
-		font-size: clamp(1rem, 3vw, 1.2rem);
+		font-size: 1.2rem;
 		font-weight: 600;
 		margin-bottom: 0.5rem;
 		color: #f0f0f0;
 	  }
   
 	  .company-info p {
-		font-size: clamp(0.8rem, 2vw, 1rem);
+		font-size: 1rem;
 		font-weight: 300;
 		color: #d0d0d0;
 	  }
@@ -583,10 +584,8 @@ p {
 	font-family: figtree;
 	font-weight: 800;
 	/* font-size: 6rem;*/ 
-	font-size: clamp(1rem, 5vw, 8rem);
-	text-align: justify;
-	text-align-last: justify;
-	width: 100%;
+	font-size: 6rem;
+	min-width: 100%;
 	height:auto;
 	box-sizing: border-box;
 	margin: 0 auto 0.4rem auto;
@@ -604,7 +603,7 @@ p {
 .pindent {
 	font-family: inter-italic;
 	color: #9bc5e6;
-	font-size: 14pt;
+	font-size: 1rem;
 	font-weight: light;
 	line-height: 1.4;
 	text-align: left;
@@ -614,7 +613,6 @@ p {
 /* LISTS START */
 
 ul.a {
-	font-family: inter;
 	color: #d5dbde;
 	padding: 0;
 	margin: 0;
@@ -632,16 +630,28 @@ li.good::before {
 	padding-right: 0.2rem;
 }
 
-
-
 li {
 	list-style-type:none;
 	padding: 4px;
-	font-family: inter;
 	color: #d5dbde;
 	font-size: 1rem;
 	font-weight: light;
 	line-height: 1.4;
+}
+
+li.bullet::before{
+	content: "✔️"; /* Insert content that looks like bullets */
+	padding-right: 0.2rem;
+}
+
+li.cut::before{
+	content: "✂ "; /* Insert content that looks like bullets */
+	color: var(--col-bl0)
+}
+
+li.cut{
+	font-size: 1.2rem;
+	font-weight:300;
 }
 
 /* LISTS END */
@@ -718,59 +728,6 @@ a:active {
 
 /* TAG CLOUD OWN TICKER END ------------------- */
 
-/* TAG CLOUD FROM FAKIR START ----------------- */
-
-.cloud{
-	padding-top:30vh;
-	width: 30%;
-	display: flex;
-	margin: auto;
-	font-size: 12em;
-}
-
-nav.cloud ul {
-    /* Remove the bullet points of the list */
-    list-style: none;
-
-
-    /* make sure that all elements will be visible by wrapping into multiple lines */
-    display: flex;
-    flex-wrap: wrap;
-
-    /* center the content */
-    padding-left: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-nav.cloud a {
-    /* add some padding between elements, otherwise no space between words */
-    padding-left: .25rem;
-    padding-right: .25rem;
-	text-decoration: none;
-}
-
-nav.cloud a[data-weight= "1"] { font-size: 0.9rem; }
-nav.cloud a[data-weight= "2"] { font-size: 1.0rem; }
-nav.cloud a[data-weight= "3"] { font-size: 1.2rem; }
-nav.cloud a[data-weight= "4"] { font-size: 1.4rem; }
-nav.cloud a[data-weight= "5"] { font-size: 1.6rem; }
-nav.cloud a[data-weight= "6"] { font-size: 1.8rem; }
-nav.cloud a[data-weight= "7"] { font-size: 2.0rem; }
-nav.cloud a[data-weight= "8"] { font-size: 2.2rem; }
-nav.cloud a[data-weight= "9"] { font-size: 2.4rem; }
-nav.cloud a /* >= 10 */       { font-size: 2.6rem; }
-
-
-nav.cloud li:nth-child( 1n+1) a {color:var(f06854)}
-nav.cloud li:nth-child( 2n+1) a {color:var(dfd700)}
-nav.cloud li:nth-child( 3n+1) a {color:var(0a81cf)}
-nav.cloud li:nth-child( 5n+1) a {color:var(2bd47d)}
-nav.cloud li:nth-child( 7n+1) a {color:var(f78c67)}
-nav.cloud li:nth-child(11n+1) a {color:var(aa92ea)}
-
-/* TAG CLOUD FROM FAKIR END ------------------- */
-
 /* Toggle START ------------------------------- */
 
 details {
@@ -826,11 +783,6 @@ hr.dashed{
 	border-width: 4px;
 	border-style: dashed;
 	border-image: linear-gradient(to right, var(--col-bl0), rgba(0, 0, 0, 0)) 1;
-}
-
-hr.space{
-	border-style: none;
-	margin:0.6rem;
 }
 
 hr.default {

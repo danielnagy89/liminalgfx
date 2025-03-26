@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
 <link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
-<link rel="stylesheet" href="../Grid-Overflow/src/GridOverflow3D.css" />
+<link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
@@ -19,10 +19,7 @@
 
 <!-- To DO ----------------------------------------
 
-• find optimal sizing for skins
 • figure out main benefits- handling art team?
-• prepare other visual materials
-• cutting room floor
 • 
 
 ----------------------------------------------- -->
@@ -50,17 +47,13 @@
 		</div>
 	</header>
 
-<div class="content">
+<main class="content"> <!-- MAIN CONTENT BEGIN -->
 	<h1 class="projtitle">BRAWLOUT (2018)</h1>
 	<h2 class="projsubhead">Cross-platform couch fighter.</h2>
 
-	<div style="display: flex; flex-direction: row;"> <!-- SPLITTER START-->
-		
-		<div style="width: 70%;"> <!-- MAIN background-color: red;------- -->
+			<div class="grid-gallery with-icon grid-col-3 aspect-4x3"> <!-- GG KEY BEGIN -->
 
-			<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GridOverflow KEY BEGIN -->
-
-				<a class="crs-expand go_gridItem" 
+				<a class="crs-expand grid-item" 
 				href="brawlout/brawlout-key.webp"
 				data-fancybox="trinity"
 				data-thumb="brawlout/brawlout-key.webp"
@@ -71,7 +64,7 @@
 				alt="Trinity Fusion Key Art">
 				</a>
 			
-			<div class="go_gridItem go_gridItem">
+			<div class="grid-item">
 				<div>
 				<h2 style="margin:0 auto 1rem">Fact Sheet</h2>
 				<ul class="a">
@@ -79,14 +72,32 @@
 					<li>Publisher: Angry Mob Games</li>
 					<li>Release date: Q3, 2018</li>
 					<li>Platforms: Steam, PS4, Xbox, Nintendo Switch</li>
+					<li>Dev cycle length: 4 years</li>
+					<li>Developers: 🗣🗣🗣🗣🗣🗣</li>
 				</ul>
-				<p style="font-size: 1.2rem; font-style:italic;">This was my first experience with working on a project... while it's LIVE! Handling the graphics optimization and environment lightmapping for 4 platforms simultaneously taught me a thing or two about dilligence and care when pushing to subversion. It was taxing but equally rewarding. </p>
 				</div>
 			</div> 	
 		
-		</div> <!-- GridOverflow KEY END -->
+			<div class="grid-item">
+				<div>
+				<p style="font-size: 1.2rem; font-style:italic;">This was my first experience with working on a project... while it's LIVE! Handling the graphics optimization and environment lightmapping for 4 platforms simultaneously taught me a thing or two about dilligence and care when pushing to subversion. It was taxing but equally rewarding. </p>
+				<hr>
+				</div>
 
+				</div>
 
+			</div> <!-- GG KEY END -->
+
+<hr>
+
+		<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+			<img src="trinityfusion/store-PS4.webp" alt="Trinity Fusion Playstation 4" style="max-height: 91px; max-width: 16%; object-fit: contain;">
+			<img src="trinityfusion/store-xbox-one.webp" alt="Trinity Fusion Xbox One" style="max-height: 91px; max-width: 16%; object-fit: contain;">
+			<img src="trinityfusion/store-steam.webp" alt="Trinity Fusion Steam" style="max-height: 91px; max-width: 16%; object-fit: contain;">
+			<img src="trinityfusion/store-switch.webp" alt="Trinity Fusion Nintendo Switch" style="max-height: 91px; max-width: 16%; object-fit: contain;">
+		</div>
+
+		<hr>
 
 		<div style="display: flex;flex-direction: row;"> <!-- Playstation theme BEGIN -->
 			<div>
@@ -94,7 +105,7 @@
 			</div>
 
 			<div style="padding:0 0 0 1em">
-			<p>One of the most technical tasks was porting the graphics to make a PS4 theme. With minimal documentation and just a basic HTML framework, I've managed to port the models with correct UVs and animations. It was a long trial-and-error process as the theme framework at the time could only process FBX files saved in ASCII, and each export setting fixed one thing but broke another. In the end it was worth it, as it was one of the most advanced themes on the store.<br><br> The background effects were done with a static image as the background and some transparent frames ping-ponging their opacity overlaid above.</p>
+			<p>One of the most technical tasks was porting the graphics to make a PS4 theme. With minimal documentation and just a basic HTML framework, I've managed to port the models with correct UVs and animations. It was a long trial-and-error process as the theme framework at the time could only process FBX files saved in ASCII, and each export setting fixed one thing but broke another. In the end it was worth it, as it was one of the most advanced themes on the PS store.<br><br> The background effects were done with some transparent frames ping-ponging their opacity overlaid above a static background image.</p>
 			</div>
 		</div> <!-- Playstation theme END -->
 
@@ -109,341 +120,584 @@
 			</div>
 		</div> <!-- Dead Cells Trailer BEGIN -->
 
-		<div class="gridOverflow go-actionIcon go-4"> <!-- GO skins BEGIN -->
-
-			<a class="crs-expand go_gridItem" 
-				href="brawlout/brawlout-skin-olaf1.webp"
-				data-fancybox="skin-olaf"
-				data-thumb="brawlout/brawlout-skin-olaf1.webp"
-				data-caption="Skin for Olaf Tyson 1/4">
-				<img 
-				src="brawlout/brawlout-skin-olaf1.webp"
-				alt="Brawlout Skin Olaf 1/4">
-			</a>
-			<a class="crs-expand go_gridItem" 
-				href="brawlout/brawlout-skin-olaf2.webp"
-				data-fancybox="skin-olaf"
-				data-thumb="brawlout/brawlout-skin-olaf2.webp"
-				data-caption="Skin for Olaf Tyson 2/4">
-				<img 
-				src="brawlout/brawlout-skin-olaf2.webp"
-				alt="Brawlout Skin Olaf 2/4">
-			</a>
-			<a class="crs-expand go_gridItem" 
-				href="brawlout/brawlout-skin-olaf3.webp"
-				data-fancybox="skin-olaf"
-				data-thumb="brawlout/brawlout-skin-olaf3.webp"
-				data-caption="Skin for Olaf Tyson 3/4">
-				<img 
-				src="brawlout/brawlout-skin-olaf3.webp"
-				alt="Brawlout Skin Olaf 3/4">
-			</a>
-			<a class="crs-expand go_gridItem fbxw50" 
-				href="brawlout/brawlout-skin-olaf4.webp"
-				data-fancybox="skin-olaf"
-				data-thumb="brawlout/brawlout-skin-olaf4.webp"
-				data-caption="Skin for Olaf Tyson 4/4">
-				<img 
-				src="brawlout/brawlout-skin-olaf4.webp"
-				alt="Brawlout Skin Olaf 4/4">
-			</a>
 
 
-		</div>
+			<div class="grid-gallery with-icon aspect-16x9"> <!-- GG Main BEGIN -->
 
-<hr style="margin:1.4rem auto">
-
-			<div class="gridOverflow go-actionIcon aspect16x9"> <!-- GridOverflow Main BEGIN -->
-				
-				
-				<!-- go_gridItem-VIP class creates a grid item in the form of a large square (2x2 cells) -->
-
-
-				
-				<!-- go_gridItem-panorama class creates a grid item in the form of a horizontal rectangle (2x1 cells) -->
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-dialogue.webp"
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-88-vs-seph.webp"
 					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-dialogue.webp"
-					data-caption="Hub environment was masterfully done by Jeremy Spagnulo.">
+					data-thumb="brawlout/brawlout-88-vs-seph.webp"
+					data-caption="Chicken vs Cat.">
 					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-dialogue.webp"
-					alt="Trinity Fusion Sshot 6/6">
+					src="brawlout/brawlout-88-vs-seph.webp"
+					alt="Brawlout Sshot">
 				</a>
 				
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-dog.webp"
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-apu-vs-stingra.webp"
 					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-dog.webp"
+					data-thumb="brawlout/brawlout-apu-vs-stingra.webp"
 					data-caption="Factory environment. I contributed to the automation of the module placement and general look. Also did the Sniper Rifle model/texture and laser sight shader.">
 					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-dog.webp"
+					src="brawlout/brawlout-apu-vs-stingra.webp"
 					alt="Trinity Fusion Environment art shot 2/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-natureout.webp"
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-biker-dodge.webp"
 					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-natureout.webp"
+					data-thumb="brawlout/brawlout-biker-dodge.webp"
 					data-caption="The Wastes. I've done most of the environment placements, setpieces, floating isles and architecture. ">
 					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-natureout.webp"
+					src="brawlout/brawlout-biker-dodge.webp"
 					alt="Trinity Fusion Environment art shot 1/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-natureunder.webp"
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-drifter-hero.webp"
 					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-natureunder.webp"
+					data-thumb="brawlout/brawlout-drifter-hero.webp"
 					data-caption="He saw that coming. Ba-dum-tss!">
 					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-natureunder.webp"
+					src="brawlout/brawlout-drifter-hero.webp"
 					alt="Trinity Fusion Environment art shot 4/6">
 				</a>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-quadra.webp"
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-drifter-slash.webp"
 					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-quadra.webp"
+					data-thumb="brawlout/brawlout-drifter-slash.webp"
 					data-caption="The Ewer Quadra - one of the most fun enemies. I've contributed only with the concept art for it.">
 					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-quadra.webp"
+					src="brawlout/brawlout-drifter-slash.webp"
 					alt="Trinity Fusion Environment art shot 5/6">
 				</a>
 
 
+			</div> <!-- ----------------------------------------- GG Main END -->
+</div>
+</div>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-snake.webp"
-					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-snake.webp"
-					data-caption="Snake versus Sniper! The Chest was concepted by Jeremy Spagnulo, I was in charge of modeling, texturing, animating and making a glow-shader for it.">
-					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-snake.webp"
-					alt="Trinity Fusion - Snake vs sniper">
-				</a>
+<div class="grid-gallery grid-col-9 with-icon aspect-2x3"> <!-- GO Skins BEGIN -->
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-steward.webp"
-					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-steward.webp"
-					data-caption="While not involved in modeling Steward One, my colleagues did a fantastic job with the look, animations, effects and behaviour.">
-					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-steward.webp"
-					alt="Trinity Fusion - Steward One">
-				</a>
+	<a class="crs-expand grid-item size-2x2" 
+	href="brawlout/brawlout-skin-bee1.webp"	data-fancybox="skin-stingra" data-thumb="brawlout/brawlout-skin-bee1.webp" data-caption="Sting'ra - Default">
+	<img src="brawlout/brawlout-skin-bee0.webp" alt="Brawlout Skin Sting'ra 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-bee2.webp" data-fancybox="skin-stingra" data-thumb="brawlout/brawlout-skin-bee2.webp" data-caption="Sting'ra - Firefly">
+		<img src="brawlout/brawlout-skin-bee2.webp"	alt="Brawlout Skin Sting'ra 2/4"></a>
+		<a href="brawlout/brawlout-skin-bee3.webp" data-fancybox="skin-stingra"	data-thumb="brawlout/brawlout-skin-bee3.webp" data-caption="Sting'ra - Grasshopper">
+		<img src="brawlout/brawlout-skin-bee3.webp"	alt="Brawlout Skin Sting'ra 3/4"></a>
+		<a href="brawlout/brawlout-skin-bee4.webp" data-fancybox="skin-stingra"	data-thumb="brawlout/brawlout-skin-bee4.webp" data-caption="Sting'ra - Moth">
+		<img src="brawlout/brawlout-skin-bee4.webp"	alt="Brawlout Skin Sting'ra 4/4"></a>
+	</div>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-sshot-sumo.webp"
-					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-sshot-sumo.webp"
-					data-caption="<i>Lemme take a closer look at ya.</i>">
-					<img 
-					src="bin-trinityfusion/trinityfusion-sshot-sumo.webp"
-					alt="Trinity Fusion Sumobot">
-				</a>
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-apo1.webp"	data-fancybox="skin-postapu" data-thumb="brawlout/brawlout-skin-apo1.webp" data-caption="Apucalypse - Default">
+	<img src="brawlout/brawlout-skin-apo0.webp" alt="Brawlout Skin Apucalypse 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-apo2.webp" data-fancybox="skin-postapu" data-thumb="brawlout/brawlout-skin-apo2.webp" data-caption="Apucalypse - Forest">
+		<img src="brawlout/brawlout-skin-apo2.webp"	alt="Brawlout Skin Apucalypse 2/4"></a>
+		<a href="brawlout/brawlout-skin-apo3.webp" data-fancybox="skin-postapu"	data-thumb="brawlout/brawlout-skin-apo3.webp" data-caption="Apucalypse - Arctic">
+		<img src="brawlout/brawlout-skin-apo3.webp"	alt="Brawlout Skin Apucalypse 3/4"></a>
+		<a href="brawlout/brawlout-skin-apo4.webp" data-fancybox="skin-postapu"	data-thumb="brawlout/brawlout-skin-apo4.webp" data-caption="Apucalypse - Irradiated">
+		<img src="brawlout/brawlout-skin-apo4.webp"	alt="Brawlout Skin Apucalypse 4/4"></a>
+	</div>
 
-				<a class="crs-expand go_gridItem" 
-					href="bin-trinityfusion/trinityfusion-steam-runscroll.gif"
-					data-fancybox="trinity"
-					data-thumb="bin-trinityfusion/trinityfusion-steam-runscroll.gif"
-					data-caption="When it came to worldbuilding, it was a collosal undertaking.<br>
-					The core roster of environment artists numbered three, myself included.<br>">
-					<img 
-					src="bin-trinityfusion/trinityfusion-steam-runscroll.gif"
-					alt="Trinity Fusion environment run-through">
-				</a>
+	<a class="crs-expand grid-item" 
+	href="brawlout/brawlout-skin-dead1.webp"	data-fancybox="skin-beheaded" data-thumb="brawlout/brawlout-skin-dead1.webp" data-caption="Beheaded - Default">
+	<img src="brawlout/brawlout-skin-dead0.webp" alt="Brawlout Skin The Beheaded 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-dead2.webp" data-fancybox="skin-beheaded" data-thumb="brawlout/brawlout-skin-dead2.webp" data-caption="Beheaded - Poisoned">
+		<img src="brawlout/brawlout-skin-dead2.webp"	alt="Brawlout Skin The Beheaded 2/4"></a>
+		<a href="brawlout/brawlout-skin-dead3.webp" data-fancybox="skin-beheaded"	data-thumb="brawlout/brawlout-skin-dead3.webp" data-caption="Beheaded - Bled">
+		<img src="brawlout/brawlout-skin-dead3.webp"	alt="Brawlout Skin The Beheaded 3/4"></a>
+		<a href="brawlout/brawlout-skin-dead4.webp" data-fancybox="skin-beheaded"	data-thumb="brawlout/brawlout-skin-dead4.webp" data-caption="Beheaded - Drowned">
+		<img src="brawlout/brawlout-skin-dead4.webp"	alt="Brawlout Skin The Beheaded 4/4"></a>
+	</div>
 
+	<a class="crs-expand grid-item" 
+	href="brawlout/brawlout-skin-funk1.webp"	data-fancybox="skin-funkmaster" data-thumb="brawlout/brawlout-skin-funk1.webp" data-caption="Funkmaster - Default">
+	<img src="brawlout/brawlout-skin-funk0.webp" alt="Brawlout Skin Funkmaster 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-funk2.webp" data-fancybox="skin-funkmaster" data-thumb="brawlout/brawlout-skin-funk2.webp" data-caption="Funkmaster - Bling Kong">
+		<img src="brawlout/brawlout-skin-funk2.webp"	alt="Brawlout Skin Funkmaster 2/4"></a>
+		<a href="brawlout/brawlout-skin-funk3.webp" data-fancybox="skin-funkmaster"	data-thumb="brawlout/brawlout-skin-funk3.webp" data-caption="Funkmaster - Disco-Drac">
+		<img src="brawlout/brawlout-skin-funk3.webp"	alt="Brawlout Skin Funkmaster 3/4"></a>
+		<a href="brawlout/brawlout-skin-funk4.webp" data-fancybox="skin-funkmaster"	data-thumb="brawlout/brawlout-skin-funk4.webp" data-caption="Funkmaster - Shizzler">
+		<img src="brawlout/brawlout-skin-funk4.webp"	alt="Brawlout Skin Funkmaster 4/4"></a>
+	</div>
+
+
+	<div class="grid-item size-3x1">
+		<div class="pad">
+			<div>
+				<h1 style="font-size:3.4rem">Variant Skins</h1>
+				<p>When multiple players select the same character they need to be distinct so everyone knows who's who. Rather than doing a simple pallette swap, I tried to give each a more developed personality.</p>
+				</div>
+				<hr>
+		</div>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-gancho1.webp"	data-fancybox="skin-gancho" data-thumb="brawlout/brawlout-skin-gancho1.webp" data-caption="Gancho Puncho - El Dolor">
+	<img src="brawlout/brawlout-skin-gancho0.webp" alt="Brawlout Skin Gancho Puncho 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-gancho2.webp" data-fancybox="skin-gancho" data-thumb="brawlout/brawlout-skin-gancho2.webp" data-caption="Gancho Puncho - Don Pepe">
+		<img src="brawlout/brawlout-skin-gancho2.webp"	alt="Brawlout Skin Gancho Puncho 2/4"></a>
+		<a href="brawlout/brawlout-skin-gancho3.webp" data-fancybox="skin-gancho"	data-thumb="brawlout/brawlout-skin-gancho3.webp" data-caption="Gancho Puncho - El Muerte">
+		<img src="brawlout/brawlout-skin-gancho3.webp"	alt="Brawlout Skin Gancho Puncho 3/4"></a>
+		<a href="brawlout/brawlout-skin-gancho4.webp" data-fancybox="skin-gancho"	data-thumb="brawlout/brawlout-skin-gancho4.webp" data-caption="Gancho Puncho - Default">
+		<img src="brawlout/brawlout-skin-gancho4.webp"	alt="Brawlout Skin Gancho Puncho 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-3x2" 
+	href="brawlout/brawlout-skin-olaf1.webp"	data-fancybox="skin-olaf" data-thumb="brawlout/brawlout-skin-olaf1.webp" data-caption="Ooga Tooga - Default">
+	<img src="brawlout/brawlout-skin-olaf0.webp" alt="Brawlout Skin Ooga Tooga 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-olaf2.webp" data-fancybox="skin-olaf" data-thumb="brawlout/brawlout-skin-olaf2.webp" data-caption="Ooga Tooga - Icecap">
+		<img src="brawlout/brawlout-skin-olaf2.webp"	alt="Brawlout Skin Ooga Tooga 2/4"></a>
+		<a href="brawlout/brawlout-skin-olaf3.webp" data-fancybox="skin-olaf"	data-thumb="brawlout/brawlout-skin-olaf3.webp" data-caption="Ooga Tooga - Swamp">
+		<img src="brawlout/brawlout-skin-olaf3.webp"	alt="Brawlout Skin Ooga Tooga 3/4"></a>
+		<a href="brawlout/brawlout-skin-olaf4.webp" data-fancybox="skin-olaf"	data-thumb="brawlout/brawlout-skin-olaf4.webp" data-caption="Ooga Tooga - Boneyard">
+		<img src="brawlout/brawlout-skin-olaf4.webp"	alt="Brawlout Skin Ooga Tooga 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-mako1.webp"	data-fancybox="skin-mako" data-thumb="brawlout/brawlout-skin-mako1.webp" data-caption="Mako - Tiburon">
+	<img src="brawlout/brawlout-skin-mako0.webp" alt="Brawlout Skin Mako 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-mako2.webp" data-fancybox="skin-mako" data-thumb="brawlout/brawlout-skin-mako2.webp" data-caption="Mako - Slashmaw ">
+		<img src="brawlout/brawlout-skin-mako2.webp"	alt="Brawlout Skin Mako 2/4"></a>
+		<a href="brawlout/brawlout-skin-mako3.webp" data-fancybox="skin-mako"	data-thumb="brawlout/brawlout-skin-mako3.webp" data-caption="Mako - Sawfin">
+		<img src="brawlout/brawlout-skin-mako3.webp"	alt="Brawlout Skin Mako 3/4"></a>
+		<a href="brawlout/brawlout-skin-mako4.webp" data-fancybox="skin-mako"	data-thumb="brawlout/brawlout-skin-mako4.webp" data-caption="Mako - Default">
+		<img src="brawlout/brawlout-skin-mako4.webp"	alt="Brawlout Skin Mako 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-mech1.webp"	data-fancybox="skin-mech" data-thumb="brawlout/brawlout-skin-mech1.webp" data-caption="Condor X - Default">
+	<img src="brawlout/brawlout-skin-mech0.webp" alt="Brawlout Skin Mech 1/5"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-mech2.webp" data-fancybox="skin-mech" data-thumb="brawlout/brawlout-skin-mech2.webp" data-caption="Condor X - Predator">
+		<img src="brawlout/brawlout-skin-mech2.webp"	alt="Brawlout Skin Mech 2/5"></a>
+		<a href="brawlout/brawlout-skin-mech3.webp" data-fancybox="skin-mech"	data-thumb="brawlout/brawlout-skin-mech3.webp" data-caption="Condor X - Volcanic">
+		<img src="brawlout/brawlout-skin-mech3.webp"	alt="Brawlout Skin Mech 3/5"></a>
+		<a href="brawlout/brawlout-skin-mech4.webp" data-fancybox="skin-mech"	data-thumb="brawlout/brawlout-skin-mech4.webp" data-caption="Condor X - Oceanic">
+		<img src="brawlout/brawlout-skin-mech4.webp"	alt="Brawlout Skin Mech 4/5"></a>
+		<a href="brawlout/brawlout-skin-mech5.webp" data-fancybox="skin-mech"	data-thumb="brawlout/brawlout-skin-mech5.webp" data-caption="Condor X - Stealth">
+		<img src="brawlout/brawlout-skin-mech5.webp"	alt="Brawlout Skin Mech 5/5"></a>
+	</div>
+
+	<a class="crs-expand grid-item" 
+	href="brawlout/brawlout-skin-natura1.webp"	data-fancybox="skin-natura" data-thumb="brawlout/brawlout-skin-natura1.webp" data-caption="Natu'ra - Default">
+	<img src="brawlout/brawlout-skin-natura0.webp" alt="Brawlout Skin Natu'ra 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-natura2.webp" data-fancybox="skin-natura" data-thumb="brawlout/brawlout-skin-natura2.webp" data-caption="Natu'ra - Agapanthus">
+		<img src="brawlout/brawlout-skin-natura2.webp"	alt="Brawlout Skin Natu'ra 2/4"></a>
+		<a href="brawlout/brawlout-skin-natura3.webp" data-fancybox="skin-natura"	data-thumb="brawlout/brawlout-skin-natura3.webp" data-caption="Natu'ra - Snapdragon">
+		<img src="brawlout/brawlout-skin-natura3.webp"	alt="Brawlout Skin Natu'ra 3/4"></a>
+		<a href="brawlout/brawlout-skin-natura4.webp" data-fancybox="skin-natura"	data-thumb="brawlout/brawlout-skin-natura4.webp" data-caption="Natu'ra - Hemlock">
+		<img src="brawlout/brawlout-skin-natura4.webp"	alt="Brawlout Skin Natu'ra 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x2" 
+	href="brawlout/brawlout-skin-rip1.webp"	data-fancybox="skin-rip" data-thumb="brawlout/brawlout-skin-rip1.webp" data-caption="Ripjack - Default">
+	<img src="brawlout/brawlout-skin-rip0.webp" alt="Brawlout Skin Ripjack 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-rip2.webp" data-fancybox="skin-rip" data-thumb="brawlout/brawlout-skin-rip2.webp" data-caption="Ripjack - Cyberpunk">
+		<img src="brawlout/brawlout-skin-rip2.webp"	alt="Brawlout Skin Ripjack 2/4"></a>
+		<a href="brawlout/brawlout-skin-rip3.webp" data-fancybox="skin-rip"	data-thumb="brawlout/brawlout-skin-rip3.webp" data-caption="Ripjack - Steel Spike">
+		<img src="brawlout/brawlout-skin-rip3.webp"	alt="Brawlout Skin Ripjack 3/4"></a>
+		<a href="brawlout/brawlout-skin-rip4.webp" data-fancybox="skin-rip"	data-thumb="brawlout/brawlout-skin-rip4.webp" data-caption="Ripjack - Rad-Rat">
+		<img src="brawlout/brawlout-skin-rip4.webp"	alt="Brawlout Skin Ripjack 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-naut1.webp"	data-fancybox="skin-naut" data-thumb="brawlout/brawlout-skin-naut1.webp" data-caption="Apunaut - Ground Control">
+	<img src="brawlout/brawlout-skin-naut0.webp" alt="Brawlout Skin Apunaut 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-naut2.webp" data-fancybox="skin-naut" data-thumb="brawlout/brawlout-skin-naut2.webp" data-caption="Apunaut - Deep Space">
+		<img src="brawlout/brawlout-skin-naut2.webp"	alt="Brawlout Skin Apunaut 2/4"></a>
+		<a href="brawlout/brawlout-skin-naut3.webp" data-fancybox="skin-naut"	data-thumb="brawlout/brawlout-skin-naut3.webp" data-caption="Apunaut - EVA">
+		<img src="brawlout/brawlout-skin-naut3.webp"	alt="Brawlout Skin Apunaut 3/4"></a>
+		<a href="brawlout/brawlout-skin-naut4.webp" data-fancybox="skin-naut"	data-thumb="brawlout/brawlout-skin-naut4.webp" data-caption="Apunaut - Default ">
+		<img src="brawlout/brawlout-skin-naut4.webp"	alt="Brawlout Skin Apunaut 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item" 
+	href="brawlout/brawlout-skin-night1.webp"	data-fancybox="skin-night" data-thumb="brawlout/brawlout-skin-night1.webp" data-caption="Nightma'ra - Default">
+	<img src="brawlout/brawlout-skin-night0.webp" alt="Brawlout Skin Nightma'ra 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-night2.webp" data-fancybox="skin-night" data-thumb="brawlout/brawlout-skin-night2.webp" data-caption="Nightma'ra - Lamia">
+		<img src="brawlout/brawlout-skin-night2.webp"	alt="Brawlout Skin Nightma'ra 2/4"></a>
+		<a href="brawlout/brawlout-skin-night3.webp" data-fancybox="skin-night"	data-thumb="brawlout/brawlout-skin-night3.webp" data-caption="Nightma'ra - Rakshasi">
+		<img src="brawlout/brawlout-skin-night3.webp"	alt="Brawlout Skin Nightma'ra 3/4"></a>
+		<a href="brawlout/brawlout-skin-night4.webp" data-fancybox="skin-night"	data-thumb="brawlout/brawlout-skin-night4.webp" data-caption="Nightma'ra - Siren">
+		<img src="brawlout/brawlout-skin-night4.webp"	alt="Brawlout Skin Nightma'ra 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-rock1.webp"	data-fancybox="skin-rock" data-thumb="brawlout/brawlout-skin-rock1.webp" data-caption="Vandal - Shakudo">
+	<img src="brawlout/brawlout-skin-rock0.webp" alt="Brawlout Skin Vandal 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-rock2.webp" data-fancybox="skin-rock" data-thumb="brawlout/brawlout-skin-rock2.webp" data-caption="Vandal - Cobalt">
+		<img src="brawlout/brawlout-skin-rock2.webp"	alt="Brawlout Skin Vandal 2/4"></a>
+		<a href="brawlout/brawlout-skin-rock3.webp" data-fancybox="skin-rock"	data-thumb="brawlout/brawlout-skin-rock3.webp" data-caption="Vandal - Carbon">
+		<img src="brawlout/brawlout-skin-rock3.webp"	alt="Brawlout Skin Vandal 3/4"></a>
+		<a href="brawlout/brawlout-skin-rock4.webp" data-fancybox="skin-rock"	data-thumb="brawlout/brawlout-skin-rock4.webp" data-caption="Vandal - Default">
+		<img src="brawlout/brawlout-skin-rock4.webp"	alt="Brawlout Skin Vandal 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item" 
+	href="brawlout/brawlout-skin-sena1.webp"	data-fancybox="skin-senator" data-thumb="brawlout/brawlout-skin-sena1.webp" data-caption="Senator Feathers">
+	<img src="brawlout/brawlout-skin-sena0.webp" alt="Brawlout Skin Senator Feathers 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-sena2.webp" data-fancybox="skin-senator" data-thumb="brawlout/brawlout-skin-sena2.webp" data-caption="Senator Feathers - Old Country">
+		<img src="brawlout/brawlout-skin-sena2.webp"	alt="Brawlout Skin Senator Feathers 2/4"></a>
+		<a href="brawlout/brawlout-skin-sena3.webp" data-fancybox="skin-senator"	data-thumb="brawlout/brawlout-skin-sena3.webp" data-caption="Senator Feathers - Off Duty">
+		<img src="brawlout/brawlout-skin-sena3.webp"	alt="Brawlout Skin Senator Feathers 3/4"></a>
+		<a href="brawlout/brawlout-skin-sena4.webp" data-fancybox="skin-senator"	data-thumb="brawlout/brawlout-skin-sena4.webp" data-caption="Senator Feathers - White Glove">
+		<img src="brawlout/brawlout-skin-sena4.webp"	alt="Brawlout Skin Senator Feathers 4/4"></a>
+	</div>
+
+	<a class="crs-expand grid-item size-2x1" 
+	href="brawlout/brawlout-skin-juan1.webp"	data-fancybox="skin-juan" data-thumb="brawlout/brawlout-skin-juan1.webp" data-caption="Juan - Default">
+	<img src="brawlout/brawlout-skin-juan0.webp" alt="Brawlout Skin Juan 1/4"> </a>
+	<div style="display: none;">
+		<a href="brawlout/brawlout-skin-juan2.webp" data-fancybox="skin-juan" data-thumb="brawlout/brawlout-skin-juan2.webp" data-caption="Juan - Tostada">
+		<img src="brawlout/brawlout-skin-juan2.webp"	alt="Brawlout Skin Juan 2/4"></a>
+		<a href="brawlout/brawlout-skin-juan3.webp" data-fancybox="skin-juan"	data-thumb="brawlout/brawlout-skin-juan3.webp" data-caption="Juan - El Portero">
+		<img src="brawlout/brawlout-skin-juan3.webp"	alt="Brawlout Skin Juan 3/4"></a>
+		<a href="brawlout/brawlout-skin-juan4.webp" data-fancybox="skin-juan"	data-thumb="brawlout/brawlout-skin-juan4.webp" data-caption="Juan - Piñata">
+		<img src="brawlout/brawlout-skin-juan4.webp"	alt="Brawlout Skin Juan 4/4"></a>
+	</div>
+
+</div>
+
+			<div class="grid-gallery with-icon grid-col-6 aspect-2x1"> <!-- GG Skills BEGIN -->
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-apu1.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-apu1.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-apu1.webp"
+						alt="Brawlout Skills Apu">
+					</a>
+					
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-dead.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-dead.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-dead.webp"
+						alt="Trinity Fusion Environment art shot 2/6">
+					</a>
+	
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-drift.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-drift.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-drift.webp"
+						alt="Trinity Fusion Environment art shot 1/6">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-feathers1.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-feathers1.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-feathers1.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-feathers2.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-feathers2.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-feathers2.webp"
+						alt="Brawlout Skills">
+					</a>
+
+
+					<div class="grid-item size-1x3">
+						<div class="pad">
+							<div>
+								<h1 style="font-size:3.4rem">Skills</h1>
+								<p>I did all of the skill iconography for all the characters and variants.</p>
+								</div>
+								<hr>
+						</div>
+					</div>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-juan.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-juan.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-juan.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-paco1.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-paco1.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-paco1.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-paco2.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-paco2.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-paco2.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-paco3.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-paco3.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-paco3.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-seph1.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-seph1.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-seph1.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-seph2.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-seph2.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-seph2.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-tyson2.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-tyson2.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-tyson2.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-volt2.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-volt2.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-volt2.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-volt3.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-volt3.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-volt3.webp"
+						alt="Brawlout Skills">
+					</a>
+
+					<a class="crs-expand grid-item" 
+						href="brawlout/brawlout-skills-yooka.webp"
+						data-fancybox="brawlout-skills"
+						data-thumb="brawlout/brawlout-skills-yooka.webp"
+						data-caption="">
+						<img 
+						src="brawlout/brawlout-skills-yooka.webp"
+						alt="Brawlout Skills">
+					</a>
+
+			</div> <!-- --------------------------------------------------- GG Skills END -->
+
+			<div class="grid-gallery with-icon grid-col-3 aspect-16x9 "> <!-- GG Extras BEGIN -->
+
+				<div class="grid-item">
+					<div class="pad">
+						<div>
+							<h1 style="font-size:3.4rem">Cosmetics</h1>
+							<p>The store was packed with stuff players could purchase or get by participation. I meticulously handled the prefab offsets so that each cosmetic fit each of the different characters correctly.</p>
+							</div>
+							<hr>
+					</div>
 				</div>
 
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-promo-cosmetics.webp"
+					data-fancybox="brawlout-extras"
+					data-thumb="brawlout/brawlout-promo-cosmetics.webp"
+					data-caption="">
+					<img 
+					src="brawlout/brawlout-promo-cosmetics.webp"
+					alt="Brawlout Cosmetics Transparent">
+				</a>
 
 
-		<div class="gridOverflow go-actionIcon aspect2x1" style="margin:1rem auto"> 
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-cosmetics.webp"
+					data-fancybox="brawlout-extras"
+					data-thumb="brawlout/brawlout-cosmetics.webp"
+					data-caption="">
+					<img 
+					src="brawlout/brawlout-cosmetics.webp"
+					alt="Brawlout Cosmetics Transparent">
+				</a>
 
-		<a class="crs-expand go_gridItem" 
-			href="bin-trinityfusion/trinityfusion-key.webp"
-			data-fancybox="trinity-chars"
-			data-thumb="bin-trinityfusion/trinityfusion-key.webp"
-			data-caption="Key art and logo fully developed from idea to execution by the talented Jeremy Spagnulo.">
-			<img 
-			src="bin-trinityfusion/trinityfusion-key.webp"
-			alt="Trinity Fusion Key Art">
-		</a>
+			</div> <!-- --------------------------------------------------- GG Extras END -->
 
-		<a class="crs-expand go_gridItem" 
-			href="bin-trinityfusion/trinityfusion-characters.webp"
-			data-fancybox="trinity-chars"
-			data-thumb="bin-trinityfusion/trinityfusion-characters.webp"
-			data-caption="Altara, Kera and Naira - the badass protagonists of Trinity Fusion! While my contribution to concepting was minimal, I've made up by designing and creating Altara's robotic arm and laying the base for the texturework in Substance.">
-			<img 
-			src="bin-trinityfusion/trinityfusion-characters.webp"
-			alt="Trinity Fusion environment run-through">
-		</a>
-
-		<a class="crs-expand go_gridItem" 
-			href="bin-trinityfusion/trinityfusion-fused-naira.webp"
-			data-fancybox="trinity-chars"
-			data-thumb="bin-trinityfusion/trinityfusion-fused-naira.webp"
-			data-caption="Naira after fusion with Altara, checking out her shiny new robot arm.">
-			<img 
-			src="bin-trinityfusion/trinityfusion-fused-naira.webp"
-			alt="Trinity Fusion environment run-through">
-		</a>
+			<div class="grid-gallery with-icon grid-col-3 aspect-3x2"> <!-- GG Extras BEGIN -->
 
 
-		<a class="crs-expand go_gridItem" 
-			href="bin-trinityfusion/trinityfusion-enemy-lines.webp"
-			data-fancybox="avp"
-			data-thumb="bin-trinityfusion/trinityfusion-enemy-lines.webp"
-			data-caption="The roster of enemies I've designed looks for - the modeling, baking and texturing was a collaborative effort with my other teammates.">
-			<img 
-			src="bin-trinityfusion/trinityfusion-enemy-lines.webp"
-			alt="Trinity Fusion environment run-through">
-		</a>
 
-		<a class="crs-expand go_gridItem" 
-			href="bin-trinityfusion/trinityfusion-lasereyes-xl.webp"
-			data-fancybox="avp"
-			data-thumb="bin-trinityfusion/trinityfusion-lasereyes-xl.webp"
-			data-caption="My contribution was the design of the attacks and the arena environment, the implementation was all done by my talented colleagues.">
-			<img 
-			src="bin-trinityfusion/trinityfusion-lasereyes-xl.webp"
-			alt="Trinity Fusion Lens Guardian">
-		</a>
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-booth-1.webp"
+					data-fancybox="brawlout-booth"
+					data-thumb="brawlout/brawlout-booth-1.webp"
+					data-caption="">
+					<img 
+					src="brawlout/brawlout-booth-1.webp"
+					alt="Brawlout Cosmetics Transparent">
+				</a>
 
-		</div> <!-- GridOverflow Main End -->
 
-	<hr>
+				<a class="crs-expand grid-item" 
+					href="brawlout/brawlout-booth-2.webp"
+					data-fancybox="brawlout-booth"
+					data-thumb="brawlout/brawlout-booth-2.webp"
+					data-caption="">
+					<img 
+					src="brawlout/brawlout-booth-2.webp"
+					alt="Brawlout Cosmetics Transparent">
+				</a>
 
-<hr style="margin:1.4rem auto">
+				<div class="grid-item">
+					<div class="pad">
+						<div>
+							<h1 style="font-size:3.4rem">Shows</h1>
+							<p>Brawlout had quite a few appearances at shows; compositing the banners to each spec usually fell on my plate.</p>
+							<p>I think it was the first time when the Desktop Publishing skills I learned in college actually came in handy.</p>
+							</div>
+							<hr>
+					</div>
+				</div>
+
+			</div> <!-- --------------------------------------------------- GG Extras END -->
+
+
+<div> <!-- Contribution START -->
+
+	<h1 style="font-size: 4rem;">Fun stuff I got to do:</h1>
+
+	<div class="grid-gallery grid-col-3 "> <!-- GG Contribution BEGIN-->
+		<div class="grid-item">
+			<ul class="a">
+				<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem; margin:1rem auto;">
+					<h1 style="font-weight: 600; font-size: 2.8rem; margin:auto auto auto 0.4rem;">Creative</h1>
+				</div>
+			<li class="good">created backgrounds for stages</li>
+			<li class="good">character skins for character Variants</li>
+			<li class="good">did the Dead Cells head VFX, fractures, props</li>
+			<li class="good">recorded Dead Cells trailer footage</li>
+			<li class="good">planning, recording trailer footage</li>
+			<li class="good">skill icons, UI, achievements</li>
+			<li class="good">banners, cover art, store assets, capsules</li>
+			<li class="good">created a sizeable portion of the tournament banners</li>
+			<li class="good">created pinatas and cosmetics for the in-game Store</li>
+			</ul>
+		</div>
+
+		<div class="grid-item">
+			<ul>
+				<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem; margin:1rem auto;">
+					<h1 style="font-weight: 600; font-size: 2.8rem; margin:auto auto auto 0.4rem;">Technical</h1></div>
+			<li class="good">managed Collision, Lightmapping and Light Probes for all environments</li>
+			<li class="good">performed optimization passes for Nintendo Switch compliance</li>
+			<li class="good">optimized environments using Amplify Impostors</li>
+			<li class="good">co-created PS4 custom screen with animations, content porting</li>
+			</ul>
+		</div>
+
+		<div class="grid-item">
+			<ul>
+				<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem; margin:1rem auto;">
+					<h1 style="font-weight: 600; font-size: 2.8rem; margin:auto auto auto 0.4rem;">Project</h1></div>
+			<li class="good">came in while project was live, was onboarded and pushing work to main branch within the month</li>
+			<li class="good">adapted to existing pipeline and workflows</li>
+			<li class="good">compiled documents and spreadsheets summarizing strategic decisions and noteworthy details from brainstorming sessions</li>
+			<li class="good">batch editing and exporting various cosmetics, UI elements, ability icons</li>
+			</ul>
+		</div>
+
+</div> <!-- GG Contribution END -->
+</div> <!-- Contribution END -->
 
 <details>
 	<summary>cutting room floor ✂ </summary>
 
-	<div class="gridOverflow go-actionIcon aspect2x1"> <!-- GO cutting room bosses START -->
+	<div class="grid-gallery grid-col-3 aspect-2x1"> <!-- GG cutting room bosses START -->
 
-	<a class="crs-expand go_gridItem" 
-		href="bin-trinityfusion/trinityfusion-boss-design-jumper.webp"
-		data-fancybox="bosssketchcut"
-		data-thumb="bin-trinityfusion/trinityfusion-boss-design-jumper.webp"
-		data-caption="Boss idea - spidery humanoid robot with a grapple hook. A very cool idea on paper but a nightmare to bring to life, it didn't make it past concept sketch.">
-		<img 
-		src="bin-trinityfusion/trinityfusion-boss-design-jumper.webp"
-		alt="Trinity Fusion environment run-through">
-	</a>
-
-	<a class="crs-expand go_gridItem" 
-		href="bin-trinityfusion/trinityfusion-boss-design-techsnake.webp"
-		data-fancybox="bosssketchcut"
-		data-thumb="bin-trinityfusion/trinityfusion-boss-design-techsnake.webp"
-		data-caption="Boss idea - flying mechanical snake-like train comprised of power core modules, got all the way to the blockout stage but ultimately didn't make the cut.">
-		<img 
-		src="bin-trinityfusion/trinityfusion-boss-design-techsnake.webp"
-		alt="Trinity Fusion environment run-through">
-	</a>
-
-	</div> <!-- GO cutting room bosses START -->
-
-	<ul class="a">
-	<li>A couple of the bosses I've made sketches for were superseded by better designs.</li>
-	<li>The sumo bot originally had an attack where he would curl into a ball and tumble forward, it was cut in favor of the laser attack.</li>
+		<div class="grid-item">
+	<ul>
+		<li class="cut">There was another character planned which got to the ideation phase, codenamed "SnakeLady".<br> As Trinity Fusion gained traction it became the top priority, and Brawlout updates were wound down.</li>
+		<li class="cut">There were voiced story animatics produced, but the idea was shelved due to collossal amount of work to fulfill it.</li>
+		<li class="cut">Early screenshots showed 8-player combat; it was planned but it ultimately would have blown the scope up too much.</li>
 	</ul>
+</div>
+
+				<a class="grid-item" href="brawlout/brawlout-6player.webp">
+					<img src="brawlout/brawlout-6player.webp" 
+					width="320" 
+					data-fancybox="brawlout-cut"
+					data-thumb="brawlout/brawlout-6player.webp"
+					data-caption="Early shot <i>showing</i> 6 player combat.">
+				</a>
+
+				<a class="grid-item" href="brawlout/brawlout-6player-2.webp">
+					<img src="brawlout/brawlout-6player-2.webp" 
+					width="320" 
+					data-fancybox="brawlout-cut"
+					data-thumb="brawlout/brawlout-6player-2.webp"
+					data-caption="For most of the development we didn't even have enough people on the team to test this.">
+				</a>
+
+
 
 </details>
 
-<!--
-<h2>Post Mortem</h2>
-	<div style="display: flex; flex-direction: row;">
-		<div style="width: 33%;">
-			<h1>Highs</h1>
-			<ul class="a">
-				<li>The first time I've used Unity at full capacity with all the features</li>
-				<li>Shipped another game, my second completed development cycle.</li>
-				<li>First contact with a large publisher.</li>
-			</ul>
-		</div>
-		<div style="width: 33%;">
-			<h1>Lows</h1>
-			<ul class="a">
-				<li>Unity's systems were still in the process of maturing, many technical difficulties to work around.</li>
-				<li>Memory and performance constraints meant we had to cut back many ideas </li>
-				<li>First contact with a large publisher.</li>
-			</ul>
-		</div>
-		<div style="width: 33%;">
-			<h1>Lessons</h1>
-		</div>
-	</div>-->
-
-
 	</div> <!-- MAIN end-->
 		
-	<div style="width: 30%; padding: 0 1vw;"> <!-- SIDEBAR background-color: green start -->
 
-		<h1 style="font-size: 2vw; margin:0 auto;">CONTRIBUTIONS</h1>
-		<ul class="a">
-			<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem;"><h1 style="font-weight: 600; font-size: 2.8rem;margin:2%">Creative</h1></div>
-	
-			<li>mid-project</li>
-			<li>character skins for alternates</li>
-			<li>optimized levels for Nintendo Switch, hand-made impostors</li>
-			<li>pinatas, cosmetics</li>
-			<li>Dead Cells head VFX, fractures, props</li>
-			<li>backgrounds for stages</li>
-			<li>PS4 custom screen with animations</li>
-			<li>skill icons, UI, achievements</li>
-			<li>banners, cover art, store assets, capsules</li>
-			<li>tournaments graphics</li>
-			<li>Dead Cells trailer footage</li>
-			<li>Nintendo Switch optimizations for compliance</li>
-			<li>planning, recording trailer footage</li>
-			<li>optimized using Impostors</li>
-
-			<li>Unity Tool: map editor with Gyuri, designing patterns and rules for placements, organized catalogue of patterns and elements, tested placements and tested useability</li>
-			<li>gathered referenced, deconstructed reference art styles and helped define overall art style to creative director's specifications.</li>
-			<li>concept art for environment, characters and enemies</li>
-			<li>biome design, concepts, prototyping, brainstorming</li>
-			<li>compiled documents and spreadsheets summarizing strategic decisions and noteworthy details from brainstorming sessions</li>
-			<li>defined folder structures and naming conventions for the Art and Tech side</li>
-			<li>established asset creation pipelines and guidelines from concept to model to engine</li>
-			<li>dynamic graphics placements based on map editor</li>
-			<li>created texture atlases, implemented Hotspotting workflow in pipeline</li>
-			<li>lightmapping</li>
-			<li>created shaders for environment, props, weapons</li>
-			<li>boss pattern and visual aspect design</li>
-			<li>adapted asset packs, kitbashing, setting correct offsets and pivots, grouping, naming</li>
-			<li>was responsible for environment art collision</li>
-			<li>weapon models and textures, atlases, materials, effects</li>
-			<li>created pipeline and documentation for batch editing and exporting weapon icons, UI elements, ability icons, character mods, class abilities, powerup items.</li>
-			<li>Profiler Optimization</li>
-			<li>ran optimization passes for Nintendo Switch compliance</li>
-			<li>organized folder structures and file naming conventions, project hygene</li>
-			<li>optimized using Impostors</li>
-			<li>designed the look of the tank boss</li>
-			<li>designer vacuum turret, sumo bot, rabid dog, acid spitter, grub enemy, two-headed mage, giraffe-bot, axethrower, quad-arm</li>
-			<li>environment art in The Wastes, boss fight scenes</li>
-			<li>fractured and cleaned up meshes for explosions and physics effects</li>
-
-			<li>environment design and art, lighting</li>
-			<li>created environment texture atlases</li>
-			<li>set dressing, lighting for levels, lightmaps, light probes, occlusion, environment colliders</li>
-			<li>proposed, designed and implemented the Secret Areas in all levels.</li>
-			<li>created environment modules, ensured grid snapping</li>
-			<li>created various props and set dressings, complete with animations. There are tarps and fabric covers that have ambient movements via a vertex-displacement shader.</li>
-			<li>modeling, texturing, lighting</li>
-			<li>designed User Interface graphics</li>
-			<li>set dressing props, basic enviro animations</li>
-	
-			<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem;"><h1 style="font-weight: 600; font-size: 2.8rem;margin:2%">Technical</h1></div>
-
-			<li>gained proficiency in Unity 4</li>
-			<li>managed Collision, Lightmapping and Occlusion Culling for all environments</li>
-			<li>managed User Interface atlases and integration with nGUI</li>
-			<li>recorded trailer video, screenshots, store icon</li>
-			<li>optimized particles and VFX for mobile, did graphics profiling and debugging</li>
-
-		</ul>
-	</div> <!-- SIDEBAR end -->
 
 	</div> <!-- SPLITTER END -->
 
@@ -455,7 +709,7 @@
 	</div>
 
 
-</div>
+</main>
 
 	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
 
@@ -516,7 +770,7 @@
 		hideScrollbar: false,
 	});
 
-	Fancybox.bind("[data-fancybox='skin-olaf']", {
+	Fancybox.bind("[data-fancybox='skin-stingra'],[data-fancybox='skin-postapu'],[data-fancybox='skin-beheaded'],[data-fancybox='skin-funkmaster'],[data-fancybox='skin-gancho'],[data-fancybox='skin-mako'],[data-fancybox='skin-mech'],[data-fancybox='skin-natura'],[data-fancybox='skin-naut'],[data-fancybox='skin-night'],[data-fancybox='skin-olaf'],[data-fancybox='skin-rip'],[data-fancybox='skin-rock'],[data-fancybox='skin-senator'],[data-fancybox='skin-juan']", {
 
 			width: "30%", // Adjust this to control zoom
 			height: "auto",
@@ -542,9 +796,15 @@
 
 </html> 
 
+<!-- https://www.youtube.com/watch?v=ao-_bwChl6U - PLAYSTATION TRAILER 
+https://www.youtube.com/watch?v=ORu1nwrDTmc - Dead Cells trailer
+https://www.youtube.com/watch?v=1WDbnzFTgX0 - Drifter trailer
+-->
+
+
 <!-- Rough huh? took me like 3 weeks to cobble this together. Feel free to grab snippets and adapt to your purposes, but bear in mind that Fancybox is NOT free. 
 
 Artliminal SRL Ⓒ 2025. All Rights Reserved.
-Website created by Daniel Nagy completely in VSCode. GridOverflow and Fancybox are licensed to their respective owners.
+Website created by Daniel Nagy completely in VSCode. Grid-gallery and Fancybox are licensed to their respective owners.
 
 -->

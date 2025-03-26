@@ -13,13 +13,12 @@
 <meta 
 	name="viewport" 
 	charset="utf-8" 
-	content="width=device-width, initial-scale=1.0, noindex, nofollow">
+	content="width=device-width, initial-scale=1, noindex, nofollow">
 
 </head>
 
 <!-- To DO ----------------------------------------
 
-• fix the Technical/ Creative section or integrate it better in the body.
 • edit text to show benefits, not features
 • clean up the footer; replicate the footer
 
@@ -48,13 +47,13 @@
 		</div>
 	</header>
 
-<div class="content" style="width:80vw; margin:6vh auto 5vh auto;">
+<main class="content">
 	<h1 class="projtitle">Alien vs Predator: Evolution (2013)</h1>
 	<h2 class="projsubhead">The first foray into a high profile project for a prestigious client- 20th Century Fox.</h2>
 
-	<div style="display: flex; flex-direction: row;"> <!-- SPLITTER START-->
+	<div> <!-- SPLITTER START-->
 		
-		<div style="width: 70%;"> <!-- MAIN background-color: red;------- -->
+		<div> <!-- MAIN background-color: red;------- -->
 
 			<div class="grid-gallery grid-col-4  aspect-16x10"> <!-- GO SShots BEGIN -->
 
@@ -144,9 +143,9 @@
 <hr style="margin:1.4rem auto">
 
 
-<div class="grid-gallery grid-col-3  aspect-1x1"> <!-- GridOverflow 2 BEGIN -->
+<div class="grid-gallery grid-col-4 aspect-1x1"> <!-- GG Fact BEGIN -->
 
-		<a class="crs-expand grid-item" 
+		<a class="crs-expand grid-item size-1x1" 
 		href="avp/avp-evolution-ico.webp"
 		data-fancybox="avp-ico"
 		data-thumb="avp/avp-evolution-ico.webp"
@@ -156,7 +155,7 @@
 		alt="Alien vs. Predator Store Icon">
 		</a>
 	
-	<div class="grid-item grid-item-centered">
+	<div class="grid-item">
 		<div class="pad">
 		<h2>Fact Sheet</h2>
 		<ul class="a">
@@ -176,38 +175,22 @@
 		</div>
 	</div>
 
-	<div class="grid-item size-1x2">
-		<p style="font-size: 1rem; font-style:italic; padding: 0.6rem;">Due to the heavy constraints of the mobile devices at the time, AVP Evolution was heavily reliant on trickery to shave off processing costs- lightmapping, occlusion culling and Light Probes were a blessing but also a constant breaking point. The way Unity calculated Occlusion Portals meant that I had to go in each level, test the camera extensively and rebake the Occlusion data and portals nearly daily, paying attention to the doors that might be open or occluding. I was in charge of meticulously checking the flags on all the props to make sure they receive proper lighting and don't pop in and out.</p>
-	</div>
-
-
 	<a class="crs-play grid-item size-2x1"
 	href="https://youtu.be/4QA7Q4ONuKo" 
 	data-fancybox
 	data-width="1600" 
 	data-height="1200"
+	data-caption="This was the first trailer I've ever planned and recorded gameplay footage for.<br>
+	While my talented colleagues handled the scripted animations,
+	I recorded the various combos and actual gameplay bits.<br>
+	The alien leaping at the camera while the APC was chasing it was a happy accident, the other 30 takes sadly weren't any good."
 	data-thumb="avp/avp-trailer-play.webp">
 	<img src="avp/avp-trailer-play.webp">
 	</a>
 
-	<div class="grid-item grid-item-centered">
-		<div class="pad">
-		<p>This was the first trailer I've ever planned and recorded gameplay footage for.<br>While my talented colleagues handled the scripted animations,<br>I recorded the various combos and actual gameplay bits. <br> The alien leaping at the camera while the APC was chasing it was a happy accident, the other 30 takes sadly weren't any good.</p>
-	</div>
-	</div>
+</div> <!-- GG Fact END-->
 
-
-</div> <!-- GO Main END-->
-
-<hr class="space">
-
-<!-- IFRAME TEST - DELETE THIS 
-<div class="iframe-parent"> 
-<iframe src="https://www.youtube.com/embed/4QA7Q4ONuKo?si=R-7GQUcq--V7hB1r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
--->
-
-<hr class="space">
+<hr>
 
 <div class="grid-gallery grid-col-3  aspect-2x1"> <!-- GO Concepts BEGIN -->
 
@@ -341,6 +324,51 @@
 	</a>
 </div> <!-- GO Enviro END -->
 
+
+<h1 style="font-size: 3rem; margin:0 auto;">Fun stuff I got to do:</h1>
+<div class="grid-gallery grid-col-4 aspect-2x3"> <!-- Contribution START -->
+
+	<div class="grid-item">
+	<ul class="a">
+		<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem; margin:1rem auto;">
+		<h1 style="font-weight: 600; font-size: 2.8rem; margin:auto auto auto 0.4rem;">Creative</h1></div>
+
+		<li class="good">environment design and art, lighting</li>
+		<li class="good">created environment texture atlases</li>
+		<li class="good">set dressing, lighting for levels, lightmaps, light probes, occlusion, environment colliders</li>
+		<li class="good">proposed, designed and implemented the Secret Areas in all levels.</li>
+		<li class="good">created environment modules, ensured grid snapping</li>
+		<li class="good">created various props and set dressings, complete with animations.</li>
+		<li class="good">modeling, texturing, lighting</li>
+		<li class="good">designed User Interface graphics</li>
+		<li class="good">created loading screens</li>
+		<li class="good">created the Predator Wrist Blade trails</li>
+		<li class="good">created the Predator Razor Whip VFX</li>
+		<li class="good">set dressing props, basic enviro animations</li>
+		<li class="good">recorded trailer video, screenshots, store icon</li>
+		<li class="good">designed and executed the "EVOLUTION" logotype</li>
+		<li class="good">promotional images, marketing resources</li>
+		</ul>
+	</div>
+
+	<div class="grid-item">
+		<ul class="a">
+		<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem; margin:1rem auto;">
+			<h1 style="font-weight: 600; font-size: 2.8rem; margin:auto auto auto 0.4rem;">Technical</h1></div>
+
+		<li class="good">gained proficiency in Unity 4</li>
+		<li class="good">managed Collision, Lightmapping and Occlusion Culling for all environments</li>
+		<li class="good">managed User Interface atlases and integration with nGUI</li>
+		<li class="good">recorded trailer video, screenshots, store icon</li>
+		<li class="good">optimized particles and VFX for mobile, did graphics profiling and debugging</li>
+	</ul>
+	</div>
+
+	<div class="grid-item">
+		<p style="font-size: 1rem; font-style:italic; padding: 0.6rem;">Due to the heavy constraints of the mobile devices at the time, AVP Evolution was heavily reliant on trickery to shave off processing costs- lightmapping, occlusion culling and Light Probes were a blessing but also a constant breaking point. The way Unity calculated Occlusion Portals meant that I had to go in each level, test the camera extensively and rebake the Occlusion data and portals daily, paying attention to the doors that might be open or occluding. I was in charge of meticulously checking the flags on all the props to make sure they receive proper lighting and don't pop in and out.</p>
+	</div>
+</div> <!-- Contribution END -->
+
 <details>
 	<summary>cutting room floor ✂ </summary>
 	<p>One of the Secrets I originally designed entailed sabotaging a fleet of APCs (Armored Personnel Carriers) as the Predator. Implementing it was time-consuming and it didn't make the cut.</p>
@@ -372,42 +400,11 @@
 	</div>-->
 
 
-	</div> <!-- MAIN end-->
+</div>
 		
-	<div style="width: 30%; padding: 0 1vw;"> <!-- SIDEBAR background-color: green start -->
-
-		<h1 style="font-size: 2vw; margin:0 auto;">CONTRIBUTION</h1>
-		<ul class="a">
-			<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem;"><h1 style="font-weight: 600; font-size: 2.8rem;margin:2%">Creative</h1></div>
-	
-			<li>environment design and art, lighting</li>
-			<li>created environment texture atlases</li>
-			<li>set dressing, lighting for levels, lightmaps, light probes, occlusion, environment colliders</li>
-			<li>proposed, designed and implemented the Secret Areas in all levels.</li>
-			<li>created environment modules, ensured grid snapping</li>
-			<li>created various props and set dressings, complete with animations. There are tarps and fabric covers that have ambient movements via a vertex-displacement shader.</li>
-			<li>modeling, texturing, lighting</li>
-			<li>designed User Interface graphics</li>
-			<li>created loading screens</li>
-			<li>created the Predator Wrist Blade trails</li>
-			<li>created the Predator Razor Whip VFX</li>
-			<li>set dressing props, basic enviro animations</li>
-			<li>recorded trailer video, screenshots, store icon</li>
-			<li>designed and executed the "EVOLUTION" logotype</li>
-			<li>promotional images, marketing resources</li>
-	
-			<div style="background-color: hsla(196, 90%, 20%, 0.591); height:3rem;"><h1 style="font-weight: 600; font-size: 2.8rem;margin:2%">Technical</h1></div>
-
-			<li>gained proficiency in Unity 4</li>
-			<li>managed Collision, Lightmapping and Occlusion Culling for all environments</li>
-			<li>managed User Interface atlases and integration with nGUI</li>
-			<li>recorded trailer video, screenshots, store icon</li>
-			<li>optimized particles and VFX for mobile, did graphics profiling and debugging</li>
-
-		</ul>
-	</div> <!-- SIDEBAR end -->
-
 	</div> <!-- SPLITTER END -->
+
+
 
 	<div class="tagticker">
 		<a href=""><div class="hashtag">#gamedev</div></a>
@@ -417,8 +414,7 @@
 	</div>
 
 
-</div>
-
+</main> <!-- MAIN end-->
 
 	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
 
