@@ -424,43 +424,71 @@ body, html {
 		align-items: center;
 		transition: padding 0.3s ease;
 	  }
+
+/* CTA Section */
+.cta-section {
+	margin-bottom: 1.5rem;
+	text-align: center;
+  }
   
-	  /* CTA Button */
-	  .cta-section {
-		margin-bottom: 1.5rem;
-		text-align: center;
-	  }
+  /* CTA Button */
+  .cta-blubutton {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 12px;
+	transition: all 0.2s ease;
+	position: relative;
+	cursor: pointer;
+  }
   
-	  .cta-button {
-		display: inline-block;
-		text-decoration: none;
-		padding: 0.5rem 1rem;
-		border-radius: 4px;
-		transition: transform 0.2s ease;
-	  }
+  /* pseudo-element that creates the blue background on hover */
+  .cta-blubutton::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(90deg, hsl(151, 72%, 47%), hsl(141, 91%, 52%), hsl(201, 72%, 47%));
+	/* background-image: linear-gradient(90deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%), hsl(201, 72%, 47%)); */
+	background-size: 200% auto;
+	border-radius: 12px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: -1; /* Behind the text */
+  }
   
-	  .cta-button:hover {
-		transform: scale(1.1);
-		background-image: repeating-linear-gradient(in srgb 90deg, hsl(201, 72%, 47%), hsl(166, 91%, 52%), hsl(201, 72%, 47%));
-		color: transparent;
-	  }
+  .cta-blubutton:hover::before {
+	opacity: 1;
+  }
+
+  .cta-blubutton:hover .cta {
+	color: black;
+  }
+
+  /* CTA */
+  .cta {
+	display: inline-block;
+	font-size: 4rem;
+	font-weight: 700;
+	font-family: figtree;
+	background-image: linear-gradient(60deg, hsl(25, 95%, 55%), hsl(40, 83%, 65%), hsl(25, 95%, 55%));
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: ctascroll 6s ease infinite;
+	background-size: 200% auto;
+	position: relative;
+	z-index: 1;
+	padding: 0.5rem;
+  }
   
-	  /* Gradient text for CTA */
-	  .cta {
-		font-size: 4rem;
-		font-weight: 600;
-		background-image: repeating-linear-gradient(in srgb 60deg, hsl(25, 95%, 45%), hsl(40, 83%, 55%), hsl(25, 95%, 45%));
-		background-clip: text;
-		color: transparent;
-		animation: ctascroll 6s ease infinite;
-		background-size: 200% auto;
-	  }
-  
-	  @keyframes ctascroll {
-		0% { background-position: 0% center; }
-		50% { background-position: 100% center; }
-		100% { background-position: 0% center; }
-	  }
+  @keyframes ctascroll {
+	0% { background-position: 0% center; }
+	50% { background-position: 100% center; }
+	100% { background-position: 0% center; }
+  }
 
 	  /* Company info section */
 	  .company-info {

@@ -3,9 +3,10 @@
     Based on Grid Overflow: https://github.com/Roman-Flossler/Grid-Overflow
     additional specifications by Daniel Nagy
     additional conversion and structuring by Cl.ai
-    draft 16.03.2025
-    rev.1 21.03.2025 - added multiple col and gap options
-    rev.2 22.03.2025 - added responsive text features
+    draft 16-03-2025
+    rev.1 21-03-2025 - added multiple col and gap options
+    rev.2 22-03-2025 - added responsive text features
+    rev.3 27-03-2025 - fixed caption functionality
 */
 
 /* Base grid container */
@@ -105,9 +106,14 @@
 .size-3x1 { --span-x: 3; --span-y: 1; }
 .size-3x2 { --span-x: 3; --span-y: 2; }
 .size-3x3 { --span-x: 3; --span-y: 3; }
+.size-3x4 { --span-x: 3; --span-y: 4; }
 .size-4x1 { --span-x: 4; --span-y: 1; }
 .size-4x2 { --span-x: 4; --span-y: 2; }
 .size-4x3 { --span-x: 4; --span-y: 3; }
+.size-4x4 { --span-x: 4; --span-y: 4; }
+.size-5x1 { --span-x: 5; --span-y: 1; }
+.size-5x2 { --span-x: 5; --span-y: 2; }
+.size-5x3 { --span-x: 5; --span-y: 3; }
 
 /* For backwards compatibility */
 .size-vip { --span-x: 2; --span-y: 2; }
@@ -235,27 +241,53 @@
 
 /* ======== END NEW TEXT FEATURES ======== */
 
-/* Caption styles */
-.caption {
-  background: linear-gradient(90deg, hsla(240, 40%, 10%, 0.5), hsla(0, 0%, 0%, 0.5));
-  position: absolute;
-  bottom: 0;
-  right: 0;
+/* GCaption System - hover-activated image captions */
+
+.gcaption {
+  /* Positioning */
+  display: block !important; /* Ensure it's a block element */
+  position: absolute !important;
+  top:auto;
+  bottom: 0 !important;
+  left: auto;
+  right: 0 !important;; /* Ensure it extends all the way to the right */
   height: auto;
-  color: white;
-  padding: 0.2rem 4%;
-  width: auto;
-  text-align: left;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.grid-item:hover .caption {
-  opacity: 1;
-}
-
-.caption-full {
   width: 100% !important;
+  max-width: 100%; /* Override the max-width constraint */
+  box-sizing: border-box;
+  
+  /* Appearance */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(4px);
+  
+  /* Text styling */
+  color: white;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  text-align: left;
+  font-family: figtree;
+  
+  /* Spacing */
+  margin: 0 !important;
+  padding: 0.2rem 4%;
+  
+  /* Initial state (hidden) */
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  
+  /* Ensure it's above the image */
+  z-index: 10;
+  
+  /* Prevent text overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Show on hover */
+.grid-item:hover .gcaption {
+  opacity: 1;
 }
 
 /* Action icons for links */
