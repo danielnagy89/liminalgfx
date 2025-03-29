@@ -404,7 +404,8 @@ body, html {
 	  /* Footer itself - scrolls into view normally */
 	  footer {
 		width: 100%;
-		background: hsla(220, 80%, 2%, 0.4);
+		background: hsla(218, 76%, 10%, 0.562);
+		/* background: hsla(220, 80%, 2%, 0.4); */
 		backdrop-filter: blur(0.8rem);
 		padding-top: 4px; /* Space for progress bar */
 		margin-bottom: 0; /* Ensure no extra space at bottom */
@@ -662,7 +663,7 @@ li {
 	list-style-type:none;
 	padding: 4px;
 	color: #d5dbde;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: light;
 	line-height: 1.4;
 }
@@ -712,15 +713,15 @@ li.cut{
 	margin: 0 auto;	
 }
 
-/* ANCHOR CSS --------- */
+/* A HREF LINKS CSS --------- */
 
 a:link { 
 	text-decoration: none; 
-	color: inherit;
+	color: hsl(194, 85%, 51%);
 } 
 a:visited { 
 	text-decoration: none; 
-	color: inherit;
+	color: hsl(216, 85%, 60%);
 } 
 a:hover { 
 	text-decoration: none; 
@@ -980,3 +981,4 @@ iframe{
 		font-size: 2rem;
 	}
 }
+

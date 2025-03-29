@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancybox Comparison Gallery Example</title>
+  
+  <!-- Include Fancybox CSS -->
+  <link rel="stylesheet" href="FancyUI/fancybox/fancybox-f2.css">
+  
+  <!-- Include our comparison CSS -->
+  <link rel="stylesheet" href="lgfx-comparison.css">
+  
+  <style>
+    /* Basic styling for the gallery display */
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .gallery-item {
+      width: 150px;
+      height: 100px;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Styling for the comparison gallery thumbnails */
+    .comparison-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    
+    .comparison-gallery-thumb {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+    
+    .comparison-gallery-thumb:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Fancybox Comparison Gallery Example</h1>
+  
+  <h2>Method 1: HTML Structure (Declarative)</h2>
+  <div class="gallery-container">
+    <!-- Comparison slider as the first item in gallery -->
+    <a href="projects/trinityfusion/trinityfusion-weapons-lineup-1.webp" 
+       data-fancybox="gallery1" 
+       data-comparison-image="images/after.jpg"
+       data-label-a="Before"
+       data-label-b="After"
+       class="gallery-item">
+      <img src="projects/trinityfusion/trinityfusion-weapons-lineup-1.webp" alt="Before/After Comparison">
+    </a>
+    
+    <!-- Original "before" image as second item -->
+    <a href="projects/trinityfusion/trinityfusion-weapons-lineup-1.webp" 
+       data-fancybox="gallery1" 
+       class="gallery-item">
+      <img src="projects/trinityfusion/trinityfusion-weapons-lineup-1.webp" alt="Before Image">
+    </a>
+    
+    <!-- Original "after" image as third item -->
+    <a href="projects/trinityfusion/trinityfusion-weapons-lineup-2.webp" 
+       data-fancybox="gallery1" 
+       class="gallery-item">
+      <img src="projects/trinityfusion/trinityfusion-weapons-lineup-2.webp" alt="After Image">
+    </a>
+    
+    <!-- Additional gallery item -->
+    <a href="projects/trinityfusion/trinityfusion-characters.webp" 
+       data-fancybox="gallery1" 
+       class="gallery-item">
+      <img src="projects/trinityfusion/trinityfusion-characters.webp" alt="Additional Image">
+    </a>
+  </div>
+  
+  <h2>Method 2: JavaScript Generated (Programmatic)</h2>
+  <div id="dynamic-gallery"></div>
+
+  <!-- Include Fancybox JS -->
+  <script src="FancyUI/fancybox/fancybox.umd.js"></script>
+  
+  <!-- Include our comparison JS -->
+  <script src="lgfx-comparison.js"></script>
+  
+  <script>
+    // Example of creating a gallery programmatically
+    document.addEventListener('DOMContentLoaded', function() {
+      createComparisonGallery('dynamic-gallery', [
+        {
+          src: 'images/before.jpg',
+          comparison: 'images/after.jpg',
+          thumb: 'images/comparison-thumb.jpg',
+          labelA: 'Original',
+          labelB: 'Enhanced',
+          caption: 'Comparison Slider'
+        },
+        {
+          src: 'images/before.jpg',
+          thumb: 'images/before-thumb.jpg',
+          caption: 'Original Image'
+        },
+        {
+          src: 'images/after.jpg',
+          thumb: 'images/after-thumb.jpg',
+          caption: 'Enhanced Image'
+        },
+        {
+          src: 'images/additional1.jpg',
+          thumb: 'images/additional1-thumb.jpg',
+          caption: 'Additional Image 1'
+        },
+        {
+          src: 'images/additional2.jpg',
+          thumb: 'images/additional2-thumb.jpg',
+          caption: 'Additional Image 2'
+        }
+      ]);
+    });
+  </script>
+</body>
+</html>

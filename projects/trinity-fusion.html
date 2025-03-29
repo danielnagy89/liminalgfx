@@ -4,12 +4,14 @@
 <title>Trinity Fusion | LiminalGFX</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
-<link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
 <link rel="stylesheet" href="../lgfx-grid.css" />
+<link rel="stylesheet" href="../FancyUI/fancybox/fancybox-f2.css"/>
+<link rel="stylesheet" href="../lgfx-comparison.css"/>
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
 <script src="../FancyUI/fancybox/fancybox.umd.js"></script>
+<script src="../lgfx-comparison.js" defer></script>
 <meta 
 	name="viewport" 
 	charset="utf-8" 
@@ -258,7 +260,7 @@
 			href="trinityfusion/trinityfusion-typhoon-intro.webp"
 			data-fancybox="trinity-typhoon"
 			data-thumb="trinityfusion/trinityfusion-typhoon-intro.webp"
-			data-caption="Fast and... angry? The head was inspired by samurai helmets while his knees were inspired by whipped cream swirls. The front grill is a light homage to ED-209.">
+			data-caption="Fast and... angry? The head was inspired by samurai helmets while his knees were a tribute to The Arsenal from FFVII. The front grill is a light homage to ED-209.">
 			<img 
 			src="trinityfusion/trinityfusion-typhoon-intro.webp"
 			alt="Trinity Fusion environment run-through">
@@ -510,6 +512,25 @@
 </div> <!-- GG Contribution END -->
 </div> <!-- Contribution END -->
 
+<a href="trinityfusion/trinityfusion-weapons-lineup-1.webp" 
+   data-fancybox="weapon-comparison2"
+   data-comparison-image="trinityfusion/trinityfusion-weapons-lineup-2.webp"
+   data-label-A="Weapons Active"
+   data-label-B="Weapons Inactive"
+   data-caption="The weapons I've modeled and textured for Trinity rendered for implementation in the UI - two versions.">
+  <img src="trinityfusion/trinityfusion-weapons-lineup-1.webp" width="800px" height="auto" alt="Weapon Comparison">
+</a>
+
+<a href="trinityfusion/trinityfusion-weapons-lineup-1.webp" 
+   data-fancybox="weapon-comparison2"
+   data-caption="Lots of task batching, weapons came in sets of 6, each set had it's own texture atlas.">
+</a>
+
+<a href="trinityfusion/trinityfusion-weapons-lineup-2.webp" 
+   data-fancybox="weapon-comparison2"
+   data-caption="Render AO > import all into Photoshop in a Smart Object > add layer styles on the Smart Object > Batch export sliced sprites.">
+</a>
+
 <details>
 	<summary>cutting room floor ✂ </summary>
 	<div>
@@ -535,13 +556,27 @@
 		alt="Trinity Fusion environment run-through">
 	</a>
 
-	</div> <!-- GO cutting room bosses START -->
-
+	</div> <!-- GO cutting room bosses END -->
 
 		<div>
 		<ul>
 		<li class="cut">A couple of the bosses I've made sketches for were superseded by better designs.</li>
-		<li class="cut">The sumo bot originally had an attack where he would curl into a ball and tumble forward, it was cut in favor of the laser attack.</li>
+
+		<a class="crs-play with-icon" 
+		href="trinityfusion/sumo-tumble.webm"
+		data-fancybox="trinity-cut"
+		data-width="1380" 
+		data-height="600"
+		data-thumb="trinityfusion/sumo-tumble.webm"
+		data-caption="Previs - sumo stance and forward tumble">
+			<video width="690" height="300" loop muted autoplay>
+				<source src="trinityfusion/sumo-tumble-thumb.mp4" type="video/mp4">
+			</video>
+		</a>
+
+
+		<li class="cut">I proposed a sumo-bot attack where he would curl into a ball and tumble forward, it was cut in favor of the laser attack.</li>
+
 		<li class="cut">Originally thought as a 2D-art style, all artwork for the prototype got scrapped in favor of a more dynamic 3D system.</li>
 		<hr>
 		</ul>
@@ -585,56 +620,70 @@
 </main> <!-- MAIN end-->
 		
 
-
-
-	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
-
 <!-- FOOTER -->
 <a href="#"><div class="bktopbtn"><img src="../graphics/arrow-top.svg" width="26px"></div></a>
 
-<footer>
-	<div class="footer">
-		<div class="progress-container">
-			<div class="progress-bar" id="myBar"></div>
+<div class="footer-container">
+    <!-- Progress bar that will be fixed at bottom until footer scrolls into view -->
+    <div class="progress-container" id="fixedProgressContainer">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
+    
+    <footer>
+    <!-- Progress bar again, positioned at top of footer when it scrolls into view -->
+    <div class="progress-container">
+        <div class="progress-bar" id="footerBar"></div>
+    </div>
+    
+    <div class="footer-content">
+        <div class="cta-section">
+        <a href="../biz.html" class="cta-blubutton">
+            <div class="cta">I'm currently available for projects, let's do business!</div>
+        </a>
+        </div>
 
-		<div style="display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			margin: 0.1rem auto;
-			padding: 0;
-			justify-content: space-between;
-			height: 100%;
-			width: 100%;">
-				<div style="width:auto; height:100%;margin-left:1vw;">
-					<h1 style="font-size: 1.2rem; font-family: figtree; font-weight: 600;text-align: left;">LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h1>
-					<p style="font-size: 1rem; font-family: figtree; font-weight: 300;text-align: left;">LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
-				</div>
-				<div style="width:40%; margin-right:14vw"> <!-- CENTER DIV START -->
-					<div class="cta"><a href= "mailto:liminalgfx@gmail.com"><h1 style="margin:0.2rem auto auto auto; font-size: 2rem; font-family: figtree; font-weight: 600;text-align: center">I'm currently available for mid/long term projects, let's do business!</h1></a>
-					</div>
-					<h1 style="font-size: 1.2rem; font-family: figtree; font-weight: 400;text-align: center;">Tell me about your project! Email me with a proposal or schedule a call to discuss and see how I can help.</h1>
-				</div> <!-- CENTER DIV END -->
-				<div style="width:auto; height:100%;margin-right:1vw;">
-					<h1 style="font-size: 1.4rem; font-family: figtree; font-weight: 600;text-align: right;">Just looking? that's fine too.</h1>
-					<h1 style="font-size: 1rem; font-family: figtree; font-weight: 400;text-align: right;">Bookmark this site just in case.</h1>
-				</div>
-		</div>
-		</div>
-	</div>
-</footer>
+        <div class="company-info">
+        <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
+        <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+    </footer>
+</div>
 
 <!-- SCRIPTS BEGIN -->
 
 <script>
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {myFunction()};
-	
-	function myFunction() {
-		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		var scrolled = (winScroll / height) * 100;
-		document.getElementById("myBar").style.width = scrolled + "%";
-	}
+    // Progress bar functionality
+    window.onscroll = function() {
+    updateProgressBar();
+    checkFooterVisibility();
+    };
+
+    function updateProgressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+    
+      // Update both progress bars
+    document.getElementById("myBar").style.width = scrolled + "%";
+    document.getElementById("footerBar").style.width = scrolled + "%";
+    }
+
+    // Hide fixed progress bar when footer is visible
+    function checkFooterVisibility() {
+    var footer = document.querySelector('footer');
+    var footerRect = footer.getBoundingClientRect();
+    var fixedProgressContainer = document.getElementById('fixedProgressContainer');
+    
+      // Check if footer is in viewport
+    if (footerRect.top < window.innerHeight) {
+        // Footer is visible, hide the fixed progress bar
+        fixedProgressContainer.style.display = 'none';
+    } else {
+        // Footer is not visible, show the fixed progress bar
+        fixedProgressContainer.style.display = 'block';
+    }
+    }
 </script>
 	
 <script>

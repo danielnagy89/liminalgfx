@@ -4,7 +4,7 @@
 <title>AVP Evolution | LiminalGFX</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
-<link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
+<link rel="stylesheet" href="../FancyUI/fancybox/fancybox-f2.css"/>
 <link rel="stylesheet" href="../lgfx-grid.css"/>
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
@@ -421,71 +421,68 @@
 <!-- FOOTER -->
 <a href="#"><div class="bktopbtn"><img src="../graphics/arrow-top.svg" width="26px"></div></a>
 
-<!-- FOOTER -->
-
 <div class="footer-container">
     <!-- Progress bar that will be fixed at bottom until footer scrolls into view -->
     <div class="progress-container" id="fixedProgressContainer">
-      <div class="progress-bar" id="myBar"></div>
+    <div class="progress-bar" id="myBar"></div>
     </div>
     
     <footer>
-      <!-- Progress bar again, positioned at top of footer when it scrolls into view -->
-      <div class="progress-container">
+    <!-- Progress bar again, positioned at top of footer when it scrolls into view -->
+    <div class="progress-container">
         <div class="progress-bar" id="footerBar"></div>
-      </div>
-      
-      <div class="footer-content">
+    </div>
+    
+    <div class="footer-content">
         <div class="cta-section">
-          <a href="../biz.html" class="cta-blubutton">
+        <a href="../biz.html" class="cta-blubutton">
             <div class="cta">I'm currently available for projects, let's do business!</div>
-          </a>
+        </a>
         </div>
 
         <div class="company-info">
-          <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
-          <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
+        <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
+        <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
         </div>
-      </div>
+    </div>
     </footer>
-  </div>
-
+</div>
 
 <!-- SCRIPTS BEGIN -->
 
 <script>
     // Progress bar functionality
     window.onscroll = function() {
-      updateProgressBar();
-      checkFooterVisibility();
+    updateProgressBar();
+    checkFooterVisibility();
     };
 
     function updateProgressBar() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = (winScroll / height) * 100;
-      
+    
       // Update both progress bars
-      document.getElementById("myBar").style.width = scrolled + "%";
-      document.getElementById("footerBar").style.width = scrolled + "%";
+    document.getElementById("myBar").style.width = scrolled + "%";
+    document.getElementById("footerBar").style.width = scrolled + "%";
     }
 
     // Hide fixed progress bar when footer is visible
     function checkFooterVisibility() {
-      var footer = document.querySelector('footer');
-      var footerRect = footer.getBoundingClientRect();
-      var fixedProgressContainer = document.getElementById('fixedProgressContainer');
-      
+    var footer = document.querySelector('footer');
+    var footerRect = footer.getBoundingClientRect();
+    var fixedProgressContainer = document.getElementById('fixedProgressContainer');
+    
       // Check if footer is in viewport
-      if (footerRect.top < window.innerHeight) {
+    if (footerRect.top < window.innerHeight) {
         // Footer is visible, hide the fixed progress bar
         fixedProgressContainer.style.display = 'none';
-      } else {
+    } else {
         // Footer is not visible, show the fixed progress bar
         fixedProgressContainer.style.display = 'block';
-      }
     }
-  </script>
+    }
+</script>
 	
 <script>
 	Fancybox.bind("[data-fancybox]", {
@@ -494,9 +491,7 @@
         },		
 		hideScrollbar: false,
 	});
-</script>
-
-<!-- SCRIPTS END -->
+</script> <!-- SCRIPTS END -->
 
 </body>
 

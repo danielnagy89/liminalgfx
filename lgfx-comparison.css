@@ -2,7 +2,7 @@
     LGFX Image Comparison slider extension for Fancybox 
     specifications by Daniel Nagy
     code bulk by Cl.ai
-    draft 29-03-2025
+    rev.9 30-03-2025 - gallery functionality with properly aligned slider labels and bottom padding
 */
 
 .comparison-wrapper {
@@ -41,7 +41,8 @@
     height: 100%;
     width: 2px;
     transform: translateX(-50%);
-    object-fit: fill;
+    background-color: hsla(192, 20%, 80%, 0.200);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     pointer-events: none;
   }
   
@@ -60,39 +61,45 @@
     transform: translate(-50%, -50%) scale(1.2);
   }
   
-  .comparison-labels-container {
+  /* Labels wrapper to position labels relative to handle */
+  .comparison-labels-wrapper {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 30px; /* Increased from 20px to 30px to add padding from bottom */
+    left: 0; /* Position at the left edge of the handle */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    width: 100%;
-    align-items: baseline; /* Aligns text baselines */
+    z-index: 35;
   }
-
+  
   .comparison-label-container-A {
-    flex: 1;
-    text-align: right;
-    padding-right: 20px;
-  }
-  
-  .comparison-label-container-B {
-    flex: 1;
-    text-align: left;
-    padding-left: 20px;
-  }
-  
-  .comparison-label {
-    display: inline-block;
-    padding: 6px 12px;
+    position: absolute;
+    right: 100%; /* Position to the left of the handle */
+    margin-right: 10px; /* Small gap between label and handle */
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 3px;
-    font-size: 24px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+    text-align: right; /* Align text toward the handle */
+  }
+  
+  .comparison-label-container-B {
+    position: absolute;
+    left: 100%; /* Position to the right of the handle */
+    margin-left: 10px; /* Small gap between label and handle */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+    text-align: left; /* Align text toward the handle */
   }
   
   .comparison-range {
@@ -106,15 +113,29 @@
     z-index: 40;
     margin: 0;
   }
-
-  .comparison-handle-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 2px;
-    transform: translateX(-50%);
-    background-color: hsla(192, 20%, 80%, 0.200);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    pointer-events: none;
+  
+  /* Add specific media query to control labels on smaller screens */
+  @media (max-width: 768px) {
+    .comparison-labels-wrapper {
+      bottom: 20px; /* Less padding on smaller screens */
+    }
+    
+    .comparison-label-container-A,
+    .comparison-label-container-B {
+      font-size: 18px;
+      padding: 4px 8px;
+    }
+  }
+  
+  /* Even smaller screens */
+  @media (max-width: 480px) {
+    .comparison-labels-wrapper {
+      bottom: 15px; /* Even less padding on very small screens */
+    }
+    
+    .comparison-label-container-A,
+    .comparison-label-container-B {
+      font-size: 14px;
+      padding: 3px 6px;
+    }
   }

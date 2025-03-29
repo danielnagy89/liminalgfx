@@ -4,7 +4,7 @@
 <title>LiminalGFX - Art of Daniel Nagy</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="root.css">
-<link rel="stylesheet" href="FancyUI/fancybox/fancybox_f2.css"/>
+<link rel="stylesheet" href="FancyUI/fancybox/fancybox-f2.css"/>
 <link rel="stylesheet" href="lgfx-grid.css"/>
 <link rel="preload" href="fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
@@ -166,47 +166,75 @@
 
 -->
 
-
 <!-- FOOTER -->
 <a href="#"><div class="bktopbtn"><img src="../graphics/arrow-top.svg" width="26px"></div></a>
 
-<footer>
-	<div class="footer">
-	  <div class="footer-content">
-		<div class="footer-section company-info">
-		  <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
-		  <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
-		</div>
-		
-		<div class="footer-section cta-section">
-		  <a href="mailto:liminalgfx@gmail.com">
-			<div class="cta">
-			  <h2>I'm currently available for mid/long term projects, let's do business!</h2>
-			</div>
-		  </a>
-		  <h3>Tell me about your project! Email me with a proposal or schedule a call to discuss and see how I can help.</h3>
-		</div>
-		
+<div class="footer-container">
+    <!-- Progress bar that will be fixed at bottom until footer scrolls into view -->
+    <div class="progress-container" id="fixedProgressContainer">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
+    
+    <footer>
+    <!-- Progress bar again, positioned at top of footer when it scrolls into view -->
+    <div class="progress-container">
+        <div class="progress-bar" id="footerBar"></div>
+    </div>
+    
+    <div class="footer-content">
+        <div class="cta-section">
+        <a href="../biz.html" class="cta-blubutton">
+            <div class="cta">I'm currently available for projects, let's do business!</div>
+        </a>
+        </div>
+
+        <div class="company-info">
+        <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
+        <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
+        </div>
+
 		<div class="footer-section bookmark-info">
-		  <h3>Just looking? that's fine too.</h3>
-		  <p>Bookmark this site just in case.</p>
+			<h3>Just looking? that's fine too.</h3>
+			<p>Bookmark this site just in case.</p>
 		</div>
-	  </div>
-	</div>
-  </footer>
+    </div>
+    </footer>
+</div>
 
 <!-- SCRIPTS BEGIN -->
 
 <script>
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {myFunction()};
-	
-	function myFunction() {
-		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		var scrolled = (winScroll / height) * 100;
-		document.getElementById("myBar").style.width = scrolled + "%";
-	}
+    // Progress bar functionality
+    window.onscroll = function() {
+    updateProgressBar();
+    checkFooterVisibility();
+    };
+
+    function updateProgressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+    
+      // Update both progress bars
+    document.getElementById("myBar").style.width = scrolled + "%";
+    document.getElementById("footerBar").style.width = scrolled + "%";
+    }
+
+    // Hide fixed progress bar when footer is visible
+    function checkFooterVisibility() {
+    var footer = document.querySelector('footer');
+    var footerRect = footer.getBoundingClientRect();
+    var fixedProgressContainer = document.getElementById('fixedProgressContainer');
+    
+      // Check if footer is in viewport
+    if (footerRect.top < window.innerHeight) {
+        // Footer is visible, hide the fixed progress bar
+        fixedProgressContainer.style.display = 'none';
+    } else {
+        // Footer is not visible, show the fixed progress bar
+        fixedProgressContainer.style.display = 'block';
+    }
+    }
 </script>
 	
 <script>

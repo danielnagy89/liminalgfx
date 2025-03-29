@@ -4,7 +4,7 @@
 <title>Abominations | LiminalGFX</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="stylesheet" href="../root.css">
-<link rel="stylesheet" href="../FancyUI/fancybox/fancybox_f2.css"/>
+<link rel="stylesheet" href="../FancyUI/fancybox/fancybox-f2.css"/>
 <link rel="stylesheet" href="../lgfx-grid.css" />
 <link rel="preload" href="/fonts/Figtree[wght].woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/CalSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
@@ -122,54 +122,70 @@ data-caption="Leg Holster mechanism simple rig and animation">
 
 </main>
 
-	<!-- WIP AREA, tag cloud/ ticker?? low prio -->
-
 <!-- FOOTER -->
 <a href="#"><div class="bktopbtn"><img src="../graphics/arrow-top.svg" width="26px"></div></a>
 
-<footer>
-	<div class="footer">
-		<div class="progress-container">
-			<div class="progress-bar" id="myBar"></div>
+<div class="footer-container">
+    <!-- Progress bar that will be fixed at bottom until footer scrolls into view -->
+    <div class="progress-container" id="fixedProgressContainer">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
+    
+    <footer>
+    <!-- Progress bar again, positioned at top of footer when it scrolls into view -->
+    <div class="progress-container">
+        <div class="progress-bar" id="footerBar"></div>
+    </div>
+    
+    <div class="footer-content">
+        <div class="cta-section">
+        <a href="../biz.html" class="cta-blubutton">
+            <div class="cta">I'm currently available for projects, let's do business!</div>
+        </a>
+        </div>
 
-		<div style="display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			margin: 0.1rem auto;
-			padding: 0;
-			justify-content: space-between;
-			height: 100%;
-			width: 100%;">
-				<div style="width:auto; height:100%;margin-left:1vw;">
-					<h1 style="font-size: 1.2rem; font-family: figtree; font-weight: 600;text-align: left;">LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h1>
-					<p style="font-size: 1rem; font-family: figtree; font-weight: 300;text-align: left;">LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
-				</div>
-				<div style="width:40%; margin-right:14vw"> <!-- CENTER DIV START -->
-					<div class="cta"><a href= "mailto:liminalgfx@gmail.com"><h1 style="margin:0.2rem auto auto auto; font-size: 2rem; font-family: figtree; font-weight: 600;text-align: center">I'm currently available for mid/long term projects, let's do business!</h1></a>
-					</div>
-					<h1 style="font-size: 1.2rem; font-family: figtree; font-weight: 400;text-align: center;">Tell me about your project! Email me with a proposal or schedule a call to discuss and see how I can help.</h1>
-				</div> <!-- CENTER DIV END -->
-				<div style="width:auto; height:100%;margin-right:1vw;">
-					<h1 style="font-size: 1.4rem; font-family: figtree; font-weight: 600;text-align: right;">Just looking? that's fine too.</h1>
-					<h1 style="font-size: 1rem; font-family: figtree; font-weight: 400;text-align: right;">Bookmark this site just in case.</h1>
-				</div>
-		</div>
-		</div>
-	</div>
-</footer>
+        <div class="company-info">
+        <h3>LiminalGFX is a video game art studio based in Cluj-Napoca, Romania.</h3>
+        <p>LiminalGFX is a brand of Artliminal SRL. Ⓒ 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+    </footer>
+</div>
 
 <!-- SCRIPTS BEGIN -->
 
 <script>
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {myFunction()};
-	
-	function myFunction() {
-		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		var scrolled = (winScroll / height) * 100;
-		document.getElementById("myBar").style.width = scrolled + "%";
-	}
+    // Progress bar functionality
+    window.onscroll = function() {
+    updateProgressBar();
+    checkFooterVisibility();
+    };
+
+    function updateProgressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+    
+      // Update both progress bars
+    document.getElementById("myBar").style.width = scrolled + "%";
+    document.getElementById("footerBar").style.width = scrolled + "%";
+    }
+
+    // Hide fixed progress bar when footer is visible
+    function checkFooterVisibility() {
+    var footer = document.querySelector('footer');
+    var footerRect = footer.getBoundingClientRect();
+    var fixedProgressContainer = document.getElementById('fixedProgressContainer');
+    
+      // Check if footer is in viewport
+    if (footerRect.top < window.innerHeight) {
+        // Footer is visible, hide the fixed progress bar
+        fixedProgressContainer.style.display = 'none';
+    } else {
+        // Footer is not visible, show the fixed progress bar
+        fixedProgressContainer.style.display = 'block';
+    }
+    }
 </script>
 	
 <script>
