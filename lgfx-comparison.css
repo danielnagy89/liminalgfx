@@ -1,0 +1,120 @@
+/*!  
+    LGFX Image Comparison slider extension for Fancybox 
+    specifications by Daniel Nagy
+    code bulk by Cl.ai
+    draft 29-03-2025
+*/
+
+.comparison-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+  
+  .comparison-imgB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .comparison-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 40px;
+    transform: translateX(-50%);
+    z-index: 30;
+    cursor: col-resize;
+  }
+  
+  .comparison-handle-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    transform: translateX(-50%);
+    object-fit: fill;
+    pointer-events: none;
+  }
+  
+  .comparison-handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease;
+    pointer-events: none;
+  }
+  
+  .comparison-handle:hover .comparison-handle-circle {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  
+  .comparison-labels-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+    align-items: baseline; /* Aligns text baselines */
+  }
+
+  .comparison-label-container-A {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  .comparison-label-container-B {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .comparison-label {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 3px;
+    font-size: 24px;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .comparison-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: col-resize;
+    z-index: 40;
+    margin: 0;
+  }
+
+  .comparison-handle-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: hsla(192, 20%, 80%, 0.200);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
